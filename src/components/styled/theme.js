@@ -9,8 +9,8 @@ const theme = {
     },
     display: {
         mobile: "756px",
-        tablet: "1200px",
-        desktop: "1199px",
+        tabletVertical: "1024px",
+        tabletHorizontal: "1400px",
     }
 
 }

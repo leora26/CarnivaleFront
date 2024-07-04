@@ -8,10 +8,10 @@ const Navigation = () => {
     return (
         <NavigationStyled>
             <Container>
-                <NavigationItemStyled to="/wholesale">Wholesale</NavigationItemStyled>
-                <NavigationItemStyled to="/shop">Shop</NavigationItemStyled>
-                <NavigationItemStyled to="/corporate">Corporate</NavigationItemStyled>
-                <NavigationItemStyled to="/stories">Stories</NavigationItemStyled>
+                <NavigationItemStyled color='black' to="/wholesale">WHOLESALE</NavigationItemStyled>
+                <NavigationItemStyled color='black' to="/shop">SHOP</NavigationItemStyled>
+                <NavigationItemStyled color='black' to="/corporate">CORPORATE</NavigationItemStyled>
+                <NavigationItemStyled color='black' to="/stories">STORIES</NavigationItemStyled>
             </Container>
 
             <Logo src={LogoPicture} alt="Logo"/>

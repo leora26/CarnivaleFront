@@ -16,7 +16,7 @@ export const Container = styled.div`
     align-items: center;
     width: 25%;
     
-    @media (max-width: ${({theme}) => theme.display.tablet}) {
+    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         width: 40%;
     }
 `;
@@ -24,7 +24,7 @@ export const Container = styled.div`
 export const Logo = styled.img`
     width: 7%;
 
-    @media (max-width: ${({theme}) => theme.display.tablet}) {
+    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         width: 15%;
     }
 `
