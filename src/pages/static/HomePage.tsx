@@ -2,6 +2,9 @@ import {BackPicture, HomepageStyled, HomePageSectionStyled, TextOverlay} from ".
 import HeroPicture from "../../assets/pictures/hero.png";
 import Hero2Picture from "../../assets/pictures/hero2.png";
 import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
+import {LatestStoriesStyled} from "../../components/styled/LatestStories.styled";
+import LatestStories from "../../components/LatestStories";
+import React from "react";
 
 const HomePage = () => {
     return (
@@ -38,6 +41,9 @@ const HomePage = () => {
                     <h3>FOR YOU BIG COMPANIES</h3>
                 </TextOverlay>
             </HomePageSectionStyled>
+
+            <h4>LATEST STORIES</h4>
+            <LatestStories/>
         </HomepageStyled>
     )
 }

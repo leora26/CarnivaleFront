@@ -7,6 +7,13 @@ export const HomepageStyled = styled.main`
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    
+    & h4{
+        font-size: 5rem;
+        margin: 0 5% 2% 0;
+        align-self: flex-end;
+        
+    }
 `
 
 export const BackPicture = styled.img`
@@ -29,7 +36,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 `
 
 export const TextOverlay = styled.div`
