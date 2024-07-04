@@ -7,6 +7,8 @@ export const NavigationStyled = styled.div`
     width: 90%;
     height: 10vh;
     margin: 0 auto;
+    background-color: white;
+    position: sticky;
 `
 
 export const Container = styled.div`

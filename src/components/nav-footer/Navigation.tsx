@@ -1,7 +1,7 @@
-import { NavigationItemStyled} from "./styled/NavigationItem.styled";
+import { NavigationItemStyled} from "../styled/nav-footer/NavigationItem.styled";
 import React from "react";
-import {Container, NavigationStyled, Logo} from "./styled/Navigation.styled";
-import LogoPicture from "../assets/pictures/carnivale-logo.png"
+import {Container, NavigationStyled, Logo} from "../styled/nav-footer/Navigation.styled";
+import LogoPicture from "../../assets/pictures/carnivale-logo.png"
 import NavigationIcons from "./NavigationIcons";
 
 const Navigation = () => {

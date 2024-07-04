@@ -6,11 +6,11 @@ import {
     ParagraphStyled,
     FooterNavigationContainer,
     PrivacyContainer
-} from "./styled/Footer.styled";
+} from "../styled/nav-footer/Footer.styled";
 import {FaRegArrowAltCircleRight} from "react-icons/fa";
 import {AiOutlineFacebook} from "react-icons/ai";
 import SocialIcons from "./SocialIcons";
-import {NavigationItemStyled} from "./styled/NavigationItem.styled";
+import {NavigationItemStyled} from "../styled/nav-footer/NavigationItem.styled";
 
 
 const Footer = () => {
@@ -45,9 +45,9 @@ const Footer = () => {
             <h1>CARNIVALE</h1>
             <PrivacyContainer>
                 <ParagraphStyled>&copy; 2024 CARNIVALE</ParagraphStyled>
-                <NavigationItemStyled color='white' to="/wholesale">PRIVACY POLICY</NavigationItemStyled>
-                <NavigationItemStyled color='white' to="/wholesale">TERMS AND CONDITIONS</NavigationItemStyled>
-                <NavigationItemStyled color='white' to="/wholesale">TO SEARCH</NavigationItemStyled>
+                <NavigationItemStyled color='white' to="/policy">PRIVACY POLICY</NavigationItemStyled>
+                <NavigationItemStyled color='white' to="/conditions">TERMS AND CONDITIONS</NavigationItemStyled>
+                <NavigationItemStyled color='white' to="/search">TO SEARCH</NavigationItemStyled>
             </PrivacyContainer>
         </FooterStyled>
     )
