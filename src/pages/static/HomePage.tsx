@@ -13,7 +13,7 @@ const HomePage = () => {
             <HomepageStyled>
 
                 {/*first section*/}
-                <HomePageSectionStyled sectionHeight="80vh">
+                <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh" tabletVerticalSectionHeight="30vh">
                     <BackPicture src={HeroPicture} alt="Hero picture"/>
                     <TextOverlay>
                         <h1>CARNIVALE</h1>

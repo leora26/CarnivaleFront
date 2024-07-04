@@ -25,6 +25,8 @@ export const BackPicture = styled.img`
 
 interface HomePageSectionStyledProps {
     sectionHeight?: string;
+    tabletHorizontalSectionHeight?: string;
+    tabletVerticalSectionHeight?: string
 }
 
 export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
@@ -37,6 +39,16 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
+
+    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+        margin-bottom: 0;
+        height: ${(props) => props.tabletHorizontalSectionHeight || '80vh'};
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        margin-bottom: 0;
+        height: ${(props) => props.tabletVerticalSectionHeight || '40vh'};
+    }
 `
 
 export const TextOverlay = styled.div`
@@ -54,6 +66,10 @@ export const TextOverlay = styled.div`
         letter-spacing: 1.5rem;
         margin: 0;
         align-self: center;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 6em;        
+        }
     }
     
     & p{
@@ -62,6 +78,10 @@ export const TextOverlay = styled.div`
         align-self: center;
         margin-left: 32%;
         font-size: 1.2rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 30%;
+        }
     }
     
     & span {

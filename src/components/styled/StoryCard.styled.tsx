@@ -14,4 +14,9 @@ export const StoryCardStyled = styled.div`
 export const StoryCardImage = styled.img`
     width: 100%;
     border-radius: 2rem;
+    
+    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+        width: 90%;
+    }
+    
 `
