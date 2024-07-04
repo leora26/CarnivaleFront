@@ -6,4 +6,5 @@ export const LatestStoriesStyled = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 10%;
 `

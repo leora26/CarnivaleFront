@@ -5,46 +5,52 @@ import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
 import {LatestStoriesStyled} from "../../components/styled/LatestStories.styled";
 import LatestStories from "../../components/LatestStories";
 import React from "react";
+import {ScrollingTextLeft, ScrollingTextRight} from "../../components/ScrollingText";
 
 const HomePage = () => {
     return (
-        <HomepageStyled>
+        <>
+            <HomepageStyled>
 
-            {/*first section*/}
-            <HomePageSectionStyled sectionHeight="80vh">
-                <BackPicture src={HeroPicture} alt="Hero picture"/>
-                <TextOverlay>
-                    <h1>CARNIVALE</h1>
-                    <p>
-                        We bring you exceptional foods:
-                        pure, distinctive, bursting with taste and value.
-                    </p>
-                </TextOverlay>
-            </HomePageSectionStyled>
+                {/*first section*/}
+                <HomePageSectionStyled sectionHeight="80vh">
+                    <BackPicture src={HeroPicture} alt="Hero picture"/>
+                    <TextOverlay>
+                        <h1>CARNIVALE</h1>
+                        <p>
+                            We bring you exceptional foods:
+                            pure, distinctive, bursting with taste and value.
+                        </p>
+                    </TextOverlay>
+                </HomePageSectionStyled>
 
-            {/*second section*/}
-            <HomePageSectionStyled>
-                <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>
-                <TextOverlay>
+                {/*second section*/}
+                <HomePageSectionStyled>
+                    <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>
+                    <TextOverlay>
                     <span>
                         Carnivale’s tradition-rich, honest food is our celebration of
                         <b> what the norm should be.</b>
                     </span>
-                </TextOverlay>
-            </HomePageSectionStyled>
+                    </TextOverlay>
+                </HomePageSectionStyled>
 
-            {/*fourth section*/}
-            <HomePageSectionStyled>
-                <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
-                <TextOverlay>
-                    <h2>BOXES</h2>
-                    <h3>FOR YOU BIG COMPANIES</h3>
-                </TextOverlay>
-            </HomePageSectionStyled>
+                {/*fourth section*/}
+                <HomePageSectionStyled>
+                    <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
+                    <TextOverlay>
+                        <h2>BOXES</h2>
+                        <h3>FOR YOU BIG COMPANIES</h3>
+                    </TextOverlay>
+                </HomePageSectionStyled>
 
-            <h4>LATEST STORIES</h4>
-            <LatestStories/>
-        </HomepageStyled>
+                <h4>LATEST STORIES</h4>
+                <LatestStories/>
+
+            </HomepageStyled>
+            <ScrollingTextLeft/>
+            <ScrollingTextRight/>
+        </>
     )
 }
 
