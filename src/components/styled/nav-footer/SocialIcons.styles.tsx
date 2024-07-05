@@ -4,6 +4,8 @@ export const SocialIconsStyled = styled.div`
     display: flex;
     flex-direction: row;
     width: 30%;
+    list-style: none;
+    margin-top: 2%;
     
     & li{
         width: 40%;
@@ -15,7 +17,7 @@ export const SocialIconsStyled = styled.div`
         width: 100%;
         
         :first-child{
-            color: white;
+            color: black;
             width: 100%;
             height: 1.8rem;
         }

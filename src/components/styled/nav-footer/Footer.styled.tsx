@@ -2,7 +2,7 @@ import {styled} from "styled-components";
 
 
 export const FooterStyled = styled.footer`
-    background-color: black;
+    background-color: #FFDD5A;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@ export const FooterStyled = styled.footer`
 
 
     & h1{
-        color: white;
+        color: black;
         font-size: 12em;
         letter-spacing: 2rem;
         margin: 0 auto;
@@ -33,25 +33,34 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    
+`
+
+export const ContainerForm = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
 
     & input {
-        border: 1px solid #FFFFFF;
+        border: 2px solid black;
         border-radius: 19px;
-        background-color: black;
+        background-color: #FFDD5A;
         padding: 0.5rem;
-        width: 60%;
-        color: white;
+        width: 90%;
+        color: black;
     }
 
     & button {
-        background-color: black;
+        background-color: #FFDD5A;
         border: none;
         padding: 0;
         width: 30%;
         height: auto;
 
         :first-child{
-            color: white;
+            color: black;
             width: 100%;
             height: 2.5rem;
         }
@@ -73,7 +82,7 @@ export const FooterForm = styled.form`
     width: 25%;
     
     & label{
-        color: white;
+        color: black;
         font-size: 1.4rem;
         margin-bottom: 1rem;
     }
@@ -86,14 +95,14 @@ export const FooterNavigation = styled.div`
     
     & span {
         font-size: 1.2rem;
-        color: white;
+        color: black;
         margin-bottom: 2rem;
     }
     
 `
 
 export const ParagraphStyled = styled.p`
-    color: white;
+    color: black;
     font-size: 1rem;
     margin-bottom: 1.8rem;
     font-family: ${({ theme }) => theme.fonts.primaryFont};

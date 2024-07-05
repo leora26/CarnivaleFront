@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, {keyframes} from "styled-components";
 import {Link} from "react-router-dom";
 
 const scrollAnimationLeft = keyframes`
@@ -28,13 +28,13 @@ export const ScrollingTextWrapper = styled(Link)`
 `;
 
 export const ScrollingTextContentLeft = styled.span`
-    display: inline-block; 
+    display: inline-block;
     animation: ${scrollAnimationLeft} 10s linear infinite;
-    color: black; 
+    color: black;
     width: 100%;
     text-transform: uppercase;
-        font-size: 8rem;
-    
+    font-size: 8rem;
+
 `;
 
 export const ScrollingTextContentRight = styled.span`
