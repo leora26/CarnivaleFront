@@ -1,48 +1,45 @@
-import {ScrollingTextWrapper, ScrollingTextContentLeft, ScrollingTextContentRight} from "./styled/ScrollingText.styled";
-import GetInTouch1 from "../assets/pictures/get-in-touch1.png"
-import GetInTouch2 from "../assets/pictures/get-in-touch2.png"
-import GetInTouch3 from "../assets/pictures/get-in-touch3.png"
+import {
+    ScrollingTextWrapper,
+    ScrollingTextContent
+} from "./styled/ScrollingText.styled";
+import GetInTouch1 from "../assets/pictures/get-in-touch1.png";
+import GetInTouch2 from "../assets/pictures/get-in-touch2.png";
+import GetInTouch3 from "../assets/pictures/get-in-touch3.png";
+import React from "react";
 
-
-export const ScrollingTextLeft = () => {
-    return (
-        <ScrollingTextWrapper to="/contantUs">
-            <ScrollingTextContentLeft>
-                Get in touch
-                <img src={GetInTouch1} alt=""/>
-                Get in touch
-                <img src={GetInTouch2} alt=""/>
-                Get in touch
-                <img src={GetInTouch3} alt=""/>
-                Get in touch
-                <img src={GetInTouch3} alt=""/>
-                Get in touch
-                <img src={GetInTouch2} alt=""/>
-                Get in touch
-                <img src={GetInTouch1} alt=""/>
-            </ScrollingTextContentLeft>
-        </ScrollingTextWrapper>
-    );
+interface ScrollingTextProp {
+    direction: "left" | "right";
 }
 
-export const ScrollingTextRight = () => {
+export const ScrollingText: React.FC<ScrollingTextProp> = ({direction}) => {
     return (
-        <ScrollingTextWrapper to="/contantUs">
-            <ScrollingTextContentRight>
-                Get in touch
-                <img src={GetInTouch1} alt=""/>
-                Get in touch
-                <img src={GetInTouch2} alt=""/>
-                Get in touch
-                <img src={GetInTouch3} alt=""/>
-                Get in touch
-                <img src={GetInTouch3} alt=""/>
-                Get in touch
-                <img src={GetInTouch2} alt=""/>
-                Get in touch
-                <img src={GetInTouch1} alt=""/>
-            </ScrollingTextContentRight>
+        <ScrollingTextWrapper to="/contactUs">
+            <ScrollingTextContent direction={direction} data-animated="true">
+                <li>
+                    <span>Get in touch</span>
+                    <img src={GetInTouch1} alt=""/>
+                </li>
+                <li>
+                    <span>Get in touch</span>
+                    <img src={GetInTouch2} alt=""/>
+                </li>
+                <li>
+                    <span>Get in touch</span>
+                    <img src={GetInTouch3} alt=""/>
+                </li>
+                <li>
+                    <span>Get in touch</span>
+                    <img src={GetInTouch1} alt=""/>
+                </li>
+                <li>
+                    <span>Get in touch</span>
+                    <img src={GetInTouch2} alt=""/>
+                </li>
+                <li>
+                    <span>Get in touch</span>
+                    <img src={GetInTouch3} alt=""/>
+                </li>
+            </ScrollingTextContent>
         </ScrollingTextWrapper>
     );
-}
-
+};

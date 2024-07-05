@@ -1,48 +1,52 @@
-import styled, {keyframes} from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 import {Link} from "react-router-dom";
 
-const scrollAnimationLeft = keyframes`
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-`;
+interface ScrollingTextWrapperProps {
+    to: string;
+}
 
-const scrollAnimationRight = keyframes`
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-`;
+interface ScrollingTextContentProps {
+    direction: "left" | "right";
+}
 
-export const ScrollingTextWrapper = styled(Link)`
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    cursor: pointer;
-`;
-
-export const ScrollingTextContentLeft = styled.span`
-    display: inline-block;
-    animation: ${scrollAnimationLeft} 10s linear infinite;
-    color: black;
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 8rem;
+export const ScrollingTextWrapper = styled(Link)<ScrollingTextWrapperProps>`
+    display: block;
+    max-width: 100%;
+    text-decoration: none;
+    color: inherit;
+    overflow-x: hidden; 
 
 `;
 
-export const ScrollingTextContentRight = styled.span`
-    display: inline-block;
-    animation: ${scrollAnimationRight} 10s linear infinite;
-    color: black;
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 8rem;
+export const scrollAnimation = keyframes`
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+`;
 
+export const ScrollingTextContent = styled.ul<ScrollingTextContentProps>`
+    display: flex;
+    margin: 0;
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+    ${({ direction }) => direction === 'right' && css`
+        animation: ${scrollAnimation} 20s linear infinite;
+    `}
+
+    ${({ direction }) => direction === 'left' && css`
+        animation: ${scrollAnimation} 20s linear infinite reverse;
+    `}
+
+    &[data-animated="true"] {
+        overflow: hidden;
+        width: max-content;
+        animation-play-state: running; 
+    }
+
+    & li {
+        font-size: 8rem;
+        list-style: none;
+        text-transform: uppercase;
+    }
 `;

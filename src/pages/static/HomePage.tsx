@@ -5,7 +5,7 @@ import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
 import {LatestStoriesStyled} from "../../components/styled/LatestStories.styled";
 import LatestStories from "../../components/LatestStories";
 import React from "react";
-import {ScrollingTextLeft, ScrollingTextRight} from "../../components/ScrollingText";
+import {ScrollingText} from "../../components/ScrollingText";
 
 const HomePage = () => {
     return (
@@ -48,8 +48,9 @@ const HomePage = () => {
                 <LatestStories/>
 
             </HomepageStyled>
-            <ScrollingTextLeft/>
-            <ScrollingTextRight/>
+            <ScrollingText direction="left"/>
+            <ScrollingText direction="right"/>
+
         </>
     )
 }
