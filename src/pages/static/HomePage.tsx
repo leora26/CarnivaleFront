@@ -1,4 +1,10 @@
-import {BackPicture, HomepageStyled, HomePageSectionStyled, TextOverlay} from "../../components/styled/Homepage.styled";
+import {
+    BackPicture,
+    HomepageStyled,
+    HomePageSectionStyled,
+    TextOverlay,
+    WorkWithLink
+} from "../../components/styled/Homepage.styled";
 import HeroPicture from "../../assets/pictures/hero.png";
 import Hero2Picture from "../../assets/pictures/hero2.png";
 import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
@@ -33,6 +39,13 @@ const HomePage = () => {
                         <b> both in taste and meaning.</b>
                     </span>
                     </TextOverlay>
+                </HomePageSectionStyled>
+
+                <HomePageSectionStyled>
+                    <span>WE WORK WITH</span>
+                    <WorkWithLink to="/professionals">professionals</WorkWithLink>
+                    <WorkWithLink to="/companies">companies</WorkWithLink>
+                    <WorkWithLink to="/enthusiasts">enthusiasts</WorkWithLink>
                 </HomePageSectionStyled>
 
                 {/*fourth section*/}

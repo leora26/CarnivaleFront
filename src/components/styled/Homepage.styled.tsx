@@ -1,4 +1,6 @@
 import {styled} from "styled-components";
+import {Link} from "react-router-dom";
+import theme from "./theme";
 
 export const HomepageStyled = styled.main`
     width: 90%;
@@ -41,6 +43,18 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
+    
+    & span{
+        font-family: ${({ theme }) => theme.fonts.secondaryBlack};
+        font-size: 2rem;
+        color: black;
+        margin-right: auto;
+        margin-bottom: 1rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 1.5rem;
+        }
+    }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         margin-bottom: 0;
@@ -50,6 +64,28 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         margin-bottom: 0;
         height: ${(props) => props.tabletVerticalSectionHeight || '40vh'};
+    }
+`
+
+export const WorkWithLink = styled(Link)`
+    color: black;
+    font-size: 8rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid black;
+    width: 100%;
+    text-align: start;
+    text-decoration: none;
+    padding-bottom: 2rem;
+    font-family: ${({ theme }) => theme.fonts.primarySemiBold};
+    
+    &:hover{
+        color: white;
+        background-color: #000;
+        transition: 0.5s;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        font-size: 5rem;
     }
 `
 
