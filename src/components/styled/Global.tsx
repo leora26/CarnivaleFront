@@ -5,7 +5,30 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         // TODO: change this when get fonts from Artem
-        font-family: Arial, sans-serif;
+        @font-face {
+            font-family: 'HarmoniaSansProCyr-Black';
+            src: url('../../assets/fonts/Harmonia/HarmoniaSansProCyr-Black.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'HarmoniaSansProCyr-Bold';
+            src: url('../../assets/fonts/Harmonia/HarmoniaSansProCyr-Bold.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'HarmoniaSansProCyr-SemiBd';
+            src: url('../../assets/fonts/Harmonia/HarmoniaSansProCyr-SemiBd.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Lexend-Black';
+            src: url('../../assets/fonts/Lexend/Lexend-Black.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Lexend-Bold';
+            src: url('../../assets/fonts/Lexend/Lexend-Bold.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Lexend-Light';
+            src: url('../../assets/fonts/Lexend/Lexend-Light.ttf') format('truetype');
+        }
     }
     
 `

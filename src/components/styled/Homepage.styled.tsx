@@ -12,7 +12,9 @@ export const HomepageStyled = styled.main`
         font-size: 5rem;
         margin: 0 5% 2% 0;
         align-self: flex-end;
-        
+        font-family: ${({ theme }) => theme.fonts.primaryBold};
+
+
     }
 `
 
@@ -66,6 +68,9 @@ export const TextOverlay = styled.div`
         letter-spacing: 1.5rem;
         margin: 0;
         align-self: center;
+        font-family: ${({ theme }) => theme.fonts.primary};
+        font-weight: lighter;
+
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 6em;        
@@ -78,6 +83,8 @@ export const TextOverlay = styled.div`
         align-self: center;
         margin-left: 32%;
         font-size: 1.2rem;
+        font-family: ${({ theme }) => theme.fonts.secondaryLight};
+        font-weight: lighter;
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             width: 30%;
@@ -91,6 +98,8 @@ export const TextOverlay = styled.div`
         letter-spacing: 0.1rem;
         text-align: center;
         align-self: center;
+        font-family: ${({ theme }) => theme.fonts.secondaryLight};
+        font-weight: lighter;
     }
 
     & h2{
@@ -99,6 +108,7 @@ export const TextOverlay = styled.div`
         font-size: 8em;
         margin: 0 0 0 5%;
         align-self: flex-start;
+        font-family: ${({ theme }) => theme.fonts.primaryBold};
     }
 
     & h3{
@@ -106,5 +116,7 @@ export const TextOverlay = styled.div`
         font-size: 2em;
         margin: 0 0 0 6%;
         align-self: flex-start;
+        font-family: ${({ theme }) => theme.fonts.secondaryLight};
+        font-weight: lighter;
     }
 `;

@@ -17,6 +17,9 @@ export const FooterStyled = styled.footer`
         letter-spacing: 2rem;
         margin: 0 auto;
         width: 75%;
+        font-family: ${({ theme }) => theme.fonts.primaryBold};
+        font-weight: bold;
+
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             font-size: 8em;
@@ -50,6 +53,7 @@ export const ContainerForm = styled.div`
         padding: 0.5rem;
         width: 90%;
         color: black;
+        font-family: ${({ theme }) => theme.fonts.secondaryBlack};
     }
 
     & button {
@@ -85,6 +89,8 @@ export const FooterForm = styled.form`
         color: black;
         font-size: 1.4rem;
         margin-bottom: 1rem;
+        font-family: ${({ theme }) => theme.fonts.secondaryBold};
+        font-weight: bolder;
     }
 `
 
@@ -97,6 +103,7 @@ export const FooterNavigation = styled.div`
         font-size: 1.2rem;
         color: black;
         margin-bottom: 2rem;
+        font-family: ${({ theme }) => theme.fonts.secondaryBold};
     }
     
 `
@@ -105,11 +112,12 @@ export const ParagraphStyled = styled.p`
     color: black;
     font-size: 1rem;
     margin-bottom: 1.8rem;
-    font-family: ${({ theme }) => theme.fonts.primaryFont};
+    font-family: ${({ theme }) => theme.fonts.secondaryBlack};
+    font-weight: bold;
 `
 
 export const PrivacyContainer = styled.div`
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

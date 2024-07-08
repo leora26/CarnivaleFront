@@ -29,8 +29,8 @@ const HomePage = () => {
                     <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>
                     <TextOverlay>
                     <span>
-                        Carnivale’s tradition-rich, honest food is our celebration of
-                        <b> what the norm should be.</b>
+                        Pure products with lots of identity and impact,
+                        <b> both in taste and meaning.</b>
                     </span>
                     </TextOverlay>
                 </HomePageSectionStyled>

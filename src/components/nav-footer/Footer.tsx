@@ -44,10 +44,9 @@ const Footer = () => {
             </Container>
             <h1>CARNIVALE</h1>
             <PrivacyContainer>
-                <ParagraphStyled>&copy; 2024 CARNIVALE</ParagraphStyled>
+                <ParagraphStyled>&copy; CARNIVALE 2024</ParagraphStyled>
                 <NavigationItemStyled color='black' to="/policy">PRIVACY POLICY</NavigationItemStyled>
                 <NavigationItemStyled color='black' to="/conditions">TERMS AND CONDITIONS</NavigationItemStyled>
-                <NavigationItemStyled color='black' to="/search">TO SEARCH</NavigationItemStyled>
             </PrivacyContainer>
         </FooterStyled>
     )

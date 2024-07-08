@@ -4,8 +4,12 @@ const theme = {
         secondaryColor: '#999',
     },
     fonts: {
-        primaryFont: 'Helvetica, sans-serif',
-        secondaryFont: 'Helvetica, sans-serif',
+        primary: 'HarmoniaSansProCyr-Black, sans-serif',
+        primaryBold: 'HarmoniaSansProCyr-Bold, sans-serif',
+        primarySemiBold: 'HarmoniaSansProCyr-SemiBd, sans-serif',
+        secondaryBlack: 'Lexend-Black, sans-serif',
+        secondaryBold: 'Lexend-Bold, sans-serif',
+        secondaryLight: 'Lexend-Light, sans-serif',
     },
     display: {
         mobile: "756px",

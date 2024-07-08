@@ -29,6 +29,9 @@ export const ScrollingTextContent = styled.ul<ScrollingTextContentProps>`
     margin: 0;
     flex-wrap: nowrap;
     gap: 1rem;
+    font-family: ${({ theme }) => theme.fonts.primaryBold};
+    font-weight: bold;
+
 
     ${({ direction }) => direction === 'right' && css`
         animation: ${scrollAnimation} 20s linear infinite;
