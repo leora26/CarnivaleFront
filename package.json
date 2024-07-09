@@ -1,7 +1,7 @@
 {
   "name": "carnivale",
   "version": "0.1.0",
-  "homepage": "https://leora26.github.io/CarnivaleFront/",
+  "homepage": "https://leora26.github.io/CarnivaleFront",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -23,6 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -46,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "react-app-rewired": "^2.2.1"
   }
 }
