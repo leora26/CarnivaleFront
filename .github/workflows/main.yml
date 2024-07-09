@@ -45,8 +45,10 @@ jobs:
           name: production-files
           path: ./build
 
-      - name: Create docs directory
-        run: mkdir -p ./docs
+      - name: Create docs directory and .nojekyll file
+        run: |
+          mkdir -p ./docs
+          touch ./docs/.nojekyll
 
       - name: Copy files to docs
         run: cp -r ./build/* ./docs
