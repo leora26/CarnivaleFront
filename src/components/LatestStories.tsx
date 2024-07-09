@@ -1,6 +1,5 @@
 import React from "react";
 import {LatestStoriesStyled} from "./styled/LatestStories.styled";
-import useFetch from "../hooks/useFetch";
 import AllStories from "../models/AllStories";
 import StoryCard from "./StoryCard";
 

@@ -8,7 +8,6 @@ import {
     PrivacyContainer, ContainerForm
 } from "../styled/nav-footer/Footer.styled";
 import {IoIosArrowRoundForward } from "react-icons/io";
-import {AiOutlineFacebook} from "react-icons/ai";
 import SocialIcons from "./SocialIcons";
 import {NavigationItemStyled} from "../styled/nav-footer/NavigationItem.styled";
 
