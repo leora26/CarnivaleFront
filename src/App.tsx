@@ -12,13 +12,11 @@ import theme from "./components/styled/theme";
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <Router>
                 <Routes>
                     <Route path="" element={<DefaultLayout />}>
                         <Route index element={<HomePage />} />
                     </Route>
                 </Routes>
-            </Router>
         </ThemeProvider>
     );
 }
