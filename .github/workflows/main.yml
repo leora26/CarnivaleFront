@@ -32,17 +32,17 @@ jobs:
           path: ./dist
 
 
-deploy:
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: production-files
-        path: ./dist
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.SECRET_FOR_CARNIVALE_FRONT }}
-        publish_dir: ./dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.SECRET_FOR_CARNIVALE_FRONT }}
+          publish_dir: ./dist
