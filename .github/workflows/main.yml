@@ -45,12 +45,14 @@ jobs:
           name: production-files
           path: ./build
 
-      - name: Copy files to root
-        run: |
-          cp -r ./build/* ./docs
+      - name: Create docs directory
+        run: mkdir -p ./docs
+
+      - name: Copy files to docs
+        run: cp -r ./build/* ./docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.SECRET_FOR_CARNIVALE_FRONT }}
-          publish_dir: ./
+          publish_dir: ./docs
