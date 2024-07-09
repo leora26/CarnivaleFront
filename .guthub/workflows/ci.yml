@@ -1,9 +1,10 @@
-name: Build and Deploy
+name: CI Pipeline
 
 on:
   push:
     branches:
       - main
+      - 'refs/tags/*'
 
 jobs:
   build:
