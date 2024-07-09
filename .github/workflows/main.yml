@@ -46,7 +46,9 @@ jobs:
           path: ./build
 
       - name: Copy files to docs
-        run: cp -r ./build/* .
+        run: |
+          cp -r ./build/* .
+          ls -l ./
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
