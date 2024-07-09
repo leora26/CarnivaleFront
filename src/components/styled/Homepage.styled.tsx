@@ -12,7 +12,7 @@ export const HomepageStyled = styled.main`
     
     & h4{
         font-size: 5rem;
-        margin: 0 5% 2% 0;
+        margin-bottom: 2% ;
         align-self: flex-end;
         font-family: ${({ theme }) => theme.fonts.primaryBold};
 
@@ -30,22 +30,45 @@ export const BackPicture = styled.img`
 interface HomePageSectionStyledProps {
     sectionHeight?: string;
     tabletHorizontalSectionHeight?: string;
-    tabletVerticalSectionHeight?: string
+    tabletVerticalSectionHeight?: string;
+    direction?: 'column' | 'row';
 }
 
 export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     width: 100%;
-    height: ${(props) => props.sectionHeight || '100vh'};
+    height: ${(props) => props.sectionHeight || '80vh'};
     border-radius: 2rem;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: ${(props) => props.direction};
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
     
+    & h2 {
+        font-size: 8rem;
+        width: 20%;
+        height: 100%;
+        margin:  0 8%  8% 0;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            font-size: 5rem;
+            width: 25%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 4rem;
+            width: 25%;
+        }
+    }
+    
     & span{
-        font-family: ${({ theme }) => theme.fonts.secondaryBlack};
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        
+        //font-family: ${({ theme }) => theme.fonts.secondaryRegular};
+        font-family: "Lexend", sans-serif;
         font-size: 2rem;
         color: black;
         margin-right: auto;
@@ -75,14 +98,15 @@ export const WorkWithLink = styled(Link)`
     width: 100%;
     text-align: start;
     text-decoration: none;
-    padding-bottom: 2rem;
+    padding-bottom: 1.8rem;
+    margin-bottom: 2rem;
     font-family: ${({ theme }) => theme.fonts.primarySemiBold};
     
-    &:hover{
-        color: white;
-        background-color: #000;
-        transition: 0.5s;
-    }
+    //&:hover{
+    //    color: white;
+    //    background-color: #000;
+    //    transition: 0.5s;
+    //}
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         font-size: 5rem;
@@ -118,7 +142,8 @@ export const TextOverlay = styled.div`
         width: 20%;
         align-self: center;
         margin-left: 32%;
-        font-size: 1.2rem;
+        margin-top: 0;
+        font-size: 1.4rem;
         font-family: ${({ theme }) => theme.fonts.secondaryLight};
         font-weight: lighter;
 
@@ -128,14 +153,15 @@ export const TextOverlay = styled.div`
     }
     
     & span {
-        width: 70%;
+        width: 50%;
         color: white;
         font-size: 2em;
         letter-spacing: 0.1rem;
         text-align: center;
         align-self: center;
-        font-family: ${({ theme }) => theme.fonts.secondaryLight};
+        font-family: ${({ theme }) => theme.fonts.secondaryRegular};
         font-weight: lighter;
+        margin: 0 auto;
     }
 
     & h2{
@@ -156,3 +182,5 @@ export const TextOverlay = styled.div`
         font-weight: lighter;
     }
 `;
+
+

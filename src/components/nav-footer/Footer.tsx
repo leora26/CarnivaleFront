@@ -7,7 +7,7 @@ import {
     FooterNavigationContainer,
     PrivacyContainer, ContainerForm
 } from "../styled/nav-footer/Footer.styled";
-import {FaRegArrowAltCircleRight} from "react-icons/fa";
+import {IoIosArrowRoundForward } from "react-icons/io";
 import {AiOutlineFacebook} from "react-icons/ai";
 import SocialIcons from "./SocialIcons";
 import {NavigationItemStyled} from "../styled/nav-footer/NavigationItem.styled";
@@ -21,7 +21,7 @@ const Footer = () => {
                     <label htmlFor="email">Join us</label>
                     <ContainerForm>
                         <input type="email" id="email" placeholder="email@gmail.com"/>
-                        <button type="submit"><FaRegArrowAltCircleRight/></button>
+                        <button type="submit"><IoIosArrowRoundForward/></button>
                     </ContainerForm>
                     <SocialIcons/>
                 </FooterForm>

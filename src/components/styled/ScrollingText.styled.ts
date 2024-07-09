@@ -34,11 +34,11 @@ export const ScrollingTextContent = styled.ul<ScrollingTextContentProps>`
 
 
     ${({ direction }) => direction === 'right' && css`
-        animation: ${scrollAnimation} 20s linear infinite;
+        animation: ${scrollAnimation} 30s linear infinite;
     `}
 
     ${({ direction }) => direction === 'left' && css`
-        animation: ${scrollAnimation} 20s linear infinite reverse;
+        animation: ${scrollAnimation} 30s linear infinite reverse;
     `}
 
     &[data-animated="true"] {
@@ -51,5 +51,10 @@ export const ScrollingTextContent = styled.ul<ScrollingTextContentProps>`
         font-size: 8rem;
         list-style: none;
         text-transform: uppercase;
+        
+        & img{
+            width: 80px;
+            margin: 0 0 0 1rem;
+        }
     }
 `;

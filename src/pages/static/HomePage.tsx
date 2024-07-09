@@ -5,13 +5,17 @@ import {
     TextOverlay,
     WorkWithLink
 } from "../../components/styled/Homepage.styled";
+import CategoryCard from "../../components/styled/CategoryCard";
 import HeroPicture from "../../assets/pictures/hero.png";
 import Hero2Picture from "../../assets/pictures/hero2.png";
 import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
-import {LatestStoriesStyled} from "../../components/styled/LatestStories.styled";
 import LatestStories from "../../components/LatestStories";
 import React from "react";
 import {ScrollingText} from "../../components/ScrollingText";
+import BeefCategory from "../../assets/pictures/category-beef.png"
+import DairyCategory from "../../assets/pictures/category-dairy.png"
+import PoultryCategory from "../../assets/pictures/category-poultry.png"
+
 
 const HomePage = () => {
     return (
@@ -19,7 +23,7 @@ const HomePage = () => {
             <HomepageStyled>
 
                 {/*first section*/}
-                <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh" tabletVerticalSectionHeight="30vh">
+                <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh" tabletVerticalSectionHeight="30vh" direction="column">
                     <BackPicture src={HeroPicture} alt="Hero picture"/>
                     <TextOverlay>
                         <h1>CARNIVALE</h1>
@@ -31,25 +35,52 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 {/*second section*/}
-                <HomePageSectionStyled>
+                <HomePageSectionStyled direction="column">
                     <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>
                     <TextOverlay>
                     <span>
                         Pure products with lots of identity and impact,
-                        <b> both in taste and meaning.</b>
+                        both in <b>  taste and meaning.</b>
                     </span>
                     </TextOverlay>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled>
+                <HomePageSectionStyled direction="column">
                     <span>WE WORK WITH</span>
                     <WorkWithLink to="/professionals">professionals</WorkWithLink>
                     <WorkWithLink to="/companies">companies</WorkWithLink>
                     <WorkWithLink to="/enthusiasts">enthusiasts</WorkWithLink>
                 </HomePageSectionStyled>
 
+                <HomePageSectionStyled direction="row">
+                   <h2>what do we have?</h2>
+                    <CategoryCard to="/beef">
+                        <img src={BeefCategory} alt="Beef category link"/>
+                        <h3>beef</h3>
+                        <p>
+                            Happiness is an old and fat cow
+                        </p>
+                    </CategoryCard>
+
+                    <CategoryCard to="/beef">
+                        <img src={DairyCategory} alt="Dairy category link"/>
+                        <h3>dairy</h3>
+                        <p>
+                            With a weakness for fresh cheeses
+                        </p>
+                    </CategoryCard>
+
+                    <CategoryCard to="/beef">
+                        <img src={PoultryCategory} alt="Beef category link"/>
+                        <h3>poultry</h3>
+                        <p>
+                            Free range is no joke
+                        </p>
+                    </CategoryCard>
+                </HomePageSectionStyled>
+
                 {/*fourth section*/}
-                <HomePageSectionStyled>
+                <HomePageSectionStyled direction="column">
                     <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
                     <TextOverlay>
                         <h2>BOXES</h2>

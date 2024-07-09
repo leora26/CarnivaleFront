@@ -3,7 +3,7 @@ import {styled} from "styled-components";
 
 export const FooterStyled = styled.footer`
     background-color: #FFDD5A;
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
     
@@ -13,10 +13,10 @@ export const FooterStyled = styled.footer`
 
     & h1{
         color: black;
-        font-size: 12em;
+        font-size: 16em;
         letter-spacing: 2rem;
-        margin: 0 auto;
-        width: 75%;
+        margin: 3% 0 0 3%;
+        width: 95%;
         font-family: ${({ theme }) => theme.fonts.primaryBold};
         font-weight: bold;
 
@@ -34,7 +34,7 @@ export const FooterStyled = styled.footer`
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     
 `
@@ -45,12 +45,12 @@ export const ContainerForm = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 80%;
-
+    
     & input {
         border: 2px solid black;
         border-radius: 19px;
         background-color: #FFDD5A;
-        padding: 0.5rem;
+        padding: 0.7rem;
         width: 90%;
         color: black;
         font-family: ${({ theme }) => theme.fonts.secondaryBlack};
@@ -65,8 +65,11 @@ export const ContainerForm = styled.div`
 
         :first-child{
             color: black;
-            width: 100%;
+            width: 45%;
             height: 2.5rem;
+            border-radius: 360px;
+            border: 2px solid black;
+            margin-top: 5px;
         }
     }
 `
@@ -84,6 +87,7 @@ export const FooterForm = styled.form`
     flex-direction: column;
     align-items: flex-start;
     width: 25%;
+    margin-left: 5%;
     
     & label{
         color: black;
@@ -110,19 +114,18 @@ export const FooterNavigation = styled.div`
 
 export const ParagraphStyled = styled.p`
     color: black;
-    font-size: 1rem;
-    margin-bottom: 1.8rem;
+    font-size: 1.2rem;
     font-family: ${({ theme }) => theme.fonts.secondaryBlack};
-    font-weight: bold;
+    margin-right: 1%;
 `
 
 export const PrivacyContainer = styled.div`
-    width: 30%;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;;
     align-items: center;
-    margin: 0 auto;
+    margin-left: 5%;
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         width: 60%;

@@ -7,6 +7,8 @@ const theme = {
         primary: 'HarmoniaSansProCyr-Black, sans-serif',
         primaryBold: 'HarmoniaSansProCyr-Bold, sans-serif',
         primarySemiBold: 'HarmoniaSansProCyr-SemiBd, sans-serif',
+        secondaryRegular: 'Lexend-Regular, sans-serif',
+        secondaryMedium: 'Lexend-Medium, sans-serif',
         secondaryBlack: 'Lexend-Black, sans-serif',
         secondaryBold: 'Lexend-Bold, sans-serif',
         secondaryLight: 'Lexend-Light, sans-serif',

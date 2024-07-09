@@ -18,6 +18,14 @@ const GlobalStyles = createGlobalStyle`
             src: url('../../assets/fonts/Harmonia/HarmoniaSansProCyr-SemiBd.ttf') format('truetype');
         }
         @font-face {
+            font-family: 'Lexend-Regular';
+            src: url('../../assets/fonts/Lexend/Lexend-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Lexend-Medium';
+            src: url('../../assets/fonts/Lexend/Lexend-Medium.ttf') format('truetype');
+        }
+        @font-face {
             font-family: 'Lexend-Black';
             src: url('../../assets/fonts/Lexend/Lexend-Black.ttf') format('truetype');
         }
