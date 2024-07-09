@@ -1,6 +1,7 @@
 {
   "name": "carnivale",
   "version": "0.1.0",
+  "homepage": "https://leora26.github.io/CarnivaleFront/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
