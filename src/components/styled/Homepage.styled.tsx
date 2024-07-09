@@ -1,6 +1,5 @@
 import {styled} from "styled-components";
 import {Link} from "react-router-dom";
-import theme from "./theme";
 
 export const HomepageStyled = styled.main`
     width: 90%;
@@ -25,6 +24,14 @@ export const BackPicture = styled.img`
     width: 100%;
     position: absolute;
     z-index: 1;
+`
+
+export const BackVideo = styled.video`
+    border-radius: 2rem;
+    width: 80%;
+    margin: 5% auto;
+    display: flex;
+    align-self: center;
 `
 
 interface HomePageSectionStyledProps {
@@ -65,10 +72,9 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
     
     & span{
-        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-        
-        //font-family: ${({ theme }) => theme.fonts.secondaryRegular};
-        font-family: "Lexend", sans-serif;
+        font-family: ${({ theme }) => theme.fonts.secondaryRegular};
+        //font-family: "Lexend", sans-serif;
+        text-transform: uppercase;
         font-size: 2rem;
         color: black;
         margin-right: auto;

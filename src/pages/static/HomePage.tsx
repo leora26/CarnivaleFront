@@ -3,7 +3,7 @@ import {
     HomepageStyled,
     HomePageSectionStyled,
     TextOverlay,
-    WorkWithLink
+    WorkWithLink, BackVideo
 } from "../../components/styled/Homepage.styled";
 import CategoryCard from "../../components/styled/CategoryCard";
 import HeroPicture from "../../assets/pictures/hero.png";
@@ -15,6 +15,7 @@ import {ScrollingText} from "../../components/ScrollingText";
 import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
+import HomePageVideo from "../../assets/videos/homepage-video.mp4"
 
 
 const HomePage = () => {
@@ -23,7 +24,8 @@ const HomePage = () => {
             <HomepageStyled>
 
                 {/*first section*/}
-                <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh" tabletVerticalSectionHeight="30vh" direction="column">
+                <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"
+                                       tabletVerticalSectionHeight="30vh" direction="column">
                     <BackPicture src={HeroPicture} alt="Hero picture"/>
                     <TextOverlay>
                         <h1>CARNIVALE</h1>
@@ -46,14 +48,14 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="column">
-                    <span>WE WORK WITH</span>
+                    <span>We work with</span>
                     <WorkWithLink to="/professionals">professionals</WorkWithLink>
                     <WorkWithLink to="/companies">companies</WorkWithLink>
                     <WorkWithLink to="/enthusiasts">enthusiasts</WorkWithLink>
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="row">
-                   <h2>what do we have?</h2>
+                    <h2>what do we have?</h2>
                     <CategoryCard to="/beef">
                         <img src={BeefCategory} alt="Beef category link"/>
                         <h3>beef</h3>
@@ -94,6 +96,9 @@ const HomePage = () => {
             </HomepageStyled>
             <ScrollingText direction="left"/>
             <ScrollingText direction="right"/>
+
+
+            <BackVideo src={HomePageVideo} autoPlay loop muted />
 
         </>
     )
