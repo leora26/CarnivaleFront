@@ -5,9 +5,10 @@ import AllProducts from "../models/AllProducts";
 import ProductCard from "./ProductCard";
 import {Container, ProductsContainer} from "./styled/ProductSection.styled";
 import IconButton from "./styled/IconButton";
+import theme from "./styled/theme";
 
 const ProductSection: React.FC = () => {
-    const initialVisibleProducts = 4; // Initial number of visible products
+    const initialVisibleProducts = 4;
     const [visibleIndex, setVisibleIndex] = useState<number>(0); // Index of the first visible product
 
     const data: AllProducts[] = [
@@ -64,7 +65,15 @@ const ProductSection: React.FC = () => {
     const visibleProducts = data.slice(visibleIndex, visibleIndex + initialVisibleProducts);
 
     const handleNext = () => {
-        if (visibleIndex + 3 < data.length) {
+        let visibleElements: number;
+        if(window.innerWidth <= 1024){
+            visibleElements = 1
+        }else if(window.innerWidth <= 1400){
+            visibleElements = 2
+        } else {
+            visibleElements = 3
+        }
+        if (visibleIndex + visibleElements < data.length) {
             setVisibleIndex((prevIndex) => prevIndex + 1);
         }
     };
@@ -81,17 +90,17 @@ const ProductSection: React.FC = () => {
                 <h2>for everyday use</h2>
                 <Container id="buttonContainer" direction="row" containerHeight="100%" containerWidth="10%">
                     <IconButton
-                        buttonHeight="70px"
-                        buttonWidth="70px"
-                        iconHeight="70px"
-                        iconWidth="70px"
+                        buttonHeight={70}
+                        buttonWidth={70}
+                        iconHeight={70}
+                        iconWidth={70}
                         onClick={handlePrev}
                     ><IoArrowBackSharp className="iconProductSection"/></IconButton>
                     <IconButton
-                        buttonHeight="70px"
-                        buttonWidth="70px"
-                        iconHeight="70px"
-                        iconWidth="70px"
+                        buttonHeight={70}
+                        buttonWidth={70}
+                        iconHeight={70}
+                        iconWidth={70}
                         onClick={handleNext}><IoArrowForward className="iconProductSection"/></IconButton>
                 </Container>
             </Container>

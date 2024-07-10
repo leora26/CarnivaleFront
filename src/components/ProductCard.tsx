@@ -9,17 +9,17 @@ import IconButton from "./styled/IconButton";
 const ProductCard: React.FC<{ product: AllProducts}> = (props) => {
     return (
         <ProductCardStyled>
-            <img src={props.product.url} alt="Product picture"/>
+            <img src={props.product.url} alt="Product"/>
             <h3>{props.product.name}</h3>
             <span>{props.product.quantity} {props.product.unit}</span>
 
             <Container>
                 <h4>€{props.product.price}</h4>
                 <IconButton
-                    buttonHeight="60px"
-                    buttonWidth="60px"
-                    iconHeight="40px"
-                    iconWidth="40px"
+                    buttonHeight={60}
+                    buttonWidth={60}
+                    iconHeight={40}
+                    iconWidth={40}
                 ><AiOutlinePlus className="iconProductCard" /></IconButton>
             </Container>
         </ProductCardStyled>

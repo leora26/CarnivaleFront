@@ -25,37 +25,18 @@ export const Container = styled.div<ContainerProps>`
         width: 100%;
         margin: 0;
         font-size: 5rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            width: 60%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 60%;
+            font-size: 3rem;
+        }
     }
     
-    & button {
-        border: none;
-        padding: 0;
-        margin: 0;
-        color: black;
-        background-color: #fff;
-        width: 70px;
-        height: 70px;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:hover {
-            background-color: black;
-        }
-
-        &:hover .iconProductSection {
-            color: white;
-        }
-
-        & .iconProductSection {
-            width: 70px;
-            height: 70px;
-            border: 1px solid #BEBEBE;
-            border-radius: 50%;
-            color: #BEBEBE;
-            transition: color 0.3s, background-color 0.3s;
-        }
+    
         
     }
 `
@@ -66,4 +47,12 @@ export const ProductsContainer = styled.div`
     flex-direction: column;
     height: 80vh;
     margin: 5% 0 5% auto;
+
+    // @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+    //     height: 60vh;
+    // }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        height: 60vh;
+    }
 `
