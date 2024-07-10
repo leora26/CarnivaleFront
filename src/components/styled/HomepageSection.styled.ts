@@ -38,7 +38,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         }
     }
     
-    & span{
+    & #workWithSpan{
         font-family: ${({ theme }) => theme.fonts.secondaryRegular};
         //font-family: "Lexend", sans-serif;
         text-transform: uppercase;
@@ -60,5 +60,9 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         margin-bottom: 0;
         height: ${(props) => props.tabletVerticalSectionHeight || '40vh'};
+    }
+
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
+        height: 100vh;
     }
 `

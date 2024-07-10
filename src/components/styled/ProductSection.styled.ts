@@ -30,6 +30,10 @@ export const Container = styled.div<ContainerProps>`
             width: 60%;
         }
 
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            font-size: 4.5rem;
+        }
+
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             width: 60%;
             font-size: 3rem;
@@ -48,9 +52,9 @@ export const ProductsContainer = styled.div`
     height: 80vh;
     margin: 5% 0 5% auto;
 
-    // @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-    //     height: 60vh;
-    // }
+     @media (max-width: ${({theme}) => theme.display.laptop}) {
+         height: 100vh;
+     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         height: 60vh;

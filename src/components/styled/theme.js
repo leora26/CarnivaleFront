@@ -17,6 +17,7 @@ const theme = {
         mobile: "756px",
         tabletVertical: "1024px",
         tabletHorizontal: "1400px",
+        laptop: "1600px"
     }
 
 }

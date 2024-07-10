@@ -4,7 +4,6 @@ const GlobalStyles = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        //@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
         @font-face {
             font-family: 'HarmoniaSansProCyr-Black';

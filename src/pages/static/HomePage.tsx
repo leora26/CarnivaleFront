@@ -51,7 +51,7 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="column">
-                    <span>We work with</span>
+                    <span id="workWithSpan">We work with</span>
                     <WorkWithLink to="/professionals">professionals</WorkWithLink>
                     <WorkWithLink to="/companies">companies</WorkWithLink>
                     <WorkWithLink to="/enthusiasts">enthusiasts</WorkWithLink>

@@ -18,6 +18,10 @@ export const HomepageStyled = styled.main`
     
     #first-section{
         margin-top: 10%;
+
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            margin-top: 2%;
+        }
     }
 `
 
@@ -103,6 +107,10 @@ export const TextOverlay = styled.div`
         font-family: ${({ theme }) => theme.fonts.secondaryRegular};
         font-weight: lighter;
         margin: 0 auto;
+
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            width: 65%;
+        }
     }
 
     & h2{

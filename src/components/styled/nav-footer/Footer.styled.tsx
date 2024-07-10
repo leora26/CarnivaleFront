@@ -25,6 +25,10 @@ export const FooterStyled = styled.footer`
             font-size: 10em;
         }
 
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            font-size: 12em;
+        }
+
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 7rem;
         }
