@@ -5,7 +5,6 @@ import AllProducts from "../models/AllProducts";
 import ProductCard from "./ProductCard";
 import {Container, ProductsContainer} from "./styled/ProductSection.styled";
 import IconButton from "./styled/IconButton";
-import theme from "./styled/theme";
 
 const ProductSection: React.FC = () => {
     const initialVisibleProducts = 4;
