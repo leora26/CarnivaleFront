@@ -1,21 +1,24 @@
+import React from "react";
 import {
     BackPicture,
     HomepageStyled,
-    HomePageSectionStyled,
     TextOverlay,
     WorkWithLink, BackVideo
 } from "../../components/styled/Homepage.styled";
+import {HomePageSectionStyled} from "../../components/styled/HomepageSection.styled";
 import CategoryCard from "../../components/styled/CategoryCard";
+
+import LatestStories from "../../components/LatestStories";
+import {ScrollingText} from "../../components/ScrollingText";
+
 import HeroPicture from "../../assets/pictures/hero.png";
 import Hero2Picture from "../../assets/pictures/hero2.png";
 import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
-import LatestStories from "../../components/LatestStories";
-import React from "react";
-import {ScrollingText} from "../../components/ScrollingText";
 import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
+import ProductSection from "../../components/ProductSection";
 
 
 const HomePage = () => {
@@ -89,7 +92,9 @@ const HomePage = () => {
                         <h3>FOR YOU BIG COMPANIES</h3>
                     </TextOverlay>
                 </HomePageSectionStyled>
-
+            </HomepageStyled>
+            <ProductSection/>
+            <HomepageStyled>
                 <h4>LATEST STORIES</h4>
                 <LatestStories/>
 
@@ -98,7 +103,7 @@ const HomePage = () => {
             <ScrollingText direction="right"/>
 
 
-            <BackVideo src={HomePageVideo} autoPlay loop muted />
+            <BackVideo src={HomePageVideo} autoPlay loop muted/>
 
         </>
     )
