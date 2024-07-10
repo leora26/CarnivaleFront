@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/CarnivaleFront/static/css/main.e6c13ad2.css",
-    "main.js": "/CarnivaleFront/static/js/main.d4eb2c98.js",
+    "main.js": "/CarnivaleFront/static/js/main.e6abe529.js",
     "static/media/homepage-video.mp4": "/CarnivaleFront/static/media/homepage-video.135598b0204530873ab8.mp4",
     "static/media/hero.png": "/CarnivaleFront/static/media/hero.e4af71d2a42e3010de09.png",
     "static/media/category-poultry.png": "/CarnivaleFront/static/media/category-poultry.fa688523609afbd2b931.png",
     "static/media/hero2.png": "/CarnivaleFront/static/media/hero2.080d8ff0fe3d20b3da1a.png",
     "static/media/homepage-boxes.png": "/CarnivaleFront/static/media/homepage-boxes.fae1f8fbd46ac4fe428b.png",
+    "static/media/product-section.png": "/CarnivaleFront/static/media/product-section.1b1efc249a397f5874ae.png",
     "static/media/category-beef.png": "/CarnivaleFront/static/media/category-beef.ad0710b97b698f31ab81.png",
     "static/media/category-dairy.png": "/CarnivaleFront/static/media/category-dairy.b82e43aa6d71d778946a.png",
     "static/media/carnivale-logo.png": "/CarnivaleFront/static/media/carnivale-logo.02195d79d750e1e62507.png",
@@ -14,10 +15,10 @@
     "static/media/get-in-touch1.png": "/CarnivaleFront/static/media/get-in-touch1.3ae56c74ef823f040ae7.png",
     "index.html": "/CarnivaleFront/index.html",
     "main.e6c13ad2.css.map": "/CarnivaleFront/static/css/main.e6c13ad2.css.map",
-    "main.d4eb2c98.js.map": "/CarnivaleFront/static/js/main.d4eb2c98.js.map"
+    "main.e6abe529.js.map": "/CarnivaleFront/static/js/main.e6abe529.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.d4eb2c98.js"
+    "static/js/main.e6abe529.js"
   ]
 }
