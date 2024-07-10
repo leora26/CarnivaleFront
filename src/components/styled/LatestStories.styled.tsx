@@ -2,7 +2,7 @@ import {styled} from "styled-components";
 
 
 export const LatestStoriesStyled = styled.section`
-    width: 95vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

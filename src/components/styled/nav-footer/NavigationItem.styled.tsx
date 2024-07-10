@@ -8,5 +8,14 @@ export const NavigationItemStyled = styled(Link)`
     font-family: ${({ theme }) => theme.fonts.primaryBold};
     font-family: ${({ theme }) => theme.fonts.secondaryBlack};
     margin-right: 1%;
+    
+    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+        font-size: 1rem;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        font-size: 1rem;
+    }
+    
 
 `

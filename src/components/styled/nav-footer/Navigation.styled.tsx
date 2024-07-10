@@ -1,6 +1,10 @@
 import {styled} from "styled-components";
 
-export const NavigationStyled = styled.div`
+interface NavigationStyledProperties {
+    visible: boolean;
+}
+
+export const NavigationStyled = styled.div<NavigationStyledProperties>`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +12,12 @@ export const NavigationStyled = styled.div`
     height: 10vh;
     margin: 0 auto;
     background-color: white;
-    position: sticky;
+    position: fixed;
+    top: ${({ visible }) => (visible ? '0' : '-10vh')}; /* Adjust position based on visibility */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out; /* Smooth transition effect */
 `
 
 export const Container = styled.div`
@@ -21,6 +30,10 @@ export const Container = styled.div`
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         width: 40%;
     }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 50%;
+    }
 `;
 
 export const Logo = styled.img`
@@ -28,5 +41,9 @@ export const Logo = styled.img`
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         width: 15%;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        margin-left: 10%;
     }
 `

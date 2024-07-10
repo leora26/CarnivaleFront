@@ -14,8 +14,10 @@ export const HomepageStyled = styled.main`
         margin-bottom: 2% ;
         align-self: flex-end;
         font-family: ${({ theme }) => theme.fonts.primaryBold};
-
-
+    }
+    
+    #first-section{
+        margin-top: 10%;
     }
 `
 
@@ -28,7 +30,7 @@ export const BackPicture = styled.img`
 
 export const BackVideo = styled.video`
     border-radius: 2rem;
-    width: 80%;
+    width: 90%;
     margin: 5% auto;
     display: flex;
     align-self: center;

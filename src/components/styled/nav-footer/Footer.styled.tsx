@@ -22,11 +22,11 @@ export const FooterStyled = styled.footer`
 
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            font-size: 8em;
+            font-size: 10em;
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 6rem;
+            font-size: 7rem;
         }
     }
 `

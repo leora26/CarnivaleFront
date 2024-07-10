@@ -25,7 +25,7 @@ const HomePage = () => {
 
                 {/*first section*/}
                 <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh" direction="column">
+                                       tabletVerticalSectionHeight="30vh" direction="column" id="first-section">
                     <BackPicture src={HeroPicture} alt="Hero picture"/>
                     <TextOverlay>
                         <h1>CARNIVALE</h1>
