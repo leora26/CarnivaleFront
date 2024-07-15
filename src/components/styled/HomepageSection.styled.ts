@@ -19,7 +19,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     justify-content: center;
     margin-bottom: 10%;
     
-    & h2 {
+    & #whatDoWeHave {
         font-size: 8rem;
         width: 20%;
         height: 100%;

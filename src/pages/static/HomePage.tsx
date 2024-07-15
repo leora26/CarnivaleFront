@@ -2,14 +2,15 @@ import React from "react";
 import {
     BackPicture,
     HomepageStyled,
-    TextOverlay,
     WorkWithLink, BackVideo
 } from "../../components/styled/Homepage.styled";
+import TextOverlay from "../../components/styled/TextOverlay";
 import {HomePageSectionStyled} from "../../components/styled/HomepageSection.styled";
 import CategoryCard from "../../components/styled/CategoryCard";
 
 import LatestStories from "../../components/LatestStories";
 import {ScrollingText} from "../../components/ScrollingText";
+import ProductSection from "../../components/ProductSection";
 
 import HeroPicture from "../../assets/pictures/hero.png";
 import Hero2Picture from "../../assets/pictures/hero2.png";
@@ -18,7 +19,7 @@ import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
-import ProductSection from "../../components/ProductSection";
+import BookingPicture from "../../assets/pictures/homepage-booking.jpg"
 
 
 const HomePage = () => {
@@ -58,7 +59,7 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="row">
-                    <h2>what do we have?</h2>
+                    <h2 id="whatDoWeHave">what do we have?</h2>
                     <CategoryCard to="/beef">
                         <img src={BeefCategory} alt="Beef category link"/>
                         <h3>beef</h3>
@@ -95,6 +96,15 @@ const HomePage = () => {
             </HomepageStyled>
             <ProductSection/>
             <HomepageStyled>
+                {/*<HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"*/}
+                {/*                       tabletVerticalSectionHeight="30vh" direction="column">*/}
+                {/*    <BackPicture src={BookingPicture} alt="Booking picture"/>*/}
+                {/*    <TextOverlay>*/}
+                {/*        <h1 id="booking-heading">BOOK AN EVENT WITH US</h1>*/}
+                {/*        <input type="date"/>*/}
+                {/*    </TextOverlay>*/}
+                {/*</HomePageSectionStyled>*/}
+
                 <h4>LATEST STORIES</h4>
                 <LatestStories/>
 
