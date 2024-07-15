@@ -19,7 +19,6 @@ import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
-import BookingPicture from "../../assets/pictures/homepage-booking.jpg"
 
 
 const HomePage = () => {
