@@ -32,6 +32,20 @@ jobs:
           name: production-files
           path: ./build
 
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Tests
+        uses: actions/test@v3
+        with:
+          test-script: npm test
+
+
+
 # TODO: Doesn't work with githib pages
 #  deploy:
 #    needs: build
