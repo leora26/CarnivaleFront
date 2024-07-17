@@ -38,6 +38,11 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
             font-size: 4rem;
             width: 25%;
         }
+
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            font-size: 7rem;
+            width: 25%;
+        }
     }
 
     & #workWithSpan {
