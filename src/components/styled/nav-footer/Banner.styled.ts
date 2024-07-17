@@ -1,5 +1,4 @@
 import {styled} from "styled-components";
-import theme from "../theme";
 
 const BannerStyled = styled.div`
     text-decoration: none;
