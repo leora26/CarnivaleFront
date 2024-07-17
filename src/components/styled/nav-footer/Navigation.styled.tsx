@@ -11,6 +11,10 @@ export const NavigationStyled = styled.div<NavigationStyledProperties>`
     width: 90%;
     height: 10vh;
     margin: 0 auto;
+    
+`
+
+export const NavigationContainer = styled.div<NavigationStyledProperties>`
     background-color: white;
     position: fixed;
     top: ${({ visible }) => (visible ? '0' : '-10vh')}; /* Adjust position based on visibility */

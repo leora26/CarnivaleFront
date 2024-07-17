@@ -18,18 +18,20 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
-    
+
     & #whatDoWeHave {
         font-size: 8rem;
         width: 20%;
-        height: 100%;
-        margin:  0 8%  8% 0;
+        height: 95%;
+        margin: 0 8% 8% 0;
         text-transform: uppercase;
         letter-spacing: -2px;
+        border-bottom: 1rem solid #FFDD5A;
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             font-size: 5rem;
             width: 25%;
+            height: 50%;
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
@@ -37,9 +39,9 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
             width: 25%;
         }
     }
-    
-    & #workWithSpan{
-        font-family: ${({ theme }) => theme.fonts.secondaryRegular};
+
+    & #workWithSpan {
+        font-family: ${({theme}) => theme.fonts.secondaryRegular};
         //font-family: "Lexend", sans-serif;
         text-transform: uppercase;
         font-size: 2rem;
@@ -53,13 +55,14 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        margin-bottom: 0;
-        height: ${(props) => props.tabletHorizontalSectionHeight || '80vh'};
+        //margin-bottom: 0 !important;
+        height: ${(props) => props.tabletHorizontalSectionHeight || '70vh'} !important;
+
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         margin-bottom: 0;
-        height: ${(props) => props.tabletVerticalSectionHeight || '40vh'};
+        height: ${(props) => props.tabletVerticalSectionHeight || '40vh'} !important;
     }
 
     @media (max-width: ${({theme}) => theme.display.laptop}) {

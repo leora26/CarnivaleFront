@@ -56,6 +56,13 @@ const TextOverlay = styled.div`
         font-weight: lighter;
         margin: 0 auto;
 
+        & b{
+            background-color: #FFDD5A;
+            color: black;
+            padding: 0 0.5rem 0 0.5rem;
+            line-height: 3rem;
+        }
+
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             width: 65%;
         }

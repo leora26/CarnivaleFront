@@ -19,6 +19,7 @@ import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
+import GetInTouch from "../../components/GetInTouch";
 
 
 const HomePage = () => {
@@ -108,8 +109,12 @@ const HomePage = () => {
                 <LatestStories/>
 
             </HomepageStyled>
-            <ScrollingText direction="left"/>
-            <ScrollingText direction="right"/>
+            <ScrollingText direction="left" backgroundColor="white">
+                <GetInTouch/>
+            </ScrollingText>
+            <ScrollingText direction="right" backgroundColor="white">
+                <GetInTouch/>
+            </ScrollingText>
 
 
             <BackVideo src={HomePageVideo} autoPlay loop muted/>

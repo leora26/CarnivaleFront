@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 import {Link} from "react-router-dom";
 
 interface ScrollingTextWrapperProps {
-    to: string;
+    backgroundColor: string
 }
 
 interface ScrollingTextContentProps {
@@ -14,8 +14,8 @@ export const ScrollingTextWrapper = styled(Link)<ScrollingTextWrapperProps>`
     max-width: 100%;
     text-decoration: none;
     color: inherit;
-    overflow-x: hidden; 
-
+    overflow-x: hidden;
+    background-color: ${({backgroundColor}) => backgroundColor};
 `;
 
 export const scrollAnimation = keyframes`

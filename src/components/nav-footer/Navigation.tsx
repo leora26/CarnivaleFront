@@ -1,8 +1,10 @@
 import {NavigationItemStyled} from "../styled/nav-footer/NavigationItem.styled";
 import React, {useCallback, useEffect, useState} from "react";
-import {Container, NavigationStyled, Logo} from "../styled/nav-footer/Navigation.styled";
+import {Container, NavigationStyled, Logo, NavigationContainer} from "../styled/nav-footer/Navigation.styled";
 import LogoPicture from "../../assets/pictures/carnivale-logo.png"
 import NavigationIcons from "./NavigationIcons";
+import {ScrollingText} from "../ScrollingText";
+import Banner from "./Banner";
 
 const Navigation: React.FC = () => {
     const [visible, setVisible] = useState<boolean>(true);
@@ -25,20 +27,26 @@ const Navigation: React.FC = () => {
 
 
     return (
-        <NavigationStyled visible={visible}>
-            <Container>
-                <NavigationItemStyled color='black' to="/wholesale">WHOLESALE</NavigationItemStyled>
-                <NavigationItemStyled color='black' to="/shop">SHOP</NavigationItemStyled>
-                <NavigationItemStyled color='black' to="/corporate">CORPORATE</NavigationItemStyled>
-                <NavigationItemStyled color='black' to="/stories">STORIES</NavigationItemStyled>
-            </Container>
+        <NavigationContainer visible={visible}>
+            <ScrollingText direction="left" backgroundColor="#FFE272">
+                <Banner />
+            </ScrollingText>
+            <NavigationStyled visible={visible}>
+                <Container>
+                    <NavigationItemStyled color='black' to="/wholesale">WHOLESALE</NavigationItemStyled>
+                    <NavigationItemStyled color='black' to="/shop">SHOP</NavigationItemStyled>
+                    <NavigationItemStyled color='black' to="/corporate">CORPORATE</NavigationItemStyled>
+                    <NavigationItemStyled color='black' to="/stories">STORIES</NavigationItemStyled>
+                </Container>
 
-            <Logo src={LogoPicture} alt="Logo"/>
+                <Logo src={LogoPicture} alt="Logo"/>
 
-            <Container>
-                <NavigationIcons/>
-            </Container>
-        </NavigationStyled>
+                <Container>
+                    <NavigationIcons/>
+                </Container>
+            </NavigationStyled>
+        </NavigationContainer>
+
     )
 }
 
