@@ -14,7 +14,8 @@ const theme = {
         secondaryLight: 'Lexend-Light, sans-serif',
     },
     display: {
-        mobile: "756px",
+        smallTabletVertical: "820px",
+        smallTabletHorizontal: "1200px",
         tabletVertical: "1024px",
         tabletHorizontal: "1400px",
         laptop: "1600px"

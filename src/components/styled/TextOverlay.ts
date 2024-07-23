@@ -22,6 +22,10 @@ const TextOverlay = styled.div`
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 6em;        
         }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 4em;
+        }
     }
     
     & #booking-heading{
@@ -42,6 +46,10 @@ const TextOverlay = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             width: 30%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            width: 40%;
         }
     }
     

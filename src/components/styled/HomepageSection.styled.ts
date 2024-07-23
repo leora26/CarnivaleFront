@@ -28,21 +28,33 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         letter-spacing: -2px;
         border-bottom: 1rem solid #FFDD5A;
 
-        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            font-size: 5rem;
-            width: 25%;
-            height: 50%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 4rem;
-            width: 25%;
-        }
-
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             font-size: 7rem;
             width: 25%;
         }
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            font-size: 7rem;
+            width: 25%;
+            height: 90%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 7rem;
+            width: 50%;
+        }
+
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            font-size: 6rem;
+            width: 25%;
+            height: 90%;
+        }
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 4rem;
+            width: 25%;
+            height: 80%;
+        }
+
     }
 
     & #workWithSpan {
@@ -70,7 +82,12 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         height: ${(props) => props.tabletVerticalSectionHeight || '40vh'} !important;
     }
 
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        margin-bottom: 5%;
+        height: 40vh !important;
+    }
+
     @media (max-width: ${({theme}) => theme.display.laptop}) {
-        height: 100vh;
+        height: 50vh;
     }
 `

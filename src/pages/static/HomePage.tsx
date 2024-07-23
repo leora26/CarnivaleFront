@@ -20,9 +20,16 @@ import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
 import GetInTouch from "../../components/GetInTouch";
+import ChangingText from "../../components/ChangingText";
+import {ChangingTextContainer} from "../../components/styled/ChangingText.styled";
 
 
 const HomePage = () => {
+    const weSeekForText: string[] = ["FARMERS", "PRODUCERS", "HEROES", "PROTAGONISTS", "PEOPLE WITH IMPACT"];
+    const offerText: string[] = ["CHEF", "ENTHUSIASTS", "HOMECHEFS", "YOU"];
+    const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
+    const ingredientsText: string[] = ["identity", "taste", "happiness", "impact", "personality", "satisfaction ", "transparency", "value"];
+
     return (
         <>
             <HomepageStyled>
@@ -104,6 +111,16 @@ const HomePage = () => {
                 {/*        <input type="date"/>*/}
                 {/*    </TextOverlay>*/}
                 {/*</HomePageSectionStyled>*/}
+
+                <HomePageSectionStyled direction="column" sectionHeight="70vh" tabletHorizontalSectionHeight="60vh"
+                                       tabletVerticalSectionHeight="30vh">
+                    <ChangingTextContainer>
+                        <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
+                        <ChangingText staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
+                        <ChangingText staticText="AIMING FOR" dynamicText={aimingForText}/>
+                        <ChangingText staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
+                    </ChangingTextContainer>
+                </HomePageSectionStyled>
 
                 <h4>LATEST STORIES</h4>
                 <LatestStories/>

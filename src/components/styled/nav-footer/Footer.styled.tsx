@@ -11,7 +11,7 @@ export const FooterStyled = styled.footer`
     border-top-right-radius: 1rem;
 
 
-    & h1{
+    & h1 {
         color: black;
         font-size: 16em;
         letter-spacing: 2rem;
@@ -19,20 +19,24 @@ export const FooterStyled = styled.footer`
         width: 95%;
         font-family: ${({ theme }) => theme.fonts.primaryBold};
         font-weight: bold;
-
-
-        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            font-size: 10em;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.laptop}) {
+        
+        @media (max-width: ${({ theme }) => theme.display.laptop}) {
             font-size: 12em;
         }
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        @media (max-width: ${({ theme }) => theme.display.tabletHorizontal}) {
+            font-size: 10em;
+        }
+        @media (max-width: ${({ theme }) => theme.display.smallTabletHorizontal}) {
+            font-size: 8em;
+        }
+        @media (max-width: ${({ theme }) => theme.display.tabletVertical}) {
             font-size: 7rem;
         }
+        @media (max-width: ${({ theme }) => theme.display.smallTabletVertical}) {
+            font-size: 5rem;
+        }
     }
+
 `
 
 export const Container = styled.div`
@@ -84,6 +88,10 @@ export const FooterNavigationContainer = styled.div`
     justify-content: space-around;
     width: 20%;
     align-items: center;
+
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        width: 40%;
+    }
 `
 
 export const FooterForm = styled.form`
