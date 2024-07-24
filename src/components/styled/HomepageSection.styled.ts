@@ -88,6 +88,6 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
 
     @media (max-width: ${({theme}) => theme.display.laptop}) {
-        height: 50vh;
+        height: 100vh;
     }
 `

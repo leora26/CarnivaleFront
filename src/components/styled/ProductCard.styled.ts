@@ -15,6 +15,8 @@ export const ProductCardStyled = styled.div`
         margin: 5% 0 0 0 ;
         text-transform: uppercase;
     }
+    
+    
 `
 
 export const Container = styled.div`

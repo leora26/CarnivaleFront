@@ -69,7 +69,7 @@ const ProductSection: React.FC = () => {
         let visibleElements: number;
         if (window.innerWidth <= 1024) {
             visibleElements = 1;
-        } else if (window.innerWidth <= 1400) {
+        } else if (window.innerWidth <= 1600) {
             visibleElements = 2;
         } else {
             visibleElements = 3;

@@ -8,19 +8,19 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
     display: flex;
-    flex-direction: ${({direction }) => direction};
+    flex-direction: ${({direction}) => direction};
     width: ${({containerWidth}) => containerWidth};
     height: ${({containerHeight}) => containerHeight};
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    
-    & #buttonContainer{
+
+    & #buttonContainer {
         margin-right: 5%;
     }
 
 
-    & h2{
+    & h2 {
         text-transform: uppercase;
         width: 100%;
         margin: 0;
@@ -45,12 +45,10 @@ export const Container = styled.div<ContainerProps>`
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 3rem;
         }
-        
+
     }
-    
-    
-        
-    }
+
+}
 `
 
 export const ProductsContainer = styled.div`
@@ -61,7 +59,7 @@ export const ProductsContainer = styled.div`
     margin: 5% 0 5% auto;
 
      @media (max-width: ${({theme}) => theme.display.laptop}) {
-         height: 60vh;
+         height: 100vh;
      }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
