@@ -2,7 +2,7 @@ import React from "react";
 import {
     BackPicture,
     HomepageStyled,
-    WorkWithLink, BackVideo
+    BackVideo
 } from "../../components/styled/Homepage.styled";
 import TextOverlay from "../../components/styled/TextOverlay";
 import {HomePageSectionStyled} from "../../components/styled/HomepageSection.styled";
@@ -22,6 +22,7 @@ import HomePageVideo from "../../assets/videos/homepage-video.mp4"
 import GetInTouch from "../../components/GetInTouch";
 import ChangingText from "../../components/ChangingText";
 import {ChangingTextContainer} from "../../components/styled/ChangingText.styled";
+import WeWorkWithLink from "../../components/WeWorkWithLink";
 
 
 const HomePage = () => {
@@ -60,9 +61,9 @@ const HomePage = () => {
 
                 <HomePageSectionStyled direction="column">
                     <span id="workWithSpan">We work with</span>
-                    <WorkWithLink to="/professionals">professionals</WorkWithLink>
-                    <WorkWithLink to="/companies">companies</WorkWithLink>
-                    <WorkWithLink to="/enthusiasts">enthusiasts</WorkWithLink>
+                    <WeWorkWithLink link="/professionals">professionals</WeWorkWithLink>
+                    <WeWorkWithLink link="/companies">companies</WeWorkWithLink>
+                    <WeWorkWithLink link="/enthusiasts">enthusiasts</WeWorkWithLink>
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="row">

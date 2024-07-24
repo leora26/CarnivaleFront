@@ -86,7 +86,7 @@ const ProductSection: React.FC = () => {
     return (
         <ProductsContainer>
             <Container direction="row" containerHeight="10%" containerWidth="100%">
-                <h2>for everyday use</h2>
+                <h2>Webshop for homes</h2>
                 <Container id="buttonContainer" direction="row" containerHeight="100%" containerWidth="10%">
                     <IconButton
                         buttonHeight={70}

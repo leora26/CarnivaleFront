@@ -46,24 +46,6 @@ export const BackVideo = styled.video`
 `
 
 
-export const WorkWithLink = styled(Link)`
-    color: black;
-    font-size: 8rem;
-    text-transform: uppercase;
-    border-bottom: 3px solid black;
-    width: 100%;
-    text-align: start;
-    text-decoration: none;
-    padding-bottom: 1.8rem;
-    margin-bottom: 2rem;
-    font-family: ${({ theme }) => theme.fonts.primarySemiBold};
-
-    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        font-size: 5rem;
-    }
-`
-
-
 
 
 

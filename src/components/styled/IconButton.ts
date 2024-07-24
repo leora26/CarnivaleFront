@@ -1,4 +1,5 @@
 import {styled} from "styled-components";
+import {motion} from "framer-motion";
 
 interface IconButtonProps {
     buttonWidth: number;
@@ -7,7 +8,7 @@ interface IconButtonProps {
     iconHeight: number;
 }
 
-const IconButton = styled.button<IconButtonProps>`
+const IconButton = styled(motion.button)<IconButtonProps>`
     border: none;
     padding: 0;
     margin: 0;
