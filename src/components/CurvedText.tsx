@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CurvedText: React.FC<{ text: string }> = ({ text }) => {
+const CurvedText: React.FC<{ text: string, color: string }> = ({ text, color }) => {
     let fontSize = 20;
     let letterSpacing = 8;
     let viewBox = "0 0 100 200"
@@ -21,7 +21,7 @@ const CurvedText: React.FC<{ text: string }> = ({ text }) => {
                     fill="none"
                 />
             </defs>
-            <text width="200" fontSize={fontSize} fill="white" letterSpacing={letterSpacing}>
+            <text width="200" fontSize={fontSize} fill={color} letterSpacing={letterSpacing}>
                 <textPath href="#curve">{text}</textPath>
             </text>
         </svg>

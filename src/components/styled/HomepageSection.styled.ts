@@ -74,13 +74,12 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        //margin-bottom: 0 !important;
         height: ${(props) => props.tabletHorizontalSectionHeight || '70vh'};
 
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        margin-bottom: 0;
+        margin-bottom: 10%;
         height: ${(props) => props.tabletVerticalSectionHeight || '40vh'};
     }
 

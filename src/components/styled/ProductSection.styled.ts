@@ -44,9 +44,7 @@ export const Container = styled.div<ContainerProps>`
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 2rem;
         }
-
     }
-
 }
 `
 

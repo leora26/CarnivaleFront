@@ -26,6 +26,7 @@ import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
 import CurvedText from "../../components/CurvedText";
+import CurvedTextV2 from "../../components/CurvedTextV2";
 
 
 const HomePage = () => {
@@ -33,8 +34,6 @@ const HomePage = () => {
     const offerText: string[] = ["CHEF", "ENTHUSIASTS", "HOMECHEFS", "YOU"];
     const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
     const ingredientsText: string[] = ["identity", "taste", "happiness", "impact", "personality", "satisfaction ", "transparency", "value"];
-
-
 
     return (
         <>
@@ -52,8 +51,8 @@ const HomePage = () => {
                         </p>
                     </TextOverlay>
                     <ExploreArrow>
-                        <CurvedText text="Connect with us"/>
-                       <IoArrowForward />
+                        <CurvedText text="Connect with us" color="white"/>
+                        <IoArrowForward />
                     </ExploreArrow>
                 </HomePageSectionStyled>
 
@@ -94,7 +93,14 @@ const HomePage = () => {
                     </CategoryCard>
 
                     <CategoryCard to="/beef">
-                        <img src={PoultryCategory} alt="Beef category link"/>
+                        <CurvedTextV2
+                            text="See all we have See all we have"
+                            color="#DC3618"
+                            fontSize="1.4rem"
+                            width={180}
+                            height={180}
+                        />
+                        <img src={PoultryCategory} alt="Poutry category link"/>
                         <h3>poultry</h3>
                         <p>
                             Free range is no joke
