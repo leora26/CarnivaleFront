@@ -91,7 +91,7 @@ const ProductSection: React.FC = () => {
         <ProductsContainer>
             <Container direction="row" containerHeight="10%" containerWidth="100%">
                 <h2>Webshop for homes</h2>
-                <Container id="buttonContainer" direction="row" containerHeight="100%" containerWidth="10%">
+                <Container id="buttonContainer" direction="row" containerHeight="100%" containerWidth="14%">
                     <IconButton
                         buttonHeight={70}
                         buttonWidth={70}

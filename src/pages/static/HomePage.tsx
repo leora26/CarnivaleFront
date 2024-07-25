@@ -2,15 +2,21 @@ import React from "react";
 import {
     BackPicture,
     HomepageStyled,
-    BackVideo
+    BackVideo, ExploreArrow
 } from "../../components/styled/Homepage.styled";
 import TextOverlay from "../../components/styled/TextOverlay";
 import {HomePageSectionStyled} from "../../components/styled/HomepageSection.styled";
 import CategoryCard from "../../components/styled/CategoryCard";
+import {ChangingTextContainer} from "../../components/styled/ChangingText.styled";
+import { IoArrowForward } from "react-icons/io5";
 
 import LatestStories from "../../components/LatestStories";
 import {ScrollingText} from "../../components/ScrollingText";
 import ProductSection from "../../components/ProductSection";
+import GetInTouch from "../../components/GetInTouch";
+import ChangingText from "../../components/ChangingText";
+import WeWorkWithLink from "../../components/WeWorkWithLink";
+
 
 import HeroPicture from "../../assets/pictures/hero.png";
 import Hero2Picture from "../../assets/pictures/hero2.png";
@@ -19,10 +25,7 @@ import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
-import GetInTouch from "../../components/GetInTouch";
-import ChangingText from "../../components/ChangingText";
-import {ChangingTextContainer} from "../../components/styled/ChangingText.styled";
-import WeWorkWithLink from "../../components/WeWorkWithLink";
+import CurvedText from "../../components/CurvedText";
 
 
 const HomePage = () => {
@@ -30,6 +33,8 @@ const HomePage = () => {
     const offerText: string[] = ["CHEF", "ENTHUSIASTS", "HOMECHEFS", "YOU"];
     const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
     const ingredientsText: string[] = ["identity", "taste", "happiness", "impact", "personality", "satisfaction ", "transparency", "value"];
+
+
 
     return (
         <>
@@ -46,6 +51,10 @@ const HomePage = () => {
                             pure, distinctive, bursting with taste and value.
                         </p>
                     </TextOverlay>
+                    <ExploreArrow>
+                        <CurvedText text="Connect with us"/>
+                       <IoArrowForward />
+                    </ExploreArrow>
                 </HomePageSectionStyled>
 
                 {/*second section*/}

@@ -37,6 +37,11 @@ const IconButton = styled(motion.button)<IconButtonProps>`
         color: #BEBEBE;
         transition: color 0.3s, background-color 0.3s;
 
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            width: ${({iconWidth}) => iconWidth / 1.2}px;
+            height: ${({iconHeight}) => iconHeight / 1.2}px;
+        }
+        
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             width: ${({iconWidth}) => iconWidth / 1.3}px;
             height: ${({iconHeight}) => iconHeight / 1.3}px;
@@ -47,10 +52,15 @@ const IconButton = styled(motion.button)<IconButtonProps>`
             height: ${({iconHeight}) => iconHeight / 1.5}px;
         }
 
-        @media (max-width: ${({theme}) => theme.display.laptop}) {
-            width: ${({iconWidth}) => iconWidth / 1.2}px;
-            height: ${({iconHeight}) => iconHeight / 1.2}px;
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            width: ${({iconWidth}) => iconWidth / 1.7}px;
+            height: ${({iconHeight}) => iconHeight / 1.7}px;
         }
+
+    }
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
+        width: ${({buttonWidth}) => buttonWidth / 1.2}px;
+        height: ${({buttonHeight}) => buttonHeight / 1.2}px;
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
@@ -63,10 +73,6 @@ const IconButton = styled(motion.button)<IconButtonProps>`
         height: ${({buttonHeight}) => buttonHeight / 1.5}px;
     }
 
-    @media (max-width: ${({theme}) => theme.display.laptop}) {
-        width: ${({buttonWidth}) => buttonWidth / 1.2}px;
-        height: ${({buttonHeight}) => buttonHeight / 1.2}px;
-    }
 `
 
 export default IconButton;

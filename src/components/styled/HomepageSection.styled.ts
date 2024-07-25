@@ -59,7 +59,6 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
 
     & #workWithSpan {
         font-family: ${({theme}) => theme.fonts.secondaryRegular};
-        //font-family: "Lexend", sans-serif;
         text-transform: uppercase;
         font-size: 2rem;
         color: black;
@@ -70,24 +69,25 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
             font-size: 1.5rem;
         }
     }
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
+        height: 100vh;
+    }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         //margin-bottom: 0 !important;
-        height: ${(props) => props.tabletHorizontalSectionHeight || '70vh'} !important;
+        height: ${(props) => props.tabletHorizontalSectionHeight || '70vh'};
 
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         margin-bottom: 0;
-        height: ${(props) => props.tabletVerticalSectionHeight || '40vh'} !important;
+        height: ${(props) => props.tabletVerticalSectionHeight || '40vh'};
     }
 
     @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
         margin-bottom: 5%;
-        height: 40vh !important;
+        height: 40vh;
     }
 
-    @media (max-width: ${({theme}) => theme.display.laptop}) {
-        height: 100vh;
-    }
+    
 `

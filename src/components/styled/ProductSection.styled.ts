@@ -30,12 +30,11 @@ export const Container = styled.div<ContainerProps>`
             font-size: 4.5rem;
         }
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            width: 60%;
+            width: 80%;
         }
-
-
+        
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            width: 60%;
+            width: 80%;
             font-size: 3rem;
         }
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
@@ -43,7 +42,7 @@ export const Container = styled.div<ContainerProps>`
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
     }
