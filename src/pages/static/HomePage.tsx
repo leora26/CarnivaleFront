@@ -42,7 +42,17 @@ const HomePage = () => {
                 {/*first section*/}
                 <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"
                                        tabletVerticalSectionHeight="30vh" direction="column" id="first-section">
-                    <BackPicture src={HeroPicture} alt="Hero picture"/>
+                    <svg width="90vw" height="60vh" viewBox="0 0 1320 474" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <clipPath id="clipShape">
+                                <path
+                                    d="M24 0C10.7452 0 0 10.7452 0 24V450C0 463.255 10.7451 474 24 474H1148.9C1167.73 474 1179.95 447.75 1176.46 429.239C1175.5 424.14 1175 418.879 1175 413.5C1175 366.832 1212.83 329 1259.5 329C1264.88 329 1270.14 329.503 1275.24 330.463C1293.75 333.95 1320 321.733 1320 302.897V24C1320 10.7452 1309.25 0 1296 0H24ZM1320 413.5C1320 380.087 1292.91 353 1259.5 353C1226.09 353 1199 380.087 1199 413.5C1199 446.913 1226.09 474 1259.5 474C1292.91 474 1320 446.913 1320 413.5Z"/>
+                            </clipPath>
+                        </defs>
+                        <image href={HeroPicture} width="100%" height="100%" clipPath="url(#clipShape)"
+                               preserveAspectRatio="xMidYMid slice"/>
+                    </svg>
+
                     <TextOverlay>
                         <h1>CARNIVALE</h1>
                         <p>
@@ -52,9 +62,10 @@ const HomePage = () => {
                     </TextOverlay>
                     <ExploreArrow>
                         <CurvedText text="Connect with us" color="white"/>
-                        <IoArrowForward />
+                        <IoArrowForward id="heroSectionArrow"/>
                     </ExploreArrow>
                 </HomePageSectionStyled>
+
 
                 {/*second section*/}
                 <HomePageSectionStyled direction="column">
@@ -97,8 +108,8 @@ const HomePage = () => {
                             text="See all we have See all we have"
                             color="#DC3618"
                             fontSize="1.4rem"
-                            width={180}
-                            height={180}
+                            width={200}
+                            height={200}
                         />
                         <img src={PoultryCategory} alt="Poutry category link"/>
                         <h3>poultry</h3>

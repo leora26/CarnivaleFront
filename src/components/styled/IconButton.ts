@@ -6,6 +6,8 @@ interface IconButtonProps {
     buttonHeight: number;
     iconWidth: number;
     iconHeight: number;
+    borderSize: string;
+    borderColor: string;
 }
 
 const IconButton = styled(motion.button)<IconButtonProps>`
@@ -21,21 +23,21 @@ const IconButton = styled(motion.button)<IconButtonProps>`
     justify-content: center;
     align-items: center;
 
-    &:hover {
-        background-color: black;
-    }
-
     &:hover .iconProductSection {
         color: white;
     }
 
     & .iconProductSection {
-        width: ${({iconWidth}) => iconWidth}px;
-        height: ${({iconHeight}) => iconHeight}px;
-        border: 1px solid #BEBEBE;
-        border-radius: 50%;
         color: #BEBEBE;
         transition: color 0.3s, background-color 0.3s;
+    }
+    
+    & :first-child{
+        width: ${({iconWidth}) => iconWidth}px;
+        height: ${({iconHeight}) => iconHeight}px;
+        border-radius: 50%;
+        border: ${({borderSize}) => borderSize} solid ${({borderColor}) => borderColor};
+
 
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             width: ${({iconWidth}) => iconWidth / 1.2}px;
@@ -56,7 +58,6 @@ const IconButton = styled(motion.button)<IconButtonProps>`
             width: ${({iconWidth}) => iconWidth / 1.7}px;
             height: ${({iconHeight}) => iconHeight / 1.7}px;
         }
-
     }
     @media (max-width: ${({theme}) => theme.display.laptop}) {
         width: ${({buttonWidth}) => buttonWidth / 1.2}px;

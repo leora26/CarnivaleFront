@@ -10,21 +10,28 @@ interface CurvedTextProps {
     height: number;
 }
 
-interface CurvedTextStyledProps{
-    top: string,
-    right: string
-}
-
-const CurvedTextStyled = styled.div<CurvedTextStyledProps>`
+const CurvedTextStyled = styled.div`
     position: absolute;
-    right: ${({right}) => right};
-    top: ${({top}) => top};
+    top: -10%;
+    right: 0;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        width: 7rem;
+        height: 7rem;
+    }
 `
 
 const CurvedTextComponent: React.FC<CurvedTextProps> = (props) => {
@@ -34,10 +41,8 @@ const CurvedTextComponent: React.FC<CurvedTextProps> = (props) => {
     let height = props.height;
     let rx = 75;
     let ry = 75;
-    let top = "-10%"
-    let right = "0";
-    let cx = 90;
-    let cy = 90;
+    let cx = 85;
+    let cy = 75;
     if(windowSize <= 1600 && windowSize > 1400){
         fontSize = "1.3rem"
         width = 190;
@@ -66,15 +71,13 @@ const CurvedTextComponent: React.FC<CurvedTextProps> = (props) => {
         rx = 40;
         ry = 40;
         cx = 50;
-        cy = 50;
+        cy = 60;
 
     }
 
 
     return (
-        <CurvedTextStyled
-        top={top}
-        right={right}>
+        <CurvedTextStyled>
             <ReactCurvedText
                 text={props.text}
                 width={width}

@@ -16,6 +16,9 @@ const ProductCard: React.FC<{ product: AllProducts}> = (props) => {
             <Container>
                 <h4>€{props.product.price}</h4>
                 <IconButton
+                    className="productSectionIconButton"
+                    borderColor="black"
+                    borderSize="1px"
                     buttonHeight={60}
                     buttonWidth={60}
                     iconHeight={40}

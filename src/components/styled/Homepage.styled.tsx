@@ -33,7 +33,7 @@ export const BackPicture = styled.img`
     border-radius: 2rem;
     width: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 `
 
 export const BackVideo = styled.video`
@@ -46,74 +46,99 @@ export const BackVideo = styled.video`
 
 export const ExploreArrow = styled.div`
     position: absolute;
-    z-index: 2;
-    bottom: 0;
-    right: 0;
+    z-index: 4;
+    bottom: 5%;
+    right: -1%;
+    width: 10rem;
+    height: 10rem;
     display: flex;
 
-    & :first-child {
-        margin-right: -8rem;
-        margin-top: -3rem;
+    & #curvedTextV1 {
+        width: 15rem;
+        height: 15rem;
+        margin-left: -7rem;
+        margin-top: -5rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            width: 10rem;
+            height: 10rem;
+            margin-left: -2rem;
+            margin-top: -3rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            width: 8rem;
+            height: 8rem;
+            margin-left: 0;
+            margin-top: -1rem;
+        }
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 8rem;
+            height: 8rem;
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            margin-right: -8rem;
-            margin-top: -3rem;
+            width: 8rem;
+            height: 8rem;
+            margin-left: -0.5rem;
+            margin-top: -2rem;
         }
     }
 
-    & :last-child {
+    & #heroSectionArrow {
         color: white;
         width: 8rem;
         height: 8rem;
-        margin-right: -2rem;
-        margin-bottom: -1.8rem;
-
-        border: 2.5rem solid white;
-        border-radius: 50%;
         
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             margin-right: -2rem;
             margin-bottom: 0;
         }
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            border: 2rem solid white;
-            margin-right: -2rem;
-            margin-bottom: -1rem;
+            bottom: 40%;
+            right: 35%;
+            width: 6rem;
+            height: 6rem;
+        }
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            width: 5rem;
+            height: 5rem;
+            bottom: 25%;
+            right: 30%;
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            width: 6rem;
-            height: 6rem;
-            border: 2rem solid white;
-            margin-right: -2rem;
+            bottom: 15%;
+            right: 30%;
         }
 
 
-        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             width: 4rem;
             height: 4rem;
-            border: 1.8rem solid white;
-            margin-right: -1rem;
-            margin-bottom: -2rem;
+            bottom: 50%;
+            right: 25%;
         }
 
     }
 
-    @media (max-width: ${({theme}) => theme.display.laptop}) {
-        bottom: 8%;
-    }
-
-    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        bottom: 0;
-    }
-
-    @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-        bottom: -5%;
-    }
-
-    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-        bottom: 10%;
-    }
+    // @media (max-width: ${({theme}) => theme.display.laptop}) {
+    //     bottom: 8%;
+    // }
+    //
+    // @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+    //     bottom: 0;
+    // }
+    //
+    // @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+    //     bottom: -5%;
+    // }
+    //
+    // @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+    //     bottom: 10%;
+    // }
 
 `
 

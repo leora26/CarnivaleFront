@@ -93,6 +93,9 @@ const ProductSection: React.FC = () => {
                 <h2>Webshop for homes</h2>
                 <Container id="buttonContainer" direction="row" containerHeight="100%" containerWidth="14%">
                     <IconButton
+                        className="productSectionIconButton"
+                        borderColor="#BEBEBE"
+                        borderSize="1px"
                         buttonHeight={70}
                         buttonWidth={70}
                         iconHeight={70}
@@ -102,6 +105,9 @@ const ProductSection: React.FC = () => {
                         <IoArrowBackSharp className="iconProductSection" />
                     </IconButton>
                     <IconButton
+                        className="productSectionIconButton"
+                        borderColor="#BEBEBE"
+                        borderSize="1px"
                         buttonHeight={70}
                         buttonWidth={70}
                         iconHeight={70}

@@ -18,6 +18,11 @@ export const Container = styled.div<ContainerProps>`
     & #buttonContainer {
         margin-right: 5%;
     }
+    
+    & .productSectionIconButton:hover{
+        background-color: black;
+        
+    }
 
 
     & h2 {

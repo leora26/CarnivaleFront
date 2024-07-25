@@ -25,6 +25,8 @@ const WeWorkWithLink: React.FC<WeWorkWithLinkProps> = (props) => {
             <Link to={props.link}>{props.children}</Link>
             {isHovered && (
                 <IconButton
+                    borderColor="black"
+                    borderSize="3px"
                     initial={{ rotate: -60}}
                     animate={{ rotate: 0}}
                     transition={{ duration: 1, type: "spring", bounce: 0.5 }}
@@ -33,7 +35,7 @@ const WeWorkWithLink: React.FC<WeWorkWithLinkProps> = (props) => {
                     iconHeight={120}
                     iconWidth={120}
                 >
-                    <IoArrowForward className="iconProductSection" />
+                    <IoArrowForward/>
                 </IconButton>
             )}
         </WeWorkWithLinkStyled>
