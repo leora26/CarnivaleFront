@@ -10,6 +10,11 @@ const CurvedText: React.FC<{ text: string, color: string }> = ({ text, color }) 
         letterSpacing = 3;
         viewBox = "0 25 100 200"
         d = "M 50,150 A 100,100 0 0,1 250,150"
+    } else if(window.innerWidth <= 1600){
+        fontSize = 15
+        letterSpacing = 5;
+        viewBox = "0 0 200 200"
+        d = "M 50,150 A 100,100 0 0,1 300,100"
     }
 
     return (

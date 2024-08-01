@@ -18,13 +18,32 @@ export const HomepageStyled = styled.main`
     
     #first-section{
         margin-top: 10%;
+        height: 80vh;
+        
+        &:hover{
+            & *{
+                color: #FFDD5A;
+            }
+        }
 
-        // @media (max-width: ${({theme}) => theme.display.laptop}) {
-        //     margin-top: 2%;
-        // }
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            height: 60vh;
 
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            height: 60vh;
+
+        }
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            height: 35vh;
             margin-top: 20%;
+        }
+
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            height: 35vh;
+
         }
     }
 `
@@ -53,11 +72,15 @@ export const ExploreArrow = styled.div`
     height: 10rem;
     display: flex;
 
-    & #curvedTextV1 {
+    & :first-child {
         width: 15rem;
         height: 15rem;
         margin-left: -7rem;
         margin-top: -5rem;
+
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            margin-top: -3rem;
+        }
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             width: 10rem;
@@ -65,25 +88,25 @@ export const ExploreArrow = styled.div`
             margin-left: -2rem;
             margin-top: -3rem;
         }
-
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-            width: 8rem;
-            height: 8rem;
-            margin-left: 0;
+            width: 10rem;
+            height: 10rem;
+            margin-left: -1rem;
             margin-top: -1rem;
         }
+
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             width: 8rem;
             height: 8rem;
-            margin-left: 1rem;
-            margin-top: 1rem;
+            margin-left: -1rem;
+            margin-top: -1rem;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             width: 8rem;
             height: 8rem;
-            margin-left: -0.5rem;
-            margin-top: -2rem;
+            margin-left: 1rem;
+            margin-top: 0;
         }
     }
 
@@ -93,12 +116,12 @@ export const ExploreArrow = styled.div`
         height: 8rem;
         
         @media (max-width: ${({theme}) => theme.display.laptop}) {
-            margin-right: -2rem;
-            margin-bottom: 0;
+            right: 10%;
+            bottom: 0;
         }
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             bottom: 40%;
-            right: 35%;
+            right: 15%;
             width: 6rem;
             height: 6rem;
         }
@@ -106,40 +129,28 @@ export const ExploreArrow = styled.div`
             width: 5rem;
             height: 5rem;
             bottom: 25%;
-            right: 30%;
+            right: 15%;
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            bottom: 15%;
-            right: 30%;
+            bottom: 35%;
+            right: 10%;
         }
 
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             width: 4rem;
             height: 4rem;
-            bottom: 50%;
-            right: 25%;
+            bottom: 35%;
+            right: 5%;
         }
 
     }
+`
 
-    // @media (max-width: ${({theme}) => theme.display.laptop}) {
-    //     bottom: 8%;
-    // }
-    //
-    // @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-    //     bottom: 0;
-    // }
-    //
-    // @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-    //     bottom: -5%;
-    // }
-    //
-    // @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-    //     bottom: 10%;
-    // }
-
+export const GetInTouchContainer = styled.div`
+    width: 100%;
+    margin-bottom: 20vh;
 `
 
 

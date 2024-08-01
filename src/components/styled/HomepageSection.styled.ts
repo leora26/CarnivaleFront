@@ -38,17 +38,17 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
             height: 90%;
         }
 
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            font-size: 6rem;
+            width: 25%;
+            height: 90%;
+        }
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 7rem;
             width: 50%;
         }
 
 
-        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-            font-size: 6rem;
-            width: 25%;
-            height: 90%;
-        }
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 4rem;
             width: 25%;

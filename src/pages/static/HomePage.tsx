@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import {
     BackPicture,
     HomepageStyled,
-    BackVideo, ExploreArrow
+    BackVideo, ExploreArrow, GetInTouchContainer
 } from "../../components/styled/Homepage.styled";
 import TextOverlay from "../../components/styled/TextOverlay";
 import {HomePageSectionStyled} from "../../components/styled/HomepageSection.styled";
 import CategoryCard from "../../components/styled/CategoryCard";
 import {ChangingTextContainer} from "../../components/styled/ChangingText.styled";
-import { IoArrowForward } from "react-icons/io5";
+import {IoArrowForward} from "react-icons/io5";
 
 import LatestStories from "../../components/LatestStories";
 import {ScrollingText} from "../../components/ScrollingText";
@@ -35,13 +35,24 @@ const HomePage = () => {
     const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
     const ingredientsText: string[] = ["identity", "taste", "happiness", "impact", "personality", "satisfaction ", "transparency", "value"];
 
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
     return (
         <>
             <HomepageStyled>
 
                 {/*first section*/}
                 <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh" direction="column" id="first-section">
+                                       tabletVerticalSectionHeight="30vh" direction="column" id="first-section"
+                                       onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <svg width="90vw" height="60vh" viewBox="0 0 1320 474" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <clipPath id="clipShape">
@@ -61,21 +72,22 @@ const HomePage = () => {
                         </p>
                     </TextOverlay>
                     <ExploreArrow>
-                        <CurvedText text="Connect with us" color="white"/>
+                        <CurvedText text="Connect with us" color={isHovered ? "#FFDD5A" : "white"}/>
                         <IoArrowForward id="heroSectionArrow"/>
                     </ExploreArrow>
                 </HomePageSectionStyled>
 
 
                 {/*second section*/}
-                <HomePageSectionStyled direction="column">
-                    <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>
-                    <TextOverlay>
-                    <span>
-                        Pure products with lots of identity and impact,
-                        both in <b>  taste and meaning.</b>
-                    </span>
-                    </TextOverlay>
+
+                <HomePageSectionStyled direction="column" sectionHeight="70vh" tabletHorizontalSectionHeight="60vh"
+                                       tabletVerticalSectionHeight="30vh">
+                    <ChangingTextContainer>
+                        <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
+                        <ChangingText staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
+                        <ChangingText staticText="AIMING FOR" dynamicText={aimingForText}/>
+                        <ChangingText staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
+                    </ChangingTextContainer>
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="column">
@@ -139,27 +151,31 @@ const HomePage = () => {
                 {/*    </TextOverlay>*/}
                 {/*</HomePageSectionStyled>*/}
 
-                <HomePageSectionStyled direction="column" sectionHeight="70vh" tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh">
-                    <ChangingTextContainer>
-                        <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
-                        <ChangingText staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
-                        <ChangingText staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
-                    </ChangingTextContainer>
-                </HomePageSectionStyled>
-
                 <h4>LATEST STORIES</h4>
                 <LatestStories/>
 
             </HomepageStyled>
-            <ScrollingText direction="left" backgroundColor="white">
-                <GetInTouch/>
-            </ScrollingText>
-            <ScrollingText direction="right" backgroundColor="white">
-                <GetInTouch/>
-            </ScrollingText>
+            <GetInTouchContainer>
+                <ScrollingText direction="left" backgroundColor="white">
+                    <GetInTouch/>
+                </ScrollingText>
+                <ScrollingText direction="right" backgroundColor="white">
+                    <GetInTouch/>
+                </ScrollingText>
+            </GetInTouchContainer>
 
+
+            <HomepageStyled>
+                <HomePageSectionStyled direction="column">
+                    <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>
+                    <TextOverlay>
+                    <span>
+                        Pure products with lots of identity and impact,
+                        both in <b>  taste and meaning.</b>
+                    </span>
+                    </TextOverlay>
+                </HomePageSectionStyled>
+            </HomepageStyled>
 
             <BackVideo src={HomePageVideo} autoPlay loop muted/>
 

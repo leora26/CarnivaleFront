@@ -27,8 +27,8 @@ const WeWorkWithLink: React.FC<WeWorkWithLinkProps> = (props) => {
                 <IconButton
                     borderColor="black"
                     borderSize="3px"
-                    initial={{ rotate: -60}}
-                    animate={{ rotate: 0}}
+                    initial={{ rotate: 0}}
+                    animate={{ rotate: -50}}
                     transition={{ duration: 1, type: "spring", bounce: 0.5 }}
                     buttonHeight={120}
                     buttonWidth={120}
