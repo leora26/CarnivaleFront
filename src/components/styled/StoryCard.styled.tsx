@@ -3,7 +3,8 @@ import {styled} from "styled-components";
 export const StoryCardStyled = styled.div`
     & h2{
         font-size: 2rem;
-        font-family: ${({ theme }) => theme.fonts.secondaryBold};
+        font-family: "Lexend", sans-serif;
+        font-weight: 700;
         margin-bottom: 1rem;
 
     }
@@ -11,7 +12,8 @@ export const StoryCardStyled = styled.div`
     & p {
         font-size: 1.4rem;
         width: 85%;
-        font-family: ${({ theme }) => theme.fonts.secondaryRegular};
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;        
         margin: 0;
 
     }

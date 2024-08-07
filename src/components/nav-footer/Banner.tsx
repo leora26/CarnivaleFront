@@ -3,35 +3,32 @@ import BannerStyled from "../styled/nav-footer/Banner.styled";
 const Banner = () => {
     return (
         <BannerStyled>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
-            <span>F*CK COLA ZERO</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
+                <p>HAPPINESS IS AN OLD AND FAT COW</p>
+                <span>*</span>
         </BannerStyled>
     )
 }

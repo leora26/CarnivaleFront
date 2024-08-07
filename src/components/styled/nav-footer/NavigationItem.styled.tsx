@@ -1,12 +1,16 @@
 import {styled} from "styled-components";
 import {Link} from "react-router-dom";
 
-export const NavigationItemStyled = styled(Link)`
+interface NavigationItemProps {
+    fontWeight: number
+}
+
+export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
     font-size: 1.2rem;
     color: ${({color}) => color};
     text-decoration: none;
-    font-family: ${({ theme }) => theme.fonts.primaryBold};
-    font-family: ${({ theme }) => theme.fonts.secondaryBlack};
+    font-family: "Lexend", sans-serif;
+    font-weight: ${({fontWeight}) => fontWeight};
     margin-right: 1%;
     
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {

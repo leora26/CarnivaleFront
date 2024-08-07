@@ -29,14 +29,16 @@ const Navigation: React.FC = () => {
     return (
         <NavigationContainer visible={visible}>
             <ScrollingText direction="left" backgroundColor="#FFE272">
-                <Banner />
+                <Banner/>
             </ScrollingText>
             <NavigationStyled visible={visible}>
                 <Container>
-                    <NavigationItemStyled color='black' to="/wholesale">WHOLESALE</NavigationItemStyled>
-                    <NavigationItemStyled color='black' to="/shop">SHOP</NavigationItemStyled>
-                    <NavigationItemStyled color='black' to="/corporate">CORPORATE</NavigationItemStyled>
-                    <NavigationItemStyled color='black' to="/stories">STORIES</NavigationItemStyled>
+                    <NavigationItemStyled fontWeight={600} color='black'
+                                          to="/wholesale">WHOLESALE</NavigationItemStyled>
+                    <NavigationItemStyled fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
+                    <NavigationItemStyled fontWeight={600} color='black'
+                                          to="/corporate">CORPORATE</NavigationItemStyled>
+                    <NavigationItemStyled fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
                 </Container>
 
                 <Logo src={LogoPicture} alt="Logo"/>

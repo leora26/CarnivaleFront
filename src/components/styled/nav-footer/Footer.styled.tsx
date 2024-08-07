@@ -105,8 +105,8 @@ export const FooterForm = styled.form`
         color: black;
         font-size: 1.4rem;
         margin-bottom: 1rem;
-        font-family: ${({ theme }) => theme.fonts.secondaryBold};
-        font-weight: bolder;
+        font-family: "Lexend", sans-serif;
+        font-weight: 600;
     }
 `
 
@@ -119,7 +119,8 @@ export const FooterNavigation = styled.div`
         font-size: 1.2rem;
         color: black;
         margin-bottom: 2rem;
-        font-family: ${({ theme }) => theme.fonts.secondaryBold};
+        font-family: "Lexend", sans-serif;
+        font-weight: 600;
     }
     
 `
@@ -127,7 +128,8 @@ export const FooterNavigation = styled.div`
 export const ParagraphStyled = styled.p`
     color: black;
     font-size: 1.2rem;
-    font-family: ${({ theme }) => theme.fonts.secondaryBlack};
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;    
     margin-right: 1%;
 `
 

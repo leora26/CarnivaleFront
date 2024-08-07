@@ -24,7 +24,8 @@ export const ChangingTextStyled = styled.div`
     & h5{
         text-transform: uppercase;
         font-size: 1.5rem;
-        font-family: ${({theme}) => theme.fonts.secondaryMedium};
+        font-family: "Lexend", sans-serif;
+        font-weight: 500;
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             font-size: 1.2rem;
@@ -43,7 +44,8 @@ export const ChangingTextStyled = styled.div`
         text-transform: uppercase;
         font-size: 3rem;
         margin: 0 0 0 5%;
-        font-family: ${({theme}) => theme.fonts.secondaryMedium};
+        font-family: "Lexend", sans-serif;
+        font-weight: 500;
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             font-size: 2.5rem;

@@ -27,6 +27,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         text-transform: uppercase;
         letter-spacing: -2px;
         border-bottom: 1rem solid #FFDD5A;
+        
 
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             font-size: 7rem;
@@ -58,7 +59,8 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
 
     & #workWithSpan {
-        font-family: ${({theme}) => theme.fonts.secondaryRegular};
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;
         text-transform: uppercase;
         font-size: 2rem;
         color: black;

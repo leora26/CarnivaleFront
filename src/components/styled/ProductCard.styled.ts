@@ -14,7 +14,15 @@ export const ProductCardStyled = styled.div`
     & h3{
         margin: 5% 0 0 0 ;
         text-transform: uppercase;
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;
     }
+    
+    & span {
+        font-family: "Lexend", sans-serif;
+        font-weight: 300;
+    }
+    
     
     
 `

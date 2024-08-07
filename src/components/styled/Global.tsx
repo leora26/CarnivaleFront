@@ -5,7 +5,6 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-    
     @font-face {
         font-family: 'HarmoniaSansProCyr-Black';
         src: url('../../assets/fonts/Harmonia/HarmoniaSansProCyr-Black.ttf') format('truetype');

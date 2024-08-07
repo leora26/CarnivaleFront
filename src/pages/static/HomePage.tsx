@@ -19,7 +19,6 @@ import WeWorkWithLink from "../../components/WeWorkWithLink";
 
 
 import HeroPicture from "../../assets/pictures/hero.png";
-import Hero2Picture from "../../assets/pictures/hero2.png";
 import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
 import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
@@ -154,6 +153,14 @@ const HomePage = () => {
                 <h4>LATEST STORIES</h4>
                 <LatestStories/>
 
+                <HomePageSectionStyled>
+                    <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
+                    <TextOverlay>
+                        <h2>PROVISIONS</h2>
+                        <h3>For your company</h3>
+                    </TextOverlay>
+                </HomePageSectionStyled>
+
             </HomepageStyled>
             <GetInTouchContainer>
                 <ScrollingText direction="left" backgroundColor="white">
@@ -165,17 +172,17 @@ const HomePage = () => {
             </GetInTouchContainer>
 
 
-            <HomepageStyled>
-                <HomePageSectionStyled direction="column">
-                    <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>
-                    <TextOverlay>
-                    <span>
-                        Pure products with lots of identity and impact,
-                        both in <b>  taste and meaning.</b>
-                    </span>
-                    </TextOverlay>
-                </HomePageSectionStyled>
-            </HomepageStyled>
+            {/*<HomepageStyled>*/}
+            {/*    <HomePageSectionStyled direction="column">*/}
+            {/*        <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>*/}
+            {/*        <TextOverlay>*/}
+            {/*        <span>*/}
+            {/*            Pure products with lots of identity and impact,*/}
+            {/*            both in <b>  taste and meaning.</b>*/}
+            {/*        </span>*/}
+            {/*        </TextOverlay>*/}
+            {/*    </HomePageSectionStyled>*/}
+            {/*</HomepageStyled>*/}
 
             <BackVideo src={HomePageVideo} autoPlay loop muted/>
 

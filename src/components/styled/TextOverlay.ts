@@ -41,8 +41,8 @@ const TextOverlay = styled.div`
         margin-left: 32%;
         margin-top: 0;
         font-size: 1.4rem;
-        font-family: ${({ theme }) => theme.fonts.secondaryLight};
-        font-weight: lighter;
+        font-family: "Lexend", sans-serif;
+        font-weight: 300;
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             width: 30%;
@@ -91,8 +91,8 @@ const TextOverlay = styled.div`
         font-size: 2em;
         margin: 0 0 0 6%;
         align-self: flex-start;
-        font-family: ${({ theme }) => theme.fonts.secondaryLight};
-        font-weight: lighter;
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;
     }
     
     & input{
