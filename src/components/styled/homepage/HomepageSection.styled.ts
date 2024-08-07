@@ -1,7 +1,6 @@
 import {styled} from "styled-components";
 
 interface HomePageSectionStyledProps {
-    sectionHeight?: string;
     tabletHorizontalSectionHeight?: string;
     tabletVerticalSectionHeight?: string;
     direction?: 'column' | 'row';
@@ -10,7 +9,7 @@ interface HomePageSectionStyledProps {
 
 export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     width: 100%;
-    height: ${(props) => props.sectionHeight || '80vh'};
+    height: 80vh;
     border-radius: 2rem;
     position: relative;
     display: flex;
@@ -34,14 +33,11 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
             width: 25%;
         }
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            font-size: 7rem;
-            width: 25%;
             height: 90%;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             font-size: 6rem;
-            width: 25%;
             height: 90%;
         }
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {

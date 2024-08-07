@@ -1,6 +1,6 @@
 import { AiOutlineFacebook } from "react-icons/ai";
 import {FaInstagram} from "react-icons/fa"
-import {SocialIconsStyled} from "../styled/nav-footer/SocialIcons.styles";
+import {SocialIconsStyled} from "../styled/nav-footer/SocialIcons.styled";
 
 export default function SocialIcons(){
     return (

@@ -1,8 +1,9 @@
 import {render, screen} from "@testing-library/react";
-import ProductCard from "../components/ProductCard"
 import AllProducts from "../models/AllProducts";
 import {ThemeProvider} from "styled-components";
 import theme from "../components/styled/theme";
+import React from "react";
+import ProductCard from "../components/global/ProductCard";
 
 describe("ProductCard component", () => {
     test("should render product", () => {

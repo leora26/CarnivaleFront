@@ -1,6 +1,6 @@
 import React from "react";
-import AllStories from "../models/AllStories";
-import {StoryCardImage, StoryCardStyled} from "./styled/StoryCard.styled";
+import AllStories from "../../models/AllStories";
+import {StoryCardImage, StoryCardStyled} from "../styled/global/StoryCard.styled";
 
 const StoryCard: React.FC<{story: AllStories }> = (props) => {
     return (

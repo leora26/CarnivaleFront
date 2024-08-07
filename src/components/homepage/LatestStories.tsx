@@ -1,7 +1,7 @@
 import React from "react";
-import {LatestStoriesStyled} from "./styled/LatestStories.styled";
-import AllStories from "../models/AllStories";
-import StoryCard from "./StoryCard";
+import {LatestStoriesStyled} from "../styled/homepage/LatestStories.styled";
+import AllStories from "../../models/AllStories";
+import StoryCard from "../global/StoryCard";
 
 const LatestStories = () => {
     // const {data, loading, error} = useFetch<AllStories[]>("http://localhost:8080");

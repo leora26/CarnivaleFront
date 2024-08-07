@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { IoArrowBackSharp, IoArrowForward } from "react-icons/io5";
-import ProductPicture from "../assets/pictures/product-section.png";
-import AllProducts from "../models/AllProducts";
-import ProductCard from "./ProductCard";
-import { Container, ProductsContainer } from "./styled/ProductSection.styled";
-import IconButton from "./styled/IconButton";
+import ProductPicture from "../../assets/pictures/product-section.png";
+import AllProducts from "../../models/AllProducts";
+import { Container, ProductsContainer } from "../styled/homepage/ProductSection.styled";
+import IconButton from "../styled/global/IconButton";
 import { motion } from "framer-motion";
+import ProductCard from "../global/ProductCard";
 
 const ProductSection: React.FC = () => {
     const initialVisibleProducts = 4;

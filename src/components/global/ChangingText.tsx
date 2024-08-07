@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {ChangingTextStyled} from "./styled/ChangingText.styled";
+import {ChangingTextStyled} from "../styled/homepage/ChangingText.styled";
 
 interface ChangingTextProps {
     staticText: string;

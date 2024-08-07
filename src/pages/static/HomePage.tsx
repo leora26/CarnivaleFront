@@ -3,19 +3,19 @@ import {
     BackPicture,
     HomepageStyled,
     BackVideo, ExploreArrow, GetInTouchContainer
-} from "../../components/styled/Homepage.styled";
-import TextOverlay from "../../components/styled/TextOverlay";
-import {HomePageSectionStyled} from "../../components/styled/HomepageSection.styled";
-import CategoryCard from "../../components/styled/CategoryCard";
-import {ChangingTextContainer} from "../../components/styled/ChangingText.styled";
+} from "../../components/styled/homepage/Homepage.styled";
+import TextOverlay from "../../components/styled/global/TextOverlay";
+import {HomePageSectionStyled} from "../../components/styled/homepage/HomepageSection.styled";
+import CategoryCard from "../../components/styled/homepage/CategoryCard";
+import {ChangingTextContainer} from "../../components/styled/homepage/ChangingText.styled";
 import {IoArrowForward} from "react-icons/io5";
 
-import LatestStories from "../../components/LatestStories";
-import {ScrollingText} from "../../components/ScrollingText";
-import ProductSection from "../../components/ProductSection";
-import GetInTouch from "../../components/GetInTouch";
-import ChangingText from "../../components/ChangingText";
-import WeWorkWithLink from "../../components/WeWorkWithLink";
+import LatestStories from "../../components/homepage/LatestStories";
+import {ScrollingText} from "../../components/homepage/ScrollingText";
+import ProductSection from "../../components/homepage/ProductSection";
+import GetInTouch from "../../components/homepage/GetInTouch";
+import ChangingText from "../../components/global/ChangingText";
+import WeWorkWithLink from "../../components/homepage/WeWorkWithLink";
 
 
 import HeroPicture from "../../assets/pictures/hero.png";
@@ -24,8 +24,8 @@ import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
-import CurvedText from "../../components/CurvedText";
-import CurvedTextV2 from "../../components/CurvedTextV2";
+import CurvedText from "../../components/homepage/CurvedText";
+import CurvedTextV2 from "../../components/homepage/CurvedTextV2";
 
 
 const HomePage = () => {
@@ -48,8 +48,7 @@ const HomePage = () => {
         <>
             <HomepageStyled>
 
-                {/*first section*/}
-                <HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"
+                <HomePageSectionStyled tabletHorizontalSectionHeight="60vh"
                                        tabletVerticalSectionHeight="30vh" direction="column" id="first-section"
                                        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <svg width="90vw" height="60vh" viewBox="0 0 1320 474" xmlns="http://www.w3.org/2000/svg">
@@ -77,9 +76,7 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
 
-                {/*second section*/}
-
-                <HomePageSectionStyled direction="column" sectionHeight="70vh" tabletHorizontalSectionHeight="60vh"
+                <HomePageSectionStyled direction="column" tabletHorizontalSectionHeight="60vh"
                                        tabletVerticalSectionHeight="30vh">
                     <ChangingTextContainer>
                         <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
@@ -97,7 +94,7 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="row">
-                    <h2 id="whatDoWeHave">what do we have?</h2>
+                    <h2 id="whatDoWeHave">what do we offer?</h2>
                     <CategoryCard to="/beef">
                         <img src={BeefCategory} alt="Beef category link"/>
                         <h3>beef</h3>
@@ -130,7 +127,6 @@ const HomePage = () => {
                     </CategoryCard>
                 </HomePageSectionStyled>
 
-                {/*fourth section*/}
                 <HomePageSectionStyled direction="column">
                     <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
                     <TextOverlay>

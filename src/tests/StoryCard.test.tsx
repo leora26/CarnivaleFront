@@ -3,7 +3,7 @@ import {ThemeProvider} from "styled-components";
 import theme from "../components/styled/theme";
 import AllStories from "../models/AllStories";
 import MediaContent from "../models/MediaContent";
-import StoryCard from "../components/StoryCard";
+import StoryCard from "../components/global/StoryCard";
 
 describe("ProductCard component", () => {
     test("should render product", () => {

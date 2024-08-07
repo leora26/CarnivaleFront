@@ -7,7 +7,7 @@ import DefaultLayout from "./layout/DefaultLayout";
 import HomePage from "./pages/static/HomePage";
 import { ThemeProvider } from "styled-components";
 import theme from "./components/styled/theme";
-import GlobalStyles from "./components/styled/Global";
+import GlobalStyles from "./components/styled/global/Global";
 
 function App() {
     return (

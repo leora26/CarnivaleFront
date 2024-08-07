@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import WeWorkWithLinkStyled from "./styled/WeWorkWithLink.styled";
+import WeWorkWithLinkStyled from "../styled/homepage/WeWorkWithLink.styled";
 import { Link } from "react-router-dom";
 import { IoArrowForward } from "react-icons/io5";
-import IconButton from "./styled/IconButton";
+import IconButton from "../styled/global/IconButton";
 
 interface WeWorkWithLinkProps {
     link: string;

@@ -1,43 +1,26 @@
 import {styled} from "styled-components";
 
 export const ChangingTextStyled = styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     margin-left: 5%;
     align-items: center;
-
-    @media (max-width: ${({theme}) => theme.display.laptop}) {
-        width: 60%;
-    }
-
-    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        width: 60%;
-
-    }
-
-    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        width: 70%;
-
-    }
+    
     
     & h5{
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-family: "Lexend", sans-serif;
         font-weight: 500;
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
-
-        // @media (max-width: ${({theme}) => theme.display.laptop}) {
-        //     font-size: 7rem;
-        // }
     }
     
     & p{
@@ -52,7 +35,7 @@ export const ChangingTextStyled = styled.div`
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
         }
     }
 `

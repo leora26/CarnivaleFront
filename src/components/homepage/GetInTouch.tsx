@@ -1,6 +1,6 @@
-import GetInTouch1 from "../assets/pictures/get-in-touch1.png";
-import GetInTouch2 from "../assets/pictures/get-in-touch2.png";
-import GetInTouch3 from "../assets/pictures/get-in-touch3.png";
+import GetInTouch1 from "../../assets/pictures/get-in-touch1.png";
+import GetInTouch2 from "../../assets/pictures/get-in-touch2.png";
+import GetInTouch3 from "../../assets/pictures/get-in-touch3.png";
 
 const GetInTouch = () => {
     return (

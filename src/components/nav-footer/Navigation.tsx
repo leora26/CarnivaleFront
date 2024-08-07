@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useState} from "react";
 import {Container, NavigationStyled, Logo, NavigationContainer} from "../styled/nav-footer/Navigation.styled";
 import LogoPicture from "../../assets/pictures/carnivale-logo.png"
 import NavigationIcons from "./NavigationIcons";
-import {ScrollingText} from "../ScrollingText";
+import {ScrollingText} from "../homepage/ScrollingText";
 import Banner from "./Banner";
 
 const Navigation: React.FC = () => {

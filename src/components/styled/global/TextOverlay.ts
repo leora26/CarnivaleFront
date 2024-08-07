@@ -49,7 +49,6 @@ const TextOverlay = styled.div`
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            width: 30%;
             font-size: 1rem;
         }
     }

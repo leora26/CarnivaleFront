@@ -1,7 +1,7 @@
 import {
     ScrollingTextWrapper,
     ScrollingTextContent
-} from "./styled/ScrollingText.styled";
+} from "../styled/homepage/ScrollingText.styled";
 import React from "react";
 
 interface ScrollingTextProp {
