@@ -53,7 +53,7 @@ export const ContainerForm = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    
+
     & input {
         border: 2px solid black;
         border-radius: 19px;
@@ -61,7 +61,11 @@ export const ContainerForm = styled.div`
         padding: 0.7rem;
         width: 90%;
         color: black;
-        font-family: ${({ theme }) => theme.fonts.secondaryBlack};
+        font-family: ${({theme}) => theme.fonts.secondaryBlack};
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            width: 100%;
+        }
     }
 
     & button {
@@ -71,7 +75,7 @@ export const ContainerForm = styled.div`
         width: 30%;
         height: auto;
 
-        :first-child{
+        :first-child {
             color: black;
             width: 45%;
             height: 2.5rem;
@@ -79,6 +83,20 @@ export const ContainerForm = styled.div`
             border: 2px solid black;
             margin-top: 5px;
         }
+        
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            width: 50%;
+        }
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 90%;
+        }
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        width: 100%;
     }
 `
 
@@ -89,7 +107,7 @@ export const FooterNavigationContainer = styled.div`
     width: 20%;
     align-items: center;
 
-    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         width: 40%;
     }
 `
@@ -113,7 +131,7 @@ export const FooterForm = styled.form`
 export const FooterNavigation = styled.div`
     display: flex;
     flex-direction: column;
-    margin-right: 2rem;
+    margin-right: 20%;
     
     & span {
         font-size: 1.2rem;

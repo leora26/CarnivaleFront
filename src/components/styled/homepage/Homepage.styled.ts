@@ -61,6 +61,7 @@ export const BackVideo = styled.video`
     margin: 5% auto;
     display: flex;
     align-self: center;
+    
 `
 
 export const ExploreArrow = styled.div`
@@ -151,6 +152,10 @@ export const ExploreArrow = styled.div`
 export const GetInTouchContainer = styled.div`
     width: 100%;
     margin-bottom: 20vh;
+
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        margin-bottom: 10vh;
+    }
 `
 
 

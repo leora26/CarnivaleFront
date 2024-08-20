@@ -58,7 +58,7 @@ export const ProductsContainer = styled.div`
     display: flex;
     flex-direction: column;
     height: 80vh;
-    margin: 5% 0 5% auto;
+    margin: 5% 0 10% auto;
 
      @media (max-width: ${({theme}) => theme.display.laptop}) {
          height: 100vh;

@@ -29,11 +29,11 @@ const CategoryCard = styled(Link)`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        width: 25%;
+        width: 30%;
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        width: 20%;
+        width: 25%;
     }
 
 `

@@ -41,10 +41,10 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
             height: 90%;
         }
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 7rem;
-            width: 50%;
+            font-size: 5rem;
+            height:90%;
+            width: 25%;
         }
-
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 4rem;
@@ -82,7 +82,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
 
     @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-        margin-bottom: 5%;
+        margin-bottom: 10%;
         height: 40vh;
     }
     

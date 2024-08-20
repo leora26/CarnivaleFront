@@ -86,13 +86,6 @@ const HomePage = () => {
                     </ChangingTextContainer>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled direction="column">
-                    <span id="workWithSpan">We work with</span>
-                    <WeWorkWithLink link="/professionals">professionals</WeWorkWithLink>
-                    <WeWorkWithLink link="/companies">companies</WeWorkWithLink>
-                    <WeWorkWithLink link="/enthusiasts">enthusiasts</WeWorkWithLink>
-                </HomePageSectionStyled>
-
                 <HomePageSectionStyled direction="row">
                     <h2 id="whatDoWeHave">what do we offer?</h2>
                     <CategoryCard to="/beef">
@@ -128,15 +121,28 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="column">
+                    <span id="workWithSpan">We work with</span>
+                    <WeWorkWithLink link="/professionals">professionals</WeWorkWithLink>
+                    <WeWorkWithLink link="/companies">companies</WeWorkWithLink>
+                    <WeWorkWithLink link="/enthusiasts">enthusiasts</WeWorkWithLink>
+                </HomePageSectionStyled>
+
+
+
+                <h4>LATEST STORIES</h4>
+                <LatestStories/>
+
+            </HomepageStyled>
+            <ProductSection/>
+            <HomepageStyled>
+
+                <HomePageSectionStyled direction="column">
                     <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
                     <TextOverlay>
                         <h2>BOXES</h2>
                         <h3>FOR YOU BIG COMPANIES</h3>
                     </TextOverlay>
                 </HomePageSectionStyled>
-            </HomepageStyled>
-            <ProductSection/>
-            <HomepageStyled>
                 {/*<HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"*/}
                 {/*                       tabletVerticalSectionHeight="30vh" direction="column">*/}
                 {/*    <BackPicture src={BookingPicture} alt="Booking picture"/>*/}
@@ -145,17 +151,6 @@ const HomePage = () => {
                 {/*        <input type="date"/>*/}
                 {/*    </TextOverlay>*/}
                 {/*</HomePageSectionStyled>*/}
-
-                <h4>LATEST STORIES</h4>
-                <LatestStories/>
-
-                <HomePageSectionStyled>
-                    <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
-                    <TextOverlay>
-                        <h2>PROVISIONS</h2>
-                        <h3>For your company</h3>
-                    </TextOverlay>
-                </HomePageSectionStyled>
 
             </HomepageStyled>
             <GetInTouchContainer>
