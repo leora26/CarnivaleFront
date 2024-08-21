@@ -6,7 +6,6 @@ export const FooterStyled = styled.footer`
     padding: 2rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
-    
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 

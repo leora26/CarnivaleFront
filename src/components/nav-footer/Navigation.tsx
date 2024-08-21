@@ -5,10 +5,14 @@ import LogoPicture from "../../assets/pictures/carnivale-logo.png"
 import NavigationIcons from "./NavigationIcons";
 import {ScrollingText} from "../homepage/ScrollingText";
 import Banner from "./Banner";
+import {useLocation} from "react-router-dom";
 
 const Navigation: React.FC = () => {
     const [visible, setVisible] = useState<boolean>(true);
     const [lastScrollY, setLastScrollY] = useState<number>(0);
+    const [banner, setBanner] = useState<boolean>(false);
+
+    const location = useLocation();
 
     const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY;
@@ -21,6 +25,15 @@ const Navigation: React.FC = () => {
     }, [lastScrollY]);
 
     useEffect(() => {
+        const path = location.pathname;
+        if (path === "/" || path === "/CarnivaleFront/") {
+            setBanner(true);
+        } else {
+            setBanner(false);
+        }
+    }, [location]);
+
+    useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [handleScroll]);
@@ -28,9 +41,11 @@ const Navigation: React.FC = () => {
 
     return (
         <NavigationContainer visible={visible}>
-            <ScrollingText direction="left" backgroundColor="#FFE272">
-                <Banner/>
-            </ScrollingText>
+            {banner && (
+                <ScrollingText direction="left" backgroundColor="#FFE272">
+                    <Banner/>
+                </ScrollingText>
+            )}
             <NavigationStyled visible={visible}>
                 <Container>
                     <NavigationItemStyled fontWeight={600} color='black'

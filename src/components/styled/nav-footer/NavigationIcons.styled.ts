@@ -1,4 +1,5 @@
 import {styled} from "styled-components";
+import {Link} from "react-router-dom";
 
 export const NavigationIconsStyled = styled.div`
     display: flex;
@@ -16,6 +17,6 @@ export const NavigationIconsStyled = styled.div`
     }
 `
 
-export const NavigationIcon = styled.img`
+export const NavigationIcon = styled(Link)`
     width: 10%;
 `

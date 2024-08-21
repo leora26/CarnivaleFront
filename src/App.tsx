@@ -8,6 +8,7 @@ import HomePage from "./pages/static/HomePage";
 import { ThemeProvider } from "styled-components";
 import theme from "./components/styled/theme";
 import GlobalStyles from "./components/styled/global/Global";
+import Login from "./pages/static/Login";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Routes>
                     <Route path="" element={<DefaultLayout />}>
                         <Route index element={<HomePage />} />
+                        <Route path="login" element={<Login />} />
                     </Route>
                 </Routes>
         </ThemeProvider>
