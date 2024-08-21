@@ -19,13 +19,7 @@ export const LoginStyled = styled.div`
     }
 
     @media (max-width: ${({theme}) => theme.display.laptop}) {
-       
-    }
-    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-    }
-
-    @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-    
+        height: 80vh;
     }
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         height: 40vh;
@@ -81,6 +75,7 @@ export const LoginForm = styled.form`
         font-family: "Lexend", sans-serif;
         font-weight: 400;
     }
+    
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         height: 80%;
     }
