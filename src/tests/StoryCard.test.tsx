@@ -1,8 +1,8 @@
 import {render, screen} from "@testing-library/react";
 import {ThemeProvider} from "styled-components";
 import theme from "../components/styled/theme";
-import AllStories from "../models/AllStories";
-import MediaContent from "../models/MediaContent";
+import AllStories from "../models/response/AllStories";
+import MediaContent from "../models/response/MediaContent";
 import StoryCard from "../components/global/StoryCard";
 
 describe("ProductCard component", () => {

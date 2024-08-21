@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoArrowBackSharp, IoArrowForward } from "react-icons/io5";
 import ProductPicture from "../../assets/pictures/product-section.png";
-import AllProducts from "../../models/AllProducts";
+import AllProducts from "../../models/response/AllProducts";
 import { Container, ProductsContainer } from "../styled/homepage/ProductSection.styled";
 import IconButton from "../styled/global/IconButton";
 import { motion } from "framer-motion";

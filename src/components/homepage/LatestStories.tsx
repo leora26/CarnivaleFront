@@ -1,6 +1,6 @@
 import React from "react";
 import {LatestStoriesStyled} from "../styled/homepage/LatestStories.styled";
-import AllStories from "../../models/AllStories";
+import AllStories from "../../models/response/AllStories";
 import StoryCard from "../global/StoryCard";
 
 const LatestStories = () => {

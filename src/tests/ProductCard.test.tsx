@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import AllProducts from "../models/AllProducts";
+import AllProducts from "../models/response/AllProducts";
 import {ThemeProvider} from "styled-components";
 import theme from "../components/styled/theme";
 import React from "react";

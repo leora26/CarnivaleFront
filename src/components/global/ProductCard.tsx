@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
-import AllProducts from "../../models/AllProducts";
+import AllProducts from "../../models/response/AllProducts";
 import {Container, ProductCardStyled} from "../styled/global/ProductCard.styled";
 import IconButton from "../styled/global/IconButton";
 
