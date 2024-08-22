@@ -1,8 +1,8 @@
-import { LoginActions, LoginForm, LoginStyled } from "../../components/styled/login/Login.styled";
+import {LoginActions, LoginForm, LoginStyled} from "../../components/styled/login/Login.styled";
 import LoginImg from "../../assets/pictures/login.png";
 import InputV1 from "../../components/global/InputV1";
 import CheckBox from "../../components/global/CheckBox";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import React, {useRef, useState} from "react";
 import axios, {AxiosResponse} from "axios";
 import LoginRequest from "../../models/request/LoginRequest";
@@ -59,19 +59,20 @@ const Login: React.FC = () => {
 
     return (
         <LoginStyled>
-            <img src={LoginImg} alt="Login" />
+            <img src={LoginImg} alt="Login"/>
             <LoginForm onSubmit={handleSubmit}>
                 <p id="login-heading">log in</p>
-                <InputV1 ref={emailRef} inputId="login-email" type="email" label="Email" />
-                <InputV1 ref={passwordRef} inputId="login-password" type="password" label="Password" />
+                <InputV1 ref={emailRef} inputId="login-email" type="email" label="Email"/>
+                <InputV1 ref={passwordRef} inputId="login-password" type="password" label="Password"/>
                 <LoginActions>
-                    <CheckBox label="Remember me" checkboxId="remember-me" />
+                    <CheckBox margin="0" borderColor="#c3c3c3" backgroundColor="white" label="Remember me"
+                              checkboxId="remember-me"/>
                     <span>
                         <Link to="#">Forgot your password?</Link>
                     </span>
                 </LoginActions>
 
-                {error && <InputErrorMessage message="Falied to login" />}
+                {error && <InputErrorMessage message="Falied to login"/>}
                 {/*{success && <p id="success-message">Successfully logged in!</p>}*/}
 
                 <button type="submit">Login</button>

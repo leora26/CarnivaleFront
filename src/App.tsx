@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "./components/styled/theme";
 import GlobalStyles from "./components/styled/global/Global";
 import Login from "./pages/static/Login";
+import Register from "./pages/static/Register";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="" element={<DefaultLayout />}>
                         <Route index element={<HomePage />} />
                         <Route path="login" element={<Login />} />
+                        <Route path="register" element={<Register />} />
                     </Route>
                 </Routes>
         </ThemeProvider>
