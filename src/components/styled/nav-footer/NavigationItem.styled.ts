@@ -2,11 +2,13 @@ import {styled} from "styled-components";
 import {Link} from "react-router-dom";
 
 interface NavigationItemProps {
-    fontWeight: number
+    fontWeight: number;
+    fontSize: string;
+    fontSizeSmall: string;
 }
 
 export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
-    font-size: 1.2rem;
+    font-size: ${({fontSize}) => fontSize};
     color: ${({color}) => color};
     text-decoration: none;
     font-family: "Lexend", sans-serif;
@@ -14,12 +16,7 @@ export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
     margin-right: 1%;
     
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        font-size: 1rem;
+        font-size: ${({fontSizeSmall}) => fontSizeSmall};
     }
-
-    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        font-size: 1rem;
-    }
-    
 
 `

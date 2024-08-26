@@ -7,6 +7,18 @@ import TextAreaV1 from "../../components/global/TextAreaV1";
 import CheckBox from "../../components/global/CheckBox";
 
 const Register: React.FC = () => {
+    // const companyNameRef = useRef<HTMLInputElement>(null);
+    // const phoneNumberRef = useRef<HTMLInputElement>(null);
+    // const emailRef = useRef<HTMLInputElement>(null);
+    // const addressRef = useRef<HTMLInputElement>(null);
+    // const postalCodeRef = useRef<HTMLInputElement>(null);
+    // const placeRef = useRef<HTMLInputElement>(null);
+    // const vatNumberRef = useRef<HTMLInputElement>(null);
+    // const billingAddressRef = useRef<HTMLInputElement>(null);
+    // const billingZipcodeRef = useRef<HTMLInputElement>(null);
+    // const billingLocationRef = useRef<HTMLInputElement>(null);
+    // const invoiceEmailRef = useRef<HTMLInputElement>(null);
+
     return (
         <RegisterStyled>
             <div id="register-heading-section">

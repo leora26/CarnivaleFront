@@ -28,18 +28,18 @@ const Footer = () => {
                 <FooterNavigationContainer>
                     <FooterNavigation>
                         <span>Distribution</span>
-                        <NavigationItemStyled fontWeight={400} color='black'
+                        <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={400} color='black'
                                               to="/wholesale">Wholesale</NavigationItemStyled>
-                        <NavigationItemStyled fontWeight={400} color='black' to="/shop">Shop</NavigationItemStyled>
-                        <NavigationItemStyled fontWeight={400} color='black' to="/boxes">Boxes</NavigationItemStyled>
+                        <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={400} color='black' to="/shop">Shop</NavigationItemStyled>
+                        <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={400} color='black' to="/boxes">Boxes</NavigationItemStyled>
                     </FooterNavigation>
 
                     <FooterNavigation>
                         <span>Company</span>
-                        <NavigationItemStyled fontWeight={400} color='black' to="/aboutUs">About
+                        <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={400} color='black' to="/aboutUs">About
                             us</NavigationItemStyled>
-                        <NavigationItemStyled fontWeight={400} color='black' to="/search">Search</NavigationItemStyled>
-                        <NavigationItemStyled fontWeight={400} color='black'
+                        <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={400} color='black' to="/search">Search</NavigationItemStyled>
+                        <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={400} color='black'
                                               to="/contact">Contact</NavigationItemStyled>
                     </FooterNavigation>
                 </FooterNavigationContainer>
@@ -47,8 +47,8 @@ const Footer = () => {
             <h1>CARNIVALE</h1>
             <PrivacyContainer>
                 <ParagraphStyled>&copy; CARNIVALE 2024</ParagraphStyled>
-                <NavigationItemStyled fontWeight={300} color='black' to="/policy">PRIVACY POLICY</NavigationItemStyled>
-                <NavigationItemStyled fontWeight={300} color='black' to="/conditions">TERMS AND
+                <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={300} color='black' to="/policy">PRIVACY POLICY</NavigationItemStyled>
+                <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={300} color='black' to="/conditions">TERMS AND
                     CONDITIONS</NavigationItemStyled>
             </PrivacyContainer>
         </FooterStyled>

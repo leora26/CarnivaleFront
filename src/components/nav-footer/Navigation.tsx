@@ -48,12 +48,12 @@ const Navigation: React.FC = () => {
             )}
             <NavigationStyled visible={visible}>
                 <Container>
-                    <NavigationItemStyled fontWeight={600} color='black'
+                    <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black'
                                           to="/wholesale">WHOLESALE</NavigationItemStyled>
-                    <NavigationItemStyled fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
-                    <NavigationItemStyled fontWeight={600} color='black'
+                    <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem"  fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
+                    <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black'
                                           to="/corporate">CORPORATE</NavigationItemStyled>
-                    <NavigationItemStyled fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
+                    <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
                 </Container>
 
                 <Logo src={LogoPicture} alt="Logo"/>

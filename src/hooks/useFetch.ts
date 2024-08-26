@@ -1,14 +1,15 @@
 import {useState, useEffect} from "react";
 import axios, {AxiosError, AxiosResponse} from "axios";
+import ApiResponse from "../models/response/ApiResponse";
 
-type ApiResponse<T> = {
-    data: T | null;
+type FetchResponse<T> = {
+    response: ApiResponse<T> | null;
     loading: boolean;
     error: AxiosError | null;
 }
 
-function useFetch<T>(url: string): ApiResponse<T> {
-    const [data, setData] = useState<T | null>(null);
+function useFetch<T>(url: string): FetchResponse<T> {
+    const [response, setResponse] = useState<ApiResponse<T> | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<AxiosError | null>(null);
 
@@ -17,8 +18,8 @@ function useFetch<T>(url: string): ApiResponse<T> {
             try {
                 setLoading(true);
                 setError(null);
-                const response: AxiosResponse<T> = await axios.get(url);
-                setData(response.data);
+                const response: AxiosResponse<ApiResponse<T>> = await axios.get(url);
+                setResponse(response.data);
             } catch (error) {
                 if (axios.isAxiosError(error)) {
                     setError(error);
@@ -33,7 +34,7 @@ function useFetch<T>(url: string): ApiResponse<T> {
         fetchData();
     }, [url]);
 
-    return {data, loading, error};
+    return {response, loading, error};
 }
 
 export default useFetch;

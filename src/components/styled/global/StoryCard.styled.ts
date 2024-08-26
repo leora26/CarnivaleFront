@@ -1,21 +1,26 @@
 import {styled} from "styled-components";
 
 export const StoryCardStyled = styled.div`
-    & h2{
+    & h2 {
         font-size: 2rem;
         font-family: "Lexend", sans-serif;
         font-weight: 700;
         margin-bottom: 1rem;
 
     }
-    
+
     & p {
         font-size: 1.4rem;
         width: 85%;
         font-family: "Lexend", sans-serif;
-        font-weight: 400;        
-        margin: 0;
-
+        font-weight: 400;
+        margin: 0 0 2% 0;
+    }
+    
+    & span {
+        font-family: "Lexend", sans-serif;
+        font-weight: 700;
+        background-color: #FFDD5A;
     }
 `
 

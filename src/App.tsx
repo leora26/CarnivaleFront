@@ -10,6 +10,8 @@ import theme from "./components/styled/theme";
 import GlobalStyles from "./components/styled/global/Global";
 import Login from "./pages/static/Login";
 import Register from "./pages/static/Register";
+import Wholesale from "./pages/static/Wholesale";
+import Stories from "./pages/dynamic/Stories";
 
 function App() {
     return (
@@ -20,6 +22,8 @@ function App() {
                         <Route index element={<HomePage />} />
                         <Route path="login" element={<Login />} />
                         <Route path="register" element={<Register />} />
+                        <Route path="wholesale" element={<Wholesale />}/>
+                        <Route path="stories" element={<Stories />}/>
                     </Route>
                 </Routes>
         </ThemeProvider>
