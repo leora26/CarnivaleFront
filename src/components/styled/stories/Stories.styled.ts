@@ -64,7 +64,18 @@ export const StoriesNavigation = styled.div`
     flex-direction: row;
     justify-content: space-between;
     
+    & .active {
+        opacity: 1 !important;
+    }
+    
     & .storiesNavigation{
+        opacity: 0.5;
+        transition: 0.4s;
+        
+        &:hover {
+            opacity: 1;
+        }
+        
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             font-size: 1.2rem;
         }

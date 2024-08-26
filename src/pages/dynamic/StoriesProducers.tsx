@@ -7,8 +7,8 @@ import ApiResponse from "../../models/response/ApiResponse";
 import StoryCardV2 from "../../components/global/StoryCardV2";
 import SpinnerLoader from "../../components/global/SpinnerLoader";
 
-const Stories: React.FC = () => {
-    const {response, loading, error} = useFetch<ApiResponse<AllStories[]>>("http://localhost:8080/api/story");
+const StoriesProducers: React.FC = () => {
+    const {response, loading, error} = useFetch<ApiResponse<AllStories[]>>("http://localhost:8080/api/producers");
     const [listStories, setListStories] = useState<number>(12)
 
     const handleLoadMore = () => {
@@ -280,7 +280,7 @@ const Stories: React.FC = () => {
 
     return (
         <StoriesStyled>
-            <h1>Stories</h1>
+            <h1>Producers</h1>
             <StoriesNavigation>
                 <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
                                       to="/stories/blogs">BLOGS</NavigationItemStyled>
@@ -288,7 +288,7 @@ const Stories: React.FC = () => {
                                       to="/stories/podcasts">PODCASTS</NavigationItemStyled>
                 <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
                                       to="/stories/events">EVENTS</NavigationItemStyled>
-                <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
+                <NavigationItemStyled className="storiesNavigation active" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
                                       to="/stories/producers">PRODUCERS</NavigationItemStyled>
                 <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
                                       to="/stories/interviews">INTERVIEWS</NavigationItemStyled>
@@ -316,4 +316,4 @@ const Stories: React.FC = () => {
     )
 }
 
-export default Stories;
+export default StoriesProducers;
