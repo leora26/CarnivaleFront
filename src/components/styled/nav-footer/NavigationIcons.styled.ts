@@ -15,6 +15,15 @@ export const NavigationIconsStyled = styled.div`
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         width: 40%;
     }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        width: 80%;
+        margin-left: 0;
+        
+        & .searchIcon{
+            display: none;
+        }
+    }
 `
 
 export const NavigationIcon = styled(Link)`

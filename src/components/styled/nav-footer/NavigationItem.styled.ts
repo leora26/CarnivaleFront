@@ -8,15 +8,12 @@ interface NavigationItemProps {
 }
 
 export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
-    font-size: ${({fontSize}) => fontSize};
+    font-size: ${({fontSizeSmall}) => fontSizeSmall};
     color: ${({color}) => color};
     text-decoration: none;
     font-family: "Lexend", sans-serif;
     font-weight: ${({fontWeight}) => fontWeight};
     margin-right: 1%;
     
-    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        font-size: ${({fontSizeSmall}) => fontSizeSmall};
-    }
 
 `

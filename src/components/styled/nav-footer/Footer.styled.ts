@@ -34,8 +34,19 @@ export const FooterStyled = styled.footer`
         @media (max-width: ${({ theme }) => theme.display.smallTabletVertical}) {
             font-size: 5rem;
         }
+
+        @media (max-width: ${({ theme }) => theme.display.mobile}) {
+            margin-top: 10%;
+            font-size: 2.2rem;
+            letter-spacing: 12px;
+        }
+
+        
     }
 
+    @media (max-width: ${({ theme }) => theme.display.mobile}) {
+        margin-top: 40%;
+    }
 `
 
 export const Container = styled.div`
@@ -43,6 +54,10 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: ${({ theme }) => theme.display.mobile}) {
+        flex-direction: column;
+    }
     
 `
 
@@ -92,6 +107,10 @@ export const ContainerForm = styled.div`
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             width: 100%;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 45%;
+        }
     }
 
     @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
@@ -109,6 +128,11 @@ export const FooterNavigationContainer = styled.div`
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         width: 40%;
     }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        margin-top: 10%;
+        width: 100%;
+    }
 `
 
 export const FooterForm = styled.form`
@@ -125,6 +149,10 @@ export const FooterForm = styled.form`
         font-family: "Lexend", sans-serif;
         font-weight: 600;
     }
+
+    @media (max-width: ${({ theme }) => theme.display.mobile}) {
+        width: 100%;
+    }
 `
 
 export const FooterNavigation = styled.div`
@@ -140,29 +168,26 @@ export const FooterNavigation = styled.div`
         font-weight: 600;
     }
     
+    & .footerNivItem{
+        margin-top: 5%;
+    }
+    
 `
 
 export const ParagraphStyled = styled.p`
     color: black;
-    font-size: 1.2rem;
+    font-size: 0.6rem;
     font-family: "Lexend", sans-serif;
     font-weight: 300;    
     margin-right: 1%;
 `
 
 export const PrivacyContainer = styled.div`
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;;
     align-items: center;
     margin-left: 5%;
-
-    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        width: 60%;
-    }
-
-    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        width: 80%;
-    }
+    
 `

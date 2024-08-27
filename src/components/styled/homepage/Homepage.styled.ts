@@ -43,7 +43,11 @@ export const HomepageStyled = styled.main`
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             height: 35vh;
+        }
 
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            height: 35vh;
+            margin-top: 15rem;
         }
     }
 `
@@ -146,6 +150,18 @@ export const ExploreArrow = styled.div`
             right: 5%;
         }
 
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 4rem;
+            height: 4rem;
+            //top: 140%;
+            //right: 13%;
+        }
+
+    }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        top: 105%;
+        right: 3%;
     }
 `
 

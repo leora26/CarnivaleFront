@@ -86,12 +86,17 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         height: 40vh;
     }
     
+    
     & svg{
-        border-radius: 2rem;
         position: absolute;
         z-index: 2;
         width: 100%;
         height: 100%;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 100vw;
+            height: 70vh;
+        }
         
         & image{
             width: 100%;

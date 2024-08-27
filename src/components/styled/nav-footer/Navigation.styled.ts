@@ -11,17 +11,21 @@ export const NavigationStyled = styled.div<NavigationStyledProperties>`
     width: 90%;
     height: 10vh;
     margin: 0 auto;
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        width: 80%;
+    }
     
 `
 
 export const NavigationContainer = styled.div<NavigationStyledProperties>`
     background-color: white;
     position: fixed;
-    top: ${({ visible }) => (visible ? '0' : '-15vh')}; /* Adjust position based on visibility */
+    top: ${({ visible }) => (visible ? '0' : '-15vh')};
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: top 0.3s ease-in-out; /* Smooth transition effect */
+    transition: top 0.3s ease-in-out;
 `
 
 export const Container = styled.div`
@@ -38,7 +42,12 @@ export const Container = styled.div`
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         width: 50%;
     }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        width: 20%;
+    }
 `;
+
 
 export const Logo = styled.img`
     width: 7%;
@@ -49,5 +58,10 @@ export const Logo = styled.img`
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         margin-left: 10%;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        margin: 0;
+        width: 30%;
     }
 `

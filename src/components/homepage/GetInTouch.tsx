@@ -6,27 +6,27 @@ const GetInTouch = () => {
     return (
         <>
             <li>
-                <span>Get in touch</span>
+                <span>Book a tasting</span>
                 <img src={GetInTouch1} alt="Get in touch"/>
             </li>
             <li>
-                <span>Get in touch</span>
+                <span>Book a tasting</span>
                 <img src={GetInTouch2} alt="Get in touch"/>
             </li>
             <li>
-                <span>Get in touch</span>
+                <span>Book a tasting</span>
                 <img src={GetInTouch3} alt="Get in touch"/>
             </li>
             <li>
-                <span>Get in touch</span>
+                <span>Book a tasting</span>
                 <img src={GetInTouch1} alt="Get in touch"/>
             </li>
             <li>
-                <span>Get in touch</span>
+                <span>Book a tasting</span>
                 <img src={GetInTouch2} alt="Get in touch"/>
             </li>
             <li>
-                <span>Get in touch</span>
+                <span>Book a tasting</span>
                 <img src={GetInTouch3} alt="Get in touch"/>
             </li>
         </>

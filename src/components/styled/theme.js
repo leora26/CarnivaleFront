@@ -9,7 +9,8 @@ const theme = {
         smallTabletHorizontal: "1200px",
         tabletVertical: "1024px",
         tabletHorizontal: "1400px",
-        laptop: "1600px"
+        laptop: "1600px",
+        mobile:"800px"
     }
 
 }

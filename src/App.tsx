@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Route,
     Routes
@@ -18,14 +18,26 @@ import StoriesEvents from "./pages/dynamic/StoriesEvents";
 import StoriesProducers from "./pages/dynamic/StoriesProducers";
 import StoriesInterviews from "./pages/dynamic/StoriesInterviews";
 import StoriesRecipies from "./pages/dynamic/StoriesRecipies";
+import MobileHomePage from "./pages/mobile/MobileHomePage";
 
 function App() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 600px)');
+        setIsMobile(mediaQuery.matches);
+
+        const handleResize = () => setIsMobile(mediaQuery.matches);
+        mediaQuery.addEventListener('change', handleResize);
+
+        return () => mediaQuery.removeEventListener('change', handleResize);
+    }, []);
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
                 <Routes>
-                    <Route path="" element={<DefaultLayout />}>
-                        <Route index element={<HomePage />} />
+                    <Route path="" element={<DefaultLayout isMobile={isMobile} />}>
+                        <Route index element={isMobile ? <MobileHomePage /> : <HomePage />} />
                         <Route path="login" element={<Login />} />
                         <Route path="register" element={<Register />} />
                         <Route path="wholesale" element={<Wholesale />}/>

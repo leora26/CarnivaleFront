@@ -26,7 +26,8 @@ const Navigation: React.FC = () => {
 
     useEffect(() => {
         const path = location.pathname;
-        if (path === "/" || path === "/CarnivaleFront/") {
+        if ((path === "/" || path === "/CarnivaleFront/")) {
+            console.log(window.innerWidth)
             setBanner(true);
         } else {
             setBanner(false);
