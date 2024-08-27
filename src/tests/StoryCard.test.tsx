@@ -12,6 +12,7 @@ describe("ProductCard component", () => {
             "Test story",
             "this is a test story",
             "10/12/2015",
+            "Recipe",
             [new MediaContent(
                 1,
                 "https://via.placeholder.com/150x150",

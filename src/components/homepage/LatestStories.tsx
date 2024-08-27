@@ -12,6 +12,7 @@ const LatestStories = () => {
             "title": "Name of the story number one",
             "subTitle": "A small description about story number one. And a second sentence about story number one.",
             "createdAt": "24/02/2023",
+            "type": "Podcast",
             "mediaContents": [
                 {
                     "id": 1,
@@ -25,6 +26,7 @@ const LatestStories = () => {
             "title": "Name of the story number two",
             "subTitle": "A small description about story number two. And a second sentence about story number two.",
             "createdAt": "25/02/2023",
+            "type": "Podcast",
             "mediaContents": [
                 {
                     "id": 2,
