@@ -50,18 +50,18 @@ export const Container = styled.div`
 
 
 export const Logo = styled.img`
-    width: 7%;
+    width: 10rem;
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-        width: 15%;
+        width: 10rem;
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        margin-left: 10%;
+        margin-left: 30%;
     }
 
     @media (max-width: ${({theme}) => theme.display.mobile}) {
         margin: 0;
-        width: 30%;
+        width: 6rem;
     }
 `

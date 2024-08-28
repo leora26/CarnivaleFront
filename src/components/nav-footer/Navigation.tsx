@@ -5,7 +5,7 @@ import LogoPicture from "../../assets/pictures/carnivale-logo.png"
 import NavigationIcons from "./NavigationIcons";
 import {ScrollingText} from "../homepage/ScrollingText";
 import Banner from "./Banner";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 const Navigation: React.FC = () => {
     const [visible, setVisible] = useState<boolean>(true);
@@ -57,7 +57,9 @@ const Navigation: React.FC = () => {
                     <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
                 </Container>
 
-                <Logo src={LogoPicture} alt="Logo"/>
+                <Link to="/">
+                    <Logo src={LogoPicture} alt="Logo"/>
+                </Link>
 
                 <Container>
                     <NavigationIcons/>

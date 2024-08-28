@@ -17,12 +17,12 @@ const Burger = () => {
                 <div/>
             </BurgerStyled>
             <NavigationContainer open={open}>
-                <NavigationItemStyled fontSizeSmall="2rem" fontSize="2rem" fontWeight={600} color='black'
+                <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="2rem" fontWeight={600} color='black'
                                       to="/wholesale">WHOLESALE</NavigationItemStyled>
-                <NavigationItemStyled fontSizeSmall="2rem" fontSize="2rem"  fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
-                <NavigationItemStyled fontSizeSmall="2rem" fontSize="2rem" fontWeight={600} color='black'
+                <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="2rem"  fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
+                <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="2rem" fontWeight={600} color='black'
                                       to="/corporate">CORPORATE</NavigationItemStyled>
-                <NavigationItemStyled fontSizeSmall="2rem" fontSize="2rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
+                <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="2rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
             </NavigationContainer>
         </>
     )

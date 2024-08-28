@@ -93,7 +93,7 @@ const ProductSection: React.FC = () => {
                 <h2>Webshop for homes</h2>
                 <Container id="buttonContainer" direction="row" containerHeight="100%" containerWidth="14%">
                     <IconButton
-                        className="productSectionIconButton"
+                        className="productSectionIconButton mobileNone"
                         borderColor="#BEBEBE"
                         borderSize="1px"
                         buttonHeight={70}
@@ -105,7 +105,7 @@ const ProductSection: React.FC = () => {
                         <IoArrowBackSharp className="iconProductSection" />
                     </IconButton>
                     <IconButton
-                        className="productSectionIconButton"
+                        className="productSectionIconButton mobileNone"
                         borderColor="#BEBEBE"
                         borderSize="1px"
                         buttonHeight={70}
@@ -119,7 +119,7 @@ const ProductSection: React.FC = () => {
                 </Container>
             </Container>
             <Container direction="row" containerHeight="90%" containerWidth="100%">
-                <img src={ProductPicture} alt="" />
+                <img id="productSectionImg" src={ProductPicture} alt="Product section" />
                 <motion.div
                     key={visibleIndex}
                     initial={{ x: direction * 100}}

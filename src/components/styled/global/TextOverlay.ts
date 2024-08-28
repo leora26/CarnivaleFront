@@ -16,7 +16,7 @@ const TextOverlay = styled.div`
         margin: 0;
         align-self: center;
         font-family: ${({theme}) => theme.fonts.primary};
-        font-weight: lighter;
+        font-weight: 600;
 
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
@@ -57,8 +57,8 @@ const TextOverlay = styled.div`
         }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 0.7rem;
-            margin: 50% 20% 0 0 ;
+            font-size: 0.8rem;
+            margin: 60% 20% 0 0 ;
             align-self: center;
             width: 60%;
         }
@@ -102,6 +102,11 @@ const TextOverlay = styled.div`
         margin: 0 0 0 5%;
         align-self: flex-start;
         font-family: ${({theme}) => theme.fonts.primaryBold};
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
+            margin-top: 95%;
+        }
     }
 
     & h3 {
@@ -111,6 +116,11 @@ const TextOverlay = styled.div`
         align-self: flex-start;
         font-family: "Lexend", sans-serif;
         font-weight: 400;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 1rem;
+            font-weight: 300;
+        }
     }
 
     & input {

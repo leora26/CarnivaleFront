@@ -9,4 +9,9 @@ export const LatestStoriesStyled = styled.section`
     margin-bottom: 5%;
     margin-left: 5%;
     align-self: center;
+    
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        flex-direction: column;
+        
+    }
 `

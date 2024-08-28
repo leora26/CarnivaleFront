@@ -5,27 +5,41 @@ const CategoryCard = styled(Link)`
     width: 23%;
     height: 100%;
     text-decoration: none;
-    
-    & img{
-            width: 90%;
-            height: auto;
-            border-radius: 1rem;
+
+    & img {
+        width: 90%;
+        height: auto;
+        border-radius: 1rem;
         
+        
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 120%;
+            height: 70%;
+        }
+
     }
-    
-    & h3{
+
+    & h3 {
         text-transform: uppercase;
         color: black;
         font-size: 2rem;
         margin-top: 1rem;
-        font-family: ${({ theme }) => theme.fonts.primaryBold};
+        font-family: ${({theme}) => theme.fonts.primaryBold};
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 1.2rem;
+        }
     }
-    
-    & p{
+
+    & p {
         color: black;
         font-size: 1.8rem;
-        font-family: ${({ theme }) => theme.fonts.primarySemiBold};
+        font-family: ${({theme}) => theme.fonts.primarySemiBold};
         width: 90%;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 0.8rem;
+        }
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
@@ -33,6 +47,10 @@ const CategoryCard = styled(Link)`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 25%;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
         width: 25%;
     }
 

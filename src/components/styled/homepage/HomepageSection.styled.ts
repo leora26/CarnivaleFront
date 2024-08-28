@@ -18,6 +18,13 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     justify-content: center;
     margin-bottom: 10%;
 
+    & #categories {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
     & #whatDoWeHave {
         font-size: 8rem;
         width: 20%;
@@ -26,7 +33,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         text-transform: uppercase;
         letter-spacing: -2px;
         border-bottom: 1rem solid #FFDD5A;
-        
+
 
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             font-size: 7rem;
@@ -42,7 +49,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         }
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 5rem;
-            height:90%;
+            height: 90%;
             width: 25%;
         }
 
@@ -50,6 +57,13 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
             font-size: 4rem;
             width: 25%;
             height: 80%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
+            width: 90%;
+            height: auto;
+            border-bottom: 6px solid #FFDD5A;
         }
 
     }
@@ -66,7 +80,12 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 1.5rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            display: none;
+        }
     }
+
     @media (max-width: ${({theme}) => theme.display.laptop}) {
         height: 100vh;
     }
@@ -85,25 +104,37 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         margin-bottom: 10%;
         height: 40vh;
     }
-    
-    
-    & svg{
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        margin-bottom: 30%;
+    }
+
+
+    & svg {
         position: absolute;
         z-index: 2;
         width: 100%;
         height: 100%;
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
-            width: 100vw;
+            width: 95vw;
             height: 70vh;
         }
-        
-        & image{
+
+        & image {
             width: 100%;
             height: 100%;
         }
     }
-    
 
-    
+    & #boxesPicture {
+        width: 100vw;
+        height: 80vh;
+
+       
+     
+    }
+
+
+
 `

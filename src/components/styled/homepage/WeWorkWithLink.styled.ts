@@ -20,6 +20,16 @@ const WeWorkWithLinkStyled = styled.div`
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 5rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        margin-bottom: 3rem;
+        padding-bottom: 0.8rem;
+        
     }
     
 `

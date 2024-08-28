@@ -55,6 +55,14 @@ export const ScrollingTextContent = styled.ul<ScrollingTextContentProps>`
         & img{
             width: 80px;
             margin: 0 0 0 1rem;
+            
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                width: 40px;
+            }
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 4rem;
         }
     }
 `;

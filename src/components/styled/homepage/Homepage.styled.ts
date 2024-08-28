@@ -14,9 +14,21 @@ export const HomepageStyled = styled.main`
         margin-top: 0;
         align-self: flex-end;
         font-family: ${({ theme }) => theme.fonts.primaryBold};
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
+            margin-top: 20%;
+            margin-bottom: 1rem;
+        }
     }
     
-    #first-section{
+    #weWorkWithContainer{
+        transform: rotate(90deg);
+        transform-origin: center;
+        margin: 0 3rem 0 0 ;
+    }
+    
+    .first-section{
         margin-top: 10%;
         height: 80vh;
         
@@ -47,7 +59,7 @@ export const HomepageStyled = styled.main`
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             height: 35vh;
-            margin-top: 15rem;
+            margin: 18rem 0 15rem 0;
         }
     }
 `
@@ -160,8 +172,8 @@ export const ExploreArrow = styled.div`
     }
 
     @media (max-width: ${({theme}) => theme.display.mobile}) {
-        top: 105%;
-        right: 3%;
+        top: 108%;
+        right: -2%;
     }
 `
 

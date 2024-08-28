@@ -9,6 +9,11 @@ export const ProductCardStyled = styled.div`
 
     & img{
         border-radius: 1.5rem;
+        
+        
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 12rem;
+        }
     }
     
     & h3{
@@ -22,8 +27,11 @@ export const ProductCardStyled = styled.div`
         font-family: "Lexend", sans-serif;
         font-weight: 300;
     }
-    
-    
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        border-radius: 1rem;
+        
+    }
     
 `
 

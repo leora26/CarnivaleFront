@@ -18,10 +18,22 @@ export const Container = styled.div<ContainerProps>`
     & #buttonContainer {
         margin-right: 5%;
     }
-    
-    & .productSectionIconButton:hover{
+
+    & .productSectionIconButton:hover {
         background-color: black;
-        
+    }
+
+    & .mobileNone {
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            display: none;
+        }
+    }
+
+    & #productSectionImg {
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            display: none;
+        }
+
     }
 
 
@@ -37,7 +49,7 @@ export const Container = styled.div<ContainerProps>`
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             width: 80%;
         }
-        
+
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             width: 80%;
             font-size: 3rem;
@@ -49,8 +61,17 @@ export const Container = styled.div<ContainerProps>`
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 2rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 100%;
+            font-size: 1.6rem;
+        }
     }
-}
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        overflow-x: scroll;
+    }
+
 `
 
 export const ProductsContainer = styled.div`
@@ -67,4 +88,6 @@ export const ProductsContainer = styled.div`
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         height: 60vh;
     }
+
+  
 `

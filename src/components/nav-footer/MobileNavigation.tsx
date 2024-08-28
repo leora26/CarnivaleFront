@@ -1,4 +1,3 @@
-import {NavigationItemStyled} from "../styled/nav-footer/NavigationItem.styled";
 import React, {useCallback, useEffect, useState} from "react";
 import {
     Container,
@@ -9,6 +8,7 @@ import {
 import LogoPicture from "../../assets/pictures/carnivale-logo.png"
 import NavigationIcons from "./NavigationIcons";
 import Burger from "./Burger";
+import {Link} from "react-router-dom";
 
 const MobileNavigation: React.FC = () => {
     const [visible, setVisible] = useState<boolean>(true);
@@ -37,7 +37,9 @@ const MobileNavigation: React.FC = () => {
             <NavigationStyled visible={visible}>
                 <Burger/>
 
-                <Logo src={LogoPicture} alt="Logo"/>
+                <Link to="/">
+                    <Logo src={LogoPicture} alt="Logo"/>
+                </Link>
 
                 <Container>
                     <NavigationIcons/>

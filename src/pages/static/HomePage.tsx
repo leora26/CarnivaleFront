@@ -87,7 +87,7 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled direction="row">
-                    <h2 id="whatDoWeHave">what do we offer?</h2>
+                    <h2 id="whatDoWeHave">what do we have?</h2>
                     <CategoryCard to="/beef">
                         <img src={BeefCategory} alt="Beef category link"/>
                         <h3>beef</h3>
@@ -140,7 +140,7 @@ const HomePage = () => {
                     <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
                     <TextOverlay>
                         <h2>BOXES</h2>
-                        <h3>FOR YOU BIG COMPANIES</h3>
+                        <h3>For your company</h3>
                     </TextOverlay>
                 </HomePageSectionStyled>
                 {/*<HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"*/}

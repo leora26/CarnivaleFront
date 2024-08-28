@@ -7,6 +7,12 @@ export const StoryCardStyled = styled.div`
         font-weight: 700;
         margin-bottom: 1rem;
 
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 1.2rem;
+            width: 90%;
+        }
+        
+
     }
 
     & p {
@@ -15,6 +21,11 @@ export const StoryCardStyled = styled.div`
         font-family: "Lexend", sans-serif;
         font-weight: 400;
         margin: 0 0 2% 0;
+        
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            margin-bottom: 5rem;
+            font-size: 0.8rem;
+        }
     }
     
     
