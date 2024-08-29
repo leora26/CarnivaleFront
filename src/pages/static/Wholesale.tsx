@@ -9,6 +9,7 @@ import {WholesaleParagraph} from "../../components/styled/wholesale/WholesalePar
 import GetTheApp from "../../components/wholesale/GetTheApp";
 import ContactUsPic from "../../assets/pictures/contact-us-wholesale.webp";
 import BookingSection from "../../components/wholesale/BookingSection";
+import AssortmentSection from "../../components/wholesale/AssortmentSection";
 
 const Wholesale = () => {
     return (
@@ -158,6 +159,8 @@ const Wholesale = () => {
             </WholesaleSection>
 
             <BookingSection/>
+
+            <AssortmentSection />
         </WholesaleStyled>
     )
 }

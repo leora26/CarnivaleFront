@@ -111,6 +111,7 @@ export const AppLinkStyled = styled(Link)`
 
         #anchovies {
             width: 100%;
+            z-index: 2;
 
             @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
                 width: 80%;
