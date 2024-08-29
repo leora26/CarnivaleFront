@@ -63,7 +63,93 @@ const TextOverlay = styled.div`
             width: 60%;
         }
     }
-    
+
+    & #h2-wholesale {
+        font-size: 4rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 2rem;
+        }
+    }
+
+    #contactUsInfo {
+        font-size: 2rem;
+        text-align: center;
+        width: 90%;
+        align-self: center;
+        font-family: ${({theme}) => theme.fonts.primary};
+        font-weight: 300;
+        margin: 0 0 5% 0;
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 1rem;
+        }
+    }
+
+    .highlighted {
+        background-color: #FFDD5A;
+        font-size: 2rem;
+        color: black;
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 1rem;
+        }
+    }
+
+    #phoneNumber {
+        background-color: #FFDD5A;
+        font-size: 2rem;
+        color: black;
+        font-family: ${({theme}) => theme.fonts.primary};
+        font-weight: 500;
+        width: 15%;
+        margin: 0 80% -5% 0;
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            width: 20%;
+            margin-right: 70%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            font-size: 1.2rem;
+            width: 15%;
+            margin-right: 75%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 1rem;
+            width: 20%;
+            margin-right: 70%;
+        }
+    }
+
+    & #p-wholesale {
+        width: 60%;
+        font-size: 1.5rem;
+        margin-left: -30%;
+        font-weight: 200;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 1rem;
+        }
+    }
+
+
     & #booking-heading {
         letter-spacing: 0 !important;
         font-size: 6em;

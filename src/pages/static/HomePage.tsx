@@ -47,9 +47,8 @@ const HomePage = () => {
     return (
         <>
             <HomepageStyled>
-
                 <HomePageSectionStyled tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh" direction="column" id="first-section"
+                                       tabletVerticalSectionHeight="30vh" direction="column" className="first-section"
                                        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <svg width="90vw" height="60vh" viewBox="0 0 1320 474" xmlns="http://www.w3.org/2000/svg">
                         <defs>

@@ -1,9 +1,11 @@
 import { createGlobalStyle} from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-    body {
+    body, html {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
         margin: 0;
         padding: 0;
+        width: 100%;
     }
 
     @font-face {

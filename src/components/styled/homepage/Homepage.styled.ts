@@ -127,6 +127,51 @@ export const ExploreArrow = styled.div`
         }
     }
 
+    & #wholesaleArrow{
+        transform: rotate(90deg);
+        transform-origin: center;
+        color: white;
+        width: 8rem;
+        height: 8rem;
+        right: 25%;
+        bottom: 20%;
+        
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            right: 10%;
+            bottom: 0;
+        }
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            bottom: 40%;
+            right: 15%;
+            width: 6rem;
+            height: 6rem;
+        }
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            width: 5rem;
+            height: 5rem;
+            bottom: 25%;
+            right: 15%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            bottom: 50%;
+            right: 10%;
+        }
+
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            width: 4rem;
+            height: 4rem;
+            bottom: 45%;
+            right: 5%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
     & #heroSectionArrow {
         color: white;
         width: 8rem;
@@ -165,8 +210,6 @@ export const ExploreArrow = styled.div`
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             width: 4rem;
             height: 4rem;
-            //top: 140%;
-            //right: 13%;
         }
 
     }
