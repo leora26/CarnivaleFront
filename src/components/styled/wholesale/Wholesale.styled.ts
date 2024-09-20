@@ -14,6 +14,13 @@ export const WholesaleStyled = styled.main`
         
     }
     
+    #first-section{
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            margin-top: 50%;
+            height: 45vh;
+        }
+    }
+    
     & #paragraphs{
         flex-direction: row;
         height: 10vh;
@@ -23,6 +30,12 @@ export const WholesaleStyled = styled.main`
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             margin-bottom: 15%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            flex-direction: column;
+            margin: 0;
+            height: 60vh;
         }
         
         & svg {
@@ -41,6 +54,10 @@ export const WholesaleStyled = styled.main`
 
             @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
                 margin-top: 15%;
+            }
+
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                display: none;
             }
         }
     }

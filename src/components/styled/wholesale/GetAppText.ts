@@ -33,4 +33,10 @@ export const GetAppText = styled.p`
     @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
         font-size: 2rem;
     }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        font-size: 1.5rem;
+        margin-bottom: 2%;
+    }
+    
 `;

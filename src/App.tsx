@@ -19,6 +19,7 @@ import StoriesProducers from "./pages/dynamic/StoriesProducers";
 import StoriesInterviews from "./pages/dynamic/StoriesInterviews";
 import StoriesRecipies from "./pages/dynamic/StoriesRecipies";
 import MobileHomePage from "./pages/mobile/MobileHomePage";
+import MobileWholesalePage from "./pages/mobile/MobileWholesalePage";
 
 function App() {
     const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +41,7 @@ function App() {
                         <Route index element={isMobile ? <MobileHomePage /> : <HomePage />} />
                         <Route path="login" element={<Login />} />
                         <Route path="register" element={<Register />} />
-                        <Route path="wholesale" element={<Wholesale />}/>
+                        <Route path="wholesale" element={isMobile ? <MobileWholesalePage /> : <Wholesale />}/>
                         <Route path="stories" element={<Stories />}/>
                         <Route path="stories/blogs" element={<StoriesBlogs />}/>
                         <Route path="stories/podcasts" element={<StoriesPodcasts />}/>

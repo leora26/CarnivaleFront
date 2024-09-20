@@ -22,6 +22,11 @@ export const WholesaleSection = styled.section`
             width: 100%;
             height: 100%;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 95vw;
+            height: 70vh;
+        }
     }
     
     
@@ -40,6 +45,7 @@ export const WholesaleSection = styled.section`
     }
 
     @media (max-width: ${({theme}) => theme.display.mobile}) {
+        margin-top: 10%;
         margin-bottom: 30%;
     }
 `

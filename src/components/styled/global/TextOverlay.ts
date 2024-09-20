@@ -66,6 +66,7 @@ const TextOverlay = styled.div`
 
     & #h2-wholesale {
         font-size: 4rem;
+        font-family:  ${({theme}) => theme.fonts.primary};
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 3rem;
@@ -73,6 +74,33 @@ const TextOverlay = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 2rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 90%;
+            font-size: 2rem;
+            margin-top: 60%;
+            text-align: center;
+        }
+    }
+
+    & #p-wholesale {
+        width: 60%;
+        font-size: 1.5rem;
+        margin-left: -30%;
+        font-weight: 200;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 1rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 0.8rem;
+            margin: 15% 20% 0 0;
         }
     }
 
@@ -134,20 +162,7 @@ const TextOverlay = styled.div`
         }
     }
 
-    & #p-wholesale {
-        width: 60%;
-        font-size: 1.5rem;
-        margin-left: -30%;
-        font-weight: 200;
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.3rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 1rem;
-        }
-    }
+   
 
 
     & #booking-heading {

@@ -23,6 +23,11 @@ export const AppLinkStyled = styled(Link)`
         margin-top: -30%;
     }
 
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        margin-left: -10%;
+        margin-top: -70%;
+    }
+
 
     #picture {
         display: flex;
@@ -47,6 +52,11 @@ export const AppLinkStyled = styled(Link)`
             @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
                 width: 22vw;
             }
+
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                width: 35vw;
+                border-radius: 2rem;
+            }
         }
         
         & p{
@@ -70,6 +80,11 @@ export const AppLinkStyled = styled(Link)`
                     width: 20px;
                     height: 20px;
                 }
+
+                @media (max-width: ${({theme}) => theme.display.mobile}) {
+                    width: 15px;
+                    height: 15px;
+                }
             }
 
             @media (max-width: ${({theme}) => theme.display.laptop}) {
@@ -81,6 +96,10 @@ export const AppLinkStyled = styled(Link)`
 
             @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
                 margin-left: 20%;
+            }
+
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                font-size: 0.6rem;
             }
             
         }
@@ -107,6 +126,10 @@ export const AppLinkStyled = styled(Link)`
                 margin-top: -90%;
             }
 
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                display: none;
+            }
+
         }
 
         #anchovies {
@@ -120,6 +143,13 @@ export const AppLinkStyled = styled(Link)`
             @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
                 width: 70%;
             }
+
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                width: 5rem;
+                margin-top: 100%;
+                margin-right: -50%;
+            }
+            
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
@@ -128,6 +158,10 @@ export const AppLinkStyled = styled(Link)`
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             margin-right: -20%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            margin: 0;
         }
     }
 
@@ -144,6 +178,11 @@ export const AppLinkStyled = styled(Link)`
             @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
                 width: 140%;
             }
+
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                width: 100%;
+                z-index: 10;
+            }
         }
         
        
@@ -154,6 +193,10 @@ export const AppLinkStyled = styled(Link)`
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             margin-left: -10%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            margin-left: -25%;
         }
 
     }

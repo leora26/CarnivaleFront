@@ -34,4 +34,5 @@ export const GetTheAppStyled = styled.section`
     @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
         height: 40vh;
     }
+    
 `;
