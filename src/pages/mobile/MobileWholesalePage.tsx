@@ -7,6 +7,8 @@ import {IoArrowForward} from "react-icons/io5";
 import {WholesaleSection} from "../../components/styled/wholesale/WholesaleSection";
 import {WholesaleParagraph} from "../../components/styled/wholesale/WholesaleParagraph";
 import GetTheApp from "../../components/wholesale/GetTheApp";
+import ContactUsPic from "../../assets/pictures/contact-us-wholesale.webp";
+import BookingSection from "../../components/wholesale/BookingSection";
 
 const MobileWholesalePage = () => {
     return (
@@ -131,6 +133,40 @@ const MobileWholesalePage = () => {
             </WholesaleSection>
 
             <GetTheApp/>
+
+            <WholesaleSection id="contactUsSection">
+
+                <svg width="347" height="505" viewBox="0 0 347 505" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="contactUsMobile">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M24 0C10.7452 0 0 10.7452 0 24V481C0 494.255 10.7452 505 24 505H116.345C129.022 505 138 486.178 138 473.5V473.5C138 449.298 157.878 430 182 430C206.122 430 226 449.298 226 473.5V473.5C226 486.178 234.978 505 247.655 505H323C336.255 505 347 494.255 347 481V24C347 10.7452 336.255 0 323 0H24ZM182 505C199.673 505 214 490.897 214 473.5C214 456.103 199.673 442 182 442C164.327 442 150 456.103 150 473.5C150 490.897 164.327 505 182 505Z"
+                                  fill="#C4C4C4"/>
+                        </clipPath>
+                    </defs>
+
+                    <image href={ContactUsPic} width="1320" height="293" clip-path="url(#contactUsMobile)"
+                           preserveAspectRatio="xMidYMid slice"/>
+
+                    <rect x="165" y="458" width="36.7647" height="29.5431" rx="4" fill="white"/>
+                    <path d="M170.909 465.55L183.054 474.084L195.2 465.55" stroke="black" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+
+                <TextOverlay>
+                    <p id="contactUsInfo">Weekdays from <span className="highlighted">9 am to 5 pm (CET)</span>, <span
+                        className="highlighted">Robbe and Bert</span> are ready to help you, dear wholesale customer,
+                        find what you seek from Carnivale’s assortment. <span className="highlighted">Simply subscribe to our app</span> and
+                        we'll be in touch promptly.
+                    </p>
+                    <span id="phoneNumber">
+                        +32 3 361 05 20
+                    </span>
+                </TextOverlay>
+
+            </WholesaleSection>
+            <BookingSection/>
         </WholesaleStyled>
     )
 }

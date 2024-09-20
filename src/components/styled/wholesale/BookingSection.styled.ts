@@ -26,6 +26,11 @@ export const BookingSectionStyled = styled.section`
             font-size: 3.5rem;
             margin-bottom: -10%;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 1.8rem;
+            margin-bottom: 5%;
+        }
     }
     
     .bookingCard{
@@ -34,15 +39,21 @@ export const BookingSectionStyled = styled.section`
         justify-content: space-between;
         width: 40%;
 
-        // @media (max-width: ${({theme}) => theme.display.laptop}) {
-        //     width: 30%;
-        // }
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 90%;
+            justify-content: center;
+        }
     }
     
     .bookings{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
@@ -55,6 +66,10 @@ export const BookingSectionStyled = styled.section`
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         margin-top: 10%;
         margin-bottom: 0;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+       height: 90vh;
     }
     
 `

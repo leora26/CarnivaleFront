@@ -120,6 +120,11 @@ const TextOverlay = styled.div`
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 1rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
     }
 
     .highlighted {
@@ -133,6 +138,10 @@ const TextOverlay = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
             font-size: 1rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 1.5rem;
         }
     }
 
@@ -159,6 +168,13 @@ const TextOverlay = styled.div`
             font-size: 1rem;
             width: 20%;
             margin-right: 70%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 1rem;
+            width: 50%;
+            margin-right: -40%;
+            margin-top: 10%;
         }
     }
 

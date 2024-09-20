@@ -11,6 +11,10 @@ export const WholesaleStyled = styled.main`
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             height: 25vh;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            height: 60vh;
+        }
         
     }
     

@@ -46,6 +46,11 @@ export const BookingCardStyled = styled.div`
     
     & svg{
         width: 100%;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 100%;
+            height: 20rem;
+        }
     }
 
 
