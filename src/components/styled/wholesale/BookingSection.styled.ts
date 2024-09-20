@@ -50,7 +50,12 @@ export const BookingSectionStyled = styled.section`
     }
 
     @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-        height: 50vh;
+        height: 40vh;
     }
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        margin-top: 10%;
+        margin-bottom: 0;
+    }
+    
 `
 

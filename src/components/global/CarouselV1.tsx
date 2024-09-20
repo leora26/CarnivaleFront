@@ -1,39 +1,27 @@
 import React from "react";
-import Carousel from "react-multi-carousel";
+import {motion} from "framer-motion";
 
-interface CarouselProps {
-    imgUrl: string;
-    title: string;
-    subtitle: string;
+
+interface CarouselV1Props {
+    children: React.ReactNode;
+    visibleIndex: number;
+    direction: number;
+    x: number;
 }
 
-const CarouselV1: React.FC<CarouselProps> = (props) => {
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-            partialVisibilityGutter: 40,
-        },
-    };
 
+const CarouselV1: React.FC<CarouselV1Props> = (props) => {
     return (
-        <Carousel
-            responsive={responsive}
-            centerMode={true}
-            infinite={true}
-            focusOnSelect={true}
-            customTransition="transform 300ms ease-in-out"
+        <motion.div
+            key={props.visibleIndex}
+            initial={{x: props.direction * props.x}}
+            animate={{x: 0}}
+            exit={{x: props.direction * (-1 * props.x)}}
+            transition={{duration: 0.5}}
+            style={{display: 'flex', width: "100%"}}
         >
-            {/*{props.map((item) => (*/}
-            {/*    <div*/}
-            {/*        key={item.id}*/}
-            {/*        className="carousel-item"*/}
-            {/*        style={{ padding: "20px", textAlign: "center" }}*/}
-            {/*    >*/}
-            {/*        {item.content}*/}
-            {/*    </div>*/}
-            {/*))}*/}
-        </Carousel>
+            {props.children}
+        </motion.div>
     );
 }
 
