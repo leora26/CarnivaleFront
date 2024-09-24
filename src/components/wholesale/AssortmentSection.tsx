@@ -7,6 +7,7 @@ import BeefAssortment from "../../assets/pictures/beef-assortment.jpg";
 import PoultryAssortment from "../../assets/pictures/poultry-assortment.png";
 import PorkAssortment from "../../assets/pictures/pork-assortment.webp";
 import { AssortmentCarouselContainerStyled, AssortmentCarouselItemStyled } from "../styled/wholesale/AssortmentCarouselItem.styled";
+import {MobileButtonContainer} from "../styled/wholesale/MobileButtonContainer";
 
 const AssortmentSection = () => {
     const initialVisibleProducts = 3;
@@ -61,6 +62,10 @@ const AssortmentSection = () => {
                     </IconButton>
                 </ButtonContainer>
             </AssortmentHeader>
+            <MobileButtonContainer>
+                <button onClick={handlePrev}></button>
+                <button onClick={handleNext}></button>
+            </MobileButtonContainer>
             <CarouselV1 x={100} direction={direction} visibleIndex={visibleIndex}>
                 <AssortmentCarouselContainerStyled>
                     {visibleImages.map((image, index) => (

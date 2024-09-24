@@ -1,5 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
+import {CarouselV1Styled} from "../styled/global/CarouselV1.styled";
 
 
 interface CarouselV1Props {
@@ -12,16 +13,15 @@ interface CarouselV1Props {
 
 const CarouselV1: React.FC<CarouselV1Props> = (props) => {
     return (
-        <motion.div
+        <CarouselV1Styled
             key={props.visibleIndex}
             initial={{x: props.direction * props.x}}
             animate={{x: 0}}
             exit={{x: props.direction * (-1 * props.x)}}
             transition={{duration: 0.5}}
-            style={{display: 'flex', width: "100%"}}
         >
             {props.children}
-        </motion.div>
+        </CarouselV1Styled>
     );
 }
 

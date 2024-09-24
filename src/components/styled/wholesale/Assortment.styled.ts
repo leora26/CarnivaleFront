@@ -32,6 +32,12 @@ export const AssortmentStyled = styled.section`
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             width: 25%;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 60%;
+            font-size: 1.2rem;
+            margin-top: 5%;
+        }
     }
 
     @media (max-width: ${({theme}) => theme.display.laptop}) {
@@ -42,7 +48,9 @@ export const AssortmentStyled = styled.section`
         margin-top: 10%;
     }
 
-    @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        margin: 0;
+        height: 50vh;
     }
 
    
@@ -58,6 +66,11 @@ export const AssortmentHeader = styled.div`
     & h2 {
         text-transform: uppercase;
         font-size: 4rem;
+
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
+        }
     }
 `
 
@@ -73,6 +86,10 @@ export const ButtonContainer = styled.div`
 
     @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
         width: 15%;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+       display: none;
     }
 
 `
