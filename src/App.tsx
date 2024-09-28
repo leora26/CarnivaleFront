@@ -20,26 +20,42 @@ import StoriesInterviews from "./pages/dynamic/StoriesInterviews";
 import StoriesRecipies from "./pages/dynamic/StoriesRecipies";
 import MobileHomePage from "./pages/mobile/MobileHomePage";
 import MobileWholesalePage from "./pages/mobile/MobileWholesalePage";
+import TabletHomePage from "./pages/tablet/TabletHomePage";
 
 function App() {
     const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 600px)');
-        setIsMobile(mediaQuery.matches);
+        const mediaQueryMobile = window.matchMedia('(max-width: 600px)');
+        const mediaQueryTablet = window.matchMedia('(min-width: 601px) and (max-width: 1024px)');
 
-        const handleResize = () => setIsMobile(mediaQuery.matches);
-        mediaQuery.addEventListener('change', handleResize);
+        setIsMobile(mediaQueryMobile.matches);
+        setIsTablet(mediaQueryTablet.matches);
 
-        return () => mediaQuery.removeEventListener('change', handleResize);
+        const handleResize = () => {
+            setIsMobile(mediaQueryMobile.matches);
+            setIsTablet(mediaQueryTablet.matches);
+        };
+
+        mediaQueryMobile.addEventListener('change', handleResize);
+        mediaQueryTablet.addEventListener('change', handleResize);
+
+        return () => {
+            mediaQueryMobile.removeEventListener('change', handleResize);
+            mediaQueryTablet.removeEventListener('change', handleResize);
+        };
     }, []);
+
+
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
                 <Routes>
                     <Route path="" element={<DefaultLayout isMobile={isMobile} />}>
-                        <Route index element={isMobile ? <MobileHomePage /> : <HomePage />} />
-                        <Route path="login" element={<Login />} />
+                        <Route index element={
+                            isMobile ? <MobileHomePage /> : isTablet ? <TabletHomePage /> : <HomePage />
+                        }/>                        <Route path="login" element={<Login />} />
                         <Route path="register" element={<Register />} />
                         <Route path="wholesale" element={isMobile ? <MobileWholesalePage /> : <Wholesale />}/>
                         <Route path="stories" element={<Stories />}/>

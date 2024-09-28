@@ -96,12 +96,11 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        margin-bottom: 10%;
-        height: ${(props) => props.tabletVerticalSectionHeight || '40vh'};
+        margin-bottom: 30%;
+        height: 60vh;
     }
 
     @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-        margin-bottom: 10%;
         height: 40vh;
     }
 
@@ -115,6 +114,11 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         z-index: 2;
         width: 100%;
         height: 100%;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 95vw;
+            height: 90vh;
+        }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             width: 95vw;

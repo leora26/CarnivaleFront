@@ -16,11 +16,16 @@ const TextOverlay = styled.div`
         margin: 0;
         align-self: center;
         font-family: ${({theme}) => theme.fonts.primary};
-        font-weight: 600;
+        font-weight: 400;
 
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 6em;
+            letter-spacing: 0.5rem;
+            transform: rotate(90deg);
+            transform-origin: center;
+            margin-right: 80%;
+            margin-top: 20%;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
@@ -29,9 +34,6 @@ const TextOverlay = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 2.8em;
-            letter-spacing: 0.5rem;
-            transform: rotate(90deg);
-            transform-origin: center;
             margin-right: 70%;
             margin-top: 15%;
         }
@@ -49,7 +51,8 @@ const TextOverlay = styled.div`
         font-weight: 300;
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            width: 30%;
+            width: 40%;
+            margin: 40% 50% 0 0 ;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {

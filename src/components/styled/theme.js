@@ -5,12 +5,12 @@ const theme = {
         primarySemiBold: 'HarmoniaSansProCyr-SemiBd, sans-serif'
     },
     display: {
-        smallTabletVertical: "820px",
-        smallTabletHorizontal: "1200px",
-        tabletVertical: "1024px",
-        tabletHorizontal: "1400px",
         laptop: "1600px",
-        mobile:"800px"
+        smallTabletHorizontal: "1200px",
+        tabletHorizontal: "1400px",
+        tabletVertical: "1024px",
+        smallTabletVertical: "820px",
+        mobile:"600px"
     }
 
 }

@@ -45,11 +45,11 @@ export const HomepageStyled = styled.main`
 
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             height: 60vh;
-
         }
+        
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            height: 35vh;
-            margin-top: 20%;
+            margin-top: 30%;
+            margin-left: 3rem;
         }
 
 
