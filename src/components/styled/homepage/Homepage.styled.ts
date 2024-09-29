@@ -28,6 +28,27 @@ export const HomepageStyled = styled.main`
         margin: 0 3rem 0 0 ;
     }
     
+    #weWorkWithSection{
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            height: 40vh;
+            margin: 10% 0 10% 0;
+        }
+    }
+    
+    #changingTextSection{
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            height: 40vh;
+        }
+    }
+    
+    #whatDoWeHaveSection{
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            height: 40vh;
+            margin: 0;
+        }
+    }
+    
     .first-section{
         margin-top: 10%;
         height: 80vh;
@@ -50,11 +71,6 @@ export const HomepageStyled = styled.main`
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             margin-top: 30%;
             margin-left: 3rem;
-        }
-
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            height: 35vh;
         }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {

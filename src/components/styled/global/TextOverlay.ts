@@ -223,6 +223,10 @@ const TextOverlay = styled.div`
         align-self: flex-start;
         font-family: ${({theme}) => theme.fonts.primaryBold};
 
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            margin-top: 70%;
+        }
+
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 2rem;
             margin-top: 95%;

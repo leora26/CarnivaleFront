@@ -52,7 +52,7 @@ function App() {
         <ThemeProvider theme={theme}>
             <GlobalStyles />
                 <Routes>
-                    <Route path="" element={<DefaultLayout isMobile={isMobile} />}>
+                    <Route path="" element={<DefaultLayout isMobile={isMobile} isTablet={isTablet} />}>
                         <Route index element={
                             isMobile ? <MobileHomePage /> : isTablet ? <TabletHomePage /> : <HomePage />
                         }/>                        <Route path="login" element={<Login />} />

@@ -8,7 +8,7 @@ interface NavigationItemProps {
 }
 
 export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
-    font-size: ${({fontSizeSmall}) => fontSizeSmall};
+    font-size: ${({fontSize}) => fontSize};
     color: ${({color}) => color};
     text-decoration: none;
     font-family: "Lexend", sans-serif;
@@ -16,4 +16,9 @@ export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
     margin-right: 1%;
     
 
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        font-size: ${({fontSizeSmall}) => fontSizeSmall};
+    }
+    
 `

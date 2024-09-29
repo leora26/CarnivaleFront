@@ -1,6 +1,4 @@
-import React, {useState} from "react";
 import {
-    BackPicture,
     BackVideo,
     GetInTouchContainer,
     HomepageStyled
@@ -18,7 +16,7 @@ import PoultryCategory from "../../assets/pictures/category-poultry.png";
 import WeWorkWithLink from "../../components/homepage/WeWorkWithLink";
 import LatestStories from "../../components/homepage/LatestStories";
 import ProductSection from "../../components/homepage/ProductSection";
-import HomePageBoxes from "../../assets/pictures/homepage-boxes.png";
+import HomePageBoxesV2 from "../../assets/pictures/homepage-boxesV2.jpg"
 import {ScrollingText} from "../../components/homepage/ScrollingText";
 import GetInTouch from "../../components/homepage/GetInTouch";
 import HomePageVideo from "../../assets/videos/homepage-video.mp4";
@@ -34,7 +32,7 @@ const TabletHomePage = () => {
             <HomepageStyled>
                 <HomePageSectionStyled direction="column" className="first-section">
 
-                    <svg width="95vw" height="95vh" viewBox="0 0 550 540" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="tabletSVGs" width="95vw" height="95vh" viewBox="0 0 550 540" xmlns="http://www.w3.org/2000/svg">
                         <image href={HeroPicture} width="100%" height="100%" clipPath="url(#homepageFirstSectionTablet)"
                                preserveAspectRatio="xMidYMid slice"/>
                         <path
@@ -65,8 +63,7 @@ const TabletHomePage = () => {
                 </HomePageSectionStyled>
 
 
-                <HomePageSectionStyled direction="column" tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh">
+                <HomePageSectionStyled id="changingTextSection" direction="column">
                     <ChangingTextContainer>
                         <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
                         <ChangingText staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
@@ -75,7 +72,7 @@ const TabletHomePage = () => {
                     </ChangingTextContainer>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled direction="row">
+                <HomePageSectionStyled id="whatDoWeHaveSection" direction="row">
                     <h2 id="whatDoWeHave">what do we have?</h2>
                     <CategoryCard to="/beef">
                         <img src={BeefCategory} alt="Beef category link"/>
@@ -109,7 +106,7 @@ const TabletHomePage = () => {
                     </CategoryCard>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled direction="column">
+                <HomePageSectionStyled id="weWorkWithSection" direction="column">
                     <span id="workWithSpan">We work with</span>
                     <WeWorkWithLink link="/professionals">professionals</WeWorkWithLink>
                     <WeWorkWithLink link="/companies">companies</WeWorkWithLink>
@@ -125,20 +122,47 @@ const TabletHomePage = () => {
             <HomepageStyled>
 
                 <HomePageSectionStyled direction="column">
-                    <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
+
+                    <svg className="tabletSVGs"  width="95vw" height="95vh"  viewBox="0 0 736 801" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_2169_438)">
+                            <image href={HomePageBoxesV2} width="100%" height="100%"
+                                   clipPath="url(#homepageBoxesSectionTablet)"
+                                   preserveAspectRatio="xMidYMid meet"/>
+                        </g>
+
+                        {/*Arrow*/}
+                        <path
+                            d="M621.455 653.911L660.506 653.383L645.863 640.047L649.522 636.381L670.844 655.8L650.898 675.777L646.986 672.214L660.685 658.495L621.633 659.023L621.455 653.911Z"
+                            fill="white"/>
+                        <defs>
+
+                            <clipPath id="homepageBoxesSectionTablet">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M47 24C33.7452 24 23 34.7452 23 48V745C23 758.255 33.7452 769 47 769H679C692.255 769 703 758.255 703 745V732.346C703 721.741 687.219 715.536 677.757 720.327C668.066 725.235 657.106 728 645.5 728C606.012 728 574 695.988 574 656.5C574 617.012 606.012 585 645.5 585C657.106 585 668.066 587.765 677.757 592.673C687.219 597.464 703 591.259 703 580.654V48C703 34.7452 692.255 24 679 24H47ZM702 656.5C702 687.704 676.704 713 645.5 713C614.296 713 589 687.704 589 656.5C589 625.296 614.296 600 645.5 600C676.704 600 702 625.296 702 656.5Z"
+                                      fill="#C4C4C4"/>
+                            </clipPath>
+
+                            <filter id="filter0_d_2169_438" x="0.299999" y="0.299999" width="735.4" height="800.4"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="5" dy="4"/>
+                                <feGaussianBlur stdDeviation="13.85"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2169_438"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2169_438"
+                                         result="shape"/>
+                            </filter>
+                        </defs>
+                    </svg>
+
                     <TextOverlay>
                         <h2>BOXES</h2>
                         <h3>For your company</h3>
                     </TextOverlay>
                 </HomePageSectionStyled>
-                {/*<HomePageSectionStyled sectionHeight="80vh" tabletHorizontalSectionHeight="60vh"*/}
-                {/*                       tabletVerticalSectionHeight="30vh" direction="column">*/}
-                {/*    <BackPicture src={BookingPicture} alt="Booking picture"/>*/}
-                {/*    <TextOverlay>*/}
-                {/*        <h1 id="booking-heading">BOOK AN EVENT WITH US</h1>*/}
-                {/*        <input type="date"/>*/}
-                {/*    </TextOverlay>*/}
-                {/*</HomePageSectionStyled>*/}
 
             </HomepageStyled>
             <GetInTouchContainer>
@@ -149,19 +173,6 @@ const TabletHomePage = () => {
                     <GetInTouch/>
                 </ScrollingText>
             </GetInTouchContainer>
-
-
-            {/*<HomepageStyled>*/}
-            {/*    <HomePageSectionStyled direction="column">*/}
-            {/*        <BackPicture src={Hero2Picture} alt="Hero picture number 2"/>*/}
-            {/*        <TextOverlay>*/}
-            {/*        <span>*/}
-            {/*            Pure products with lots of identity and impact,*/}
-            {/*            both in <b>  taste and meaning.</b>*/}
-            {/*        </span>*/}
-            {/*        </TextOverlay>*/}
-            {/*    </HomePageSectionStyled>*/}
-            {/*</HomepageStyled>*/}
 
             <BackVideo src={HomePageVideo} autoPlay loop muted/>
 

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {
     BackPicture,
     HomepageStyled,
@@ -32,24 +32,14 @@ const HomePage = () => {
     const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
     const ingredientsText: string[] = ["identity", "taste", "happiness", "impact", "personality", "satisfaction ", "transparency", "value"];
 
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
-
     return (
         <>
             <HomepageStyled>
                 <HomePageSectionStyled tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh" direction="column" className="first-section"
-                                       onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                                       tabletVerticalSectionHeight="30vh" direction="column" className="first-section">
 
-                    <svg width="90vw" height="60vh" viewBox="0 0 1340 490" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="tabletSVGs" width="90vw" height="60vh" viewBox="0 0 1340 490"
+                         xmlns="http://www.w3.org/2000/svg">
                         <image href={HeroPicture} width="100%" height="100%" clipPath="url(#homepageFirstSection)"
                                preserveAspectRatio="xMidYMid slice"/>
                         <g filter="url(#filter0_d_2129_429)">

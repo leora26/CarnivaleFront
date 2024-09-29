@@ -19,7 +19,7 @@ export const ChangingTextStyled = styled.div`
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
         }
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 0.6rem;
@@ -39,7 +39,7 @@ export const ChangingTextStyled = styled.div`
         }
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.7rem;
+            font-size: 2rem;
         }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {

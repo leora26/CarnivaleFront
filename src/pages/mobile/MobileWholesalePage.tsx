@@ -2,8 +2,6 @@ import React from "react";
 import {WholesaleStyled} from "../../components/styled/wholesale/Wholesale.styled";
 import HeroPicture from "../../assets/pictures/wholesale-hero.jpg";
 import TextOverlay from "../../components/styled/global/TextOverlay";
-import {ExploreArrow} from "../../components/styled/homepage/Homepage.styled";
-import {IoArrowForward} from "react-icons/io5";
 import {WholesaleSection} from "../../components/styled/wholesale/WholesaleSection";
 import {WholesaleParagraph} from "../../components/styled/wholesale/WholesaleParagraph";
 import GetTheApp from "../../components/wholesale/GetTheApp";

@@ -6,17 +6,18 @@ import MobileNavigation from "../components/nav-footer/MobileNavigation";
 import MobileFooter from "../components/nav-footer/MobileFooter";
 
 interface DefaultLayoutProps {
-    isMobile: boolean
+    isTablet: boolean;
+    isMobile: boolean;
 }
 
-const DefaultLayout: React.FC<DefaultLayoutProps> = ({isMobile}) => {
+const DefaultLayout: React.FC<DefaultLayoutProps> = ({isTablet, isMobile}) => {
     return (
         <>
-            {isMobile ? <MobileNavigation/> : <Navigation/>}
+            {isTablet || isMobile ? <MobileNavigation/> : <Navigation/>}
             <main>
                 <Outlet />
             </main>
-            {isMobile ? <MobileFooter/> : <Footer/>}
+            {isTablet ? <MobileFooter/> : <Footer/>}
         </>
     )
 }

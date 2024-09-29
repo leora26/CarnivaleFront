@@ -49,8 +49,9 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
         }
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 5rem;
-            height: 90%;
+            height: 80%;
             width: 25%;
+            align-self: start;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
@@ -109,7 +110,7 @@ export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
     }
 
 
-    & svg {
+    & .tabletSVGs {
         position: absolute;
         z-index: 2;
         width: 100%;

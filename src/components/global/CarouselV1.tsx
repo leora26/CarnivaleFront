@@ -1,5 +1,4 @@
 import React from "react";
-import {motion} from "framer-motion";
 import {CarouselV1Styled} from "../styled/global/CarouselV1.styled";
 
 

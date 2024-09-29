@@ -40,7 +40,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        width: 50%;
+        width: 15%;
     }
 
     @media (max-width: ${({theme}) => theme.display.mobile}) {
