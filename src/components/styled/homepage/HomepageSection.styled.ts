@@ -8,7 +8,7 @@ interface HomePageSectionStyledProps {
 }
 
 
-export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyledProps>`
+    export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyledProps>`
     width: 100%;
     height: 80vh;
     border-radius: 2rem;

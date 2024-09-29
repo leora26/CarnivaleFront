@@ -21,21 +21,31 @@ import HomePageBoxes from "../../assets/pictures/product-section.png"
 import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
+import {useAnimation} from "framer-motion";
 
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 const MobileHomePage = () => {
+    const controls = useAnimation();
+
     const weSeekForText: string[] = ["FARMERS", "PRODUCERS", "HEROES", "PROTAGONISTS", "PEOPLE WITH IMPACT"];
     const offerText: string[] = ["CHEF", "ENTHUSIASTS", "HOMECHEFS", "YOU"];
     const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
     const ingredientsText: string[] = ["identity", "taste", "happiness", "impact", "personality", "satisfaction ", "transparency", "value"];
 
 
-
-
     return (
         <>
             <HomepageStyled>
                 <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{once: false, amount: 0.4}}
                     direction="column" className="first-section"
                 >
                     <svg className="tabletSVGs" width="90vw" height="60vh" viewBox="0 0 343 520"
@@ -68,17 +78,29 @@ const MobileHomePage = () => {
                     </TextOverlay>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled direction="column" tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
+                    direction="column">
                     <ChangingTextContainer>
                         <ChangingText animationOrder={0} staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
                         <ChangingText animationOrder={1} staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
                         <ChangingText animationOrder={2} staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
+                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH "
+                                      dynamicText={ingredientsText}/>
                     </ChangingTextContainer>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled direction="column">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
+                    direction="column">
                     <h2 id="whatDoWeHave">what do we have?</h2>
                     <div id="categories">
                         <CategoryCard to="/beef">
@@ -108,7 +130,8 @@ const MobileHomePage = () => {
 
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled id="weWorkWithContainer" direction="column">
+                <HomePageSectionStyled
+                    id="weWorkWithContainer" direction="column">
                     <span id="workWithSpan">We work with</span>
                     <WeWorkWithLink link="/professionals">professionals</WeWorkWithLink>
                     <WeWorkWithLink link="/companies">companies</WeWorkWithLink>
@@ -124,10 +147,15 @@ const MobileHomePage = () => {
 
             <HomepageStyled>
                 <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
                     direction="column"
                     className="first-section"
                 >
-                    <svg id="boxesPicture" width="379" height="640" viewBox="0 0 379 640" fill="none"
+                    <svg className="tabletSVGs" width="379" height="640" viewBox="0 0 379 640" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <clipPath id="clipShape2">

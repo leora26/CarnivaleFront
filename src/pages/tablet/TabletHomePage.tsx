@@ -21,8 +21,16 @@ import {ScrollingText} from "../../components/homepage/ScrollingText";
 import GetInTouch from "../../components/homepage/GetInTouch";
 import HomePageVideo from "../../assets/videos/homepage-video.mp4";
 import React from "react";
+import {useAnimation} from "framer-motion";
+
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 const TabletHomePage = () => {
+    const controls = useAnimation();
+
     const weSeekForText: string[] = ["FARMERS", "PRODUCERS", "HEROES", "PROTAGONISTS", "PEOPLE WITH IMPACT"];
     const offerText: string[] = ["CHEF", "ENTHUSIASTS", "HOMECHEFS", "YOU"];
     const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
@@ -31,9 +39,17 @@ const TabletHomePage = () => {
     return (
         <>
             <HomepageStyled>
-                <HomePageSectionStyled direction="column" className="first-section">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{once: false, amount: 0.4}}
+                    direction="column"
+                    className="first-section">
 
-                    <svg className="tabletSVGs" width="95vw" height="95vh" viewBox="0 0 550 540" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="tabletSVGs" width="95vw" height="95vh" viewBox="0 0 550 540"
+                         xmlns="http://www.w3.org/2000/svg">
                         <image href={HeroPicture} width="100%" height="100%" clipPath="url(#homepageFirstSectionTablet)"
                                preserveAspectRatio="xMidYMid slice"/>
                         <path
@@ -64,16 +80,31 @@ const TabletHomePage = () => {
                 </HomePageSectionStyled>
 
 
-                <HomePageSectionStyled id="changingTextSection" direction="column">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{once: false, amount: 0.4}}
+                    id="changingTextSection"
+                    direction="column">
                     <ChangingTextContainer>
                         <ChangingText animationOrder={0} staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
                         <ChangingText animationOrder={1} staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
                         <ChangingText animationOrder={2} staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
+                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH "
+                                      dynamicText={ingredientsText}/>
                     </ChangingTextContainer>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled id="whatDoWeHaveSection" direction="row">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{once: false, amount: 0.4}}
+                    id="whatDoWeHaveSection"
+                    direction="row">
                     <h2 id="whatDoWeHave">what do we have?</h2>
                     <CategoryCard to="/beef">
                         <img src={BeefCategory} alt="Beef category link"/>
@@ -122,9 +153,16 @@ const TabletHomePage = () => {
             <ProductSection/>
             <HomepageStyled>
 
-                <HomePageSectionStyled direction="column">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{once: false, amount: 0.4}}
+                    direction="column">
 
-                    <svg className="tabletSVGs"  width="95vw" height="95vh"  viewBox="0 0 736 801" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="tabletSVGs" width="95vw" height="95vh" viewBox="0 0 736 801" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_2169_438)">
                             <image href={HomePageBoxesV2} width="100%" height="100%"
                                    clipPath="url(#homepageBoxesSectionTablet)"
