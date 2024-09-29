@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
     BackPicture,
     HomepageStyled,
@@ -24,9 +24,21 @@ import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import HomePageVideo from "../../assets/videos/homepage-video.mp4"
 import CurvedTextV2 from "../../components/homepage/CurvedTextV2";
+import {useAnimation} from "framer-motion";
+
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 
 const HomePage = () => {
+    const controls = useAnimation();
+    useEffect(() => {
+        controls.start("visible")
+    }, [controls])
+
+
     const weSeekForText: string[] = ["FARMERS", "PRODUCERS", "HEROES", "PROTAGONISTS", "PEOPLE WITH IMPACT"];
     const offerText: string[] = ["CHEF", "ENTHUSIASTS", "HOMECHEFS", "YOU"];
     const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
@@ -35,8 +47,16 @@ const HomePage = () => {
     return (
         <>
             <HomepageStyled>
-                <HomePageSectionStyled tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh" direction="column" className="first-section">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
+                    tabletHorizontalSectionHeight="60vh"
+                    tabletVerticalSectionHeight="30vh"
+                    direction="column"
+                    className="first-section">
 
                     <svg className="tabletSVGs" width="90vw" height="60vh" viewBox="0 0 1340 490"
                          xmlns="http://www.w3.org/2000/svg">
@@ -134,17 +154,30 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
 
-                <HomePageSectionStyled direction="column" tabletHorizontalSectionHeight="60vh"
-                                       tabletVerticalSectionHeight="30vh">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
+                    direction="column"
+                    tabletHorizontalSectionHeight="60vh"
+                    tabletVerticalSectionHeight="30vh">
                     <ChangingTextContainer>
-                        <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
-                        <ChangingText staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
-                        <ChangingText staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
+                        <ChangingText animationOrder={0} staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
+                        <ChangingText animationOrder={1} staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
+                        <ChangingText animationOrder={2} staticText="AIMING FOR" dynamicText={aimingForText}/>
+                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
                     </ChangingTextContainer>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled direction="row">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
+                    direction="row">
                     <h2 id="whatDoWeHave">what do we have?</h2>
                     <CategoryCard to="/beef">
                         <img src={BeefCategory} alt="Beef category link"/>
@@ -178,7 +211,13 @@ const HomePage = () => {
                     </CategoryCard>
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled direction="column">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
+                    direction="column">
                     <span id="workWithSpan">We work with</span>
                     <WeWorkWithLink link="/professionals">professionals</WeWorkWithLink>
                     <WeWorkWithLink link="/companies">companies</WeWorkWithLink>
@@ -193,7 +232,13 @@ const HomePage = () => {
             <ProductSection/>
             <HomepageStyled>
 
-                <HomePageSectionStyled direction="column">
+                <HomePageSectionStyled
+                    initial="hidden"
+                    animate={controls}
+                    variants={sectionVariants}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }}
+                    direction="column">
                     <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
                     <TextOverlay>
                         <h2>BOXES</h2>

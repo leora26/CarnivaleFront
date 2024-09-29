@@ -71,10 +71,10 @@ const MobileHomePage = () => {
                 <HomePageSectionStyled direction="column" tabletHorizontalSectionHeight="60vh"
                                        tabletVerticalSectionHeight="30vh">
                     <ChangingTextContainer>
-                        <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
-                        <ChangingText staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
-                        <ChangingText staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
+                        <ChangingText animationOrder={0} staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
+                        <ChangingText animationOrder={1} staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
+                        <ChangingText animationOrder={2} staticText="AIMING FOR" dynamicText={aimingForText}/>
+                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
                     </ChangingTextContainer>
                 </HomePageSectionStyled>
 

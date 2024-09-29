@@ -2,8 +2,15 @@ import React from "react";
 import {LatestStoriesStyled} from "../styled/homepage/LatestStories.styled";
 import AllStories from "../../models/response/AllStories";
 import StoryCard from "../global/StoryCard";
+import {useAnimation} from "framer-motion";
+
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 const LatestStories = () => {
+    const controls = useAnimation();
     // const {data, loading, error} = useFetch<AllStories[]>("http://localhost:8080");
 
     const data: AllStories[] = [
@@ -39,7 +46,13 @@ const LatestStories = () => {
 
 
     return (
-        <LatestStoriesStyled>
+        <LatestStoriesStyled
+            initial="hidden"
+            animate={controls}
+            variants={sectionVariants}
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+        >
             {data?.map(story => {
                 return (
                     <StoryCard key={story.id} story={story}/>

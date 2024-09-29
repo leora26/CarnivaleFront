@@ -1,7 +1,8 @@
 import {styled} from "styled-components";
+import {motion} from "framer-motion";
 
 
-export const LatestStoriesStyled = styled.section`
+export const LatestStoriesStyled = styled(motion.section)`
     width: 90vw;
     display: flex;
     flex-direction: row;

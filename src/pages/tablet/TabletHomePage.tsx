@@ -20,6 +20,7 @@ import HomePageBoxesV2 from "../../assets/pictures/homepage-boxesV2.jpg"
 import {ScrollingText} from "../../components/homepage/ScrollingText";
 import GetInTouch from "../../components/homepage/GetInTouch";
 import HomePageVideo from "../../assets/videos/homepage-video.mp4";
+import React from "react";
 
 const TabletHomePage = () => {
     const weSeekForText: string[] = ["FARMERS", "PRODUCERS", "HEROES", "PROTAGONISTS", "PEOPLE WITH IMPACT"];
@@ -65,10 +66,10 @@ const TabletHomePage = () => {
 
                 <HomePageSectionStyled id="changingTextSection" direction="column">
                     <ChangingTextContainer>
-                        <ChangingText staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
-                        <ChangingText staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
-                        <ChangingText staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
+                        <ChangingText animationOrder={0} staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
+                        <ChangingText animationOrder={1} staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
+                        <ChangingText animationOrder={2} staticText="AIMING FOR" dynamicText={aimingForText}/>
+                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH " dynamicText={ingredientsText}/>
                     </ChangingTextContainer>
                 </HomePageSectionStyled>
 

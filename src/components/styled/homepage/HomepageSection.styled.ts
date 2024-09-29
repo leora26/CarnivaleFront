@@ -1,4 +1,5 @@
 import {styled} from "styled-components";
+import {motion} from "framer-motion";
 
 interface HomePageSectionStyledProps {
     tabletHorizontalSectionHeight?: string;
@@ -7,7 +8,7 @@ interface HomePageSectionStyledProps {
 }
 
 
-export const HomePageSectionStyled = styled.section<HomePageSectionStyledProps>`
+export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyledProps>`
     width: 100%;
     height: 80vh;
     border-radius: 2rem;
