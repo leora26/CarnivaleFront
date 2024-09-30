@@ -57,7 +57,7 @@ export const StoriesStyled = styled.main`
     }
 `
 
-export const StoriesNavigation = styled.div`
+export const StoriesNavigationStyled = styled.div`
     align-self: start;
     width: 70%;
     display: flex;

@@ -21,32 +21,12 @@ import StoriesRecipies from "./pages/dynamic/StoriesRecipies";
 import MobileHomePage from "./pages/mobile/MobileHomePage";
 import MobileWholesalePage from "./pages/mobile/MobileWholesalePage";
 import TabletHomePage from "./pages/tablet/TabletHomePage";
+import useScreenSize from "./hooks/useScreenSize";
 
 function App() {
-    const [isMobile, setIsMobile] = useState(false);
-    const [isTablet, setIsTablet] = useState(false);
 
-    useEffect(() => {
-        const mediaQueryMobile = window.matchMedia('(max-width: 600px)');
-        const mediaQueryTablet = window.matchMedia('(min-width: 601px) and (max-width: 1024px)');
-
-        setIsMobile(mediaQueryMobile.matches);
-        setIsTablet(mediaQueryTablet.matches);
-
-        const handleResize = () => {
-            setIsMobile(mediaQueryMobile.matches);
-            setIsTablet(mediaQueryTablet.matches);
-        };
-
-        mediaQueryMobile.addEventListener('change', handleResize);
-        mediaQueryTablet.addEventListener('change', handleResize);
-
-        return () => {
-            mediaQueryMobile.removeEventListener('change', handleResize);
-            mediaQueryTablet.removeEventListener('change', handleResize);
-        };
-    }, []);
-
+    const isMobile = useScreenSize({minWidth: 200, maxWidth: 600});
+    const isTablet = useScreenSize({minWidth: 601, maxWidth: 1024});
 
     return (
         <ThemeProvider theme={theme}>

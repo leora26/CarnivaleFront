@@ -34,6 +34,10 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 25%;
+
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
+        width: 30%;
+    }
     
     @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
         width: 40%;

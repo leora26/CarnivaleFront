@@ -17,7 +17,7 @@ export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
     
 
 
-    @media (max-width: ${({theme}) => theme.display.mobile}) {
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
         font-size: ${({fontSizeSmall}) => fontSizeSmall};
     }
     

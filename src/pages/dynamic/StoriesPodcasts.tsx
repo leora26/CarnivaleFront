@@ -1,11 +1,11 @@
-import {StoriesContainer, StoriesNavigation, StoriesStyled} from "../../components/styled/stories/Stories.styled";
-import {NavigationItemStyled} from "../../components/styled/nav-footer/NavigationItem.styled";
+import {StoriesContainer, StoriesStyled} from "../../components/styled/stories/Stories.styled";
 import React, {useState} from "react";
 import useFetch from "../../hooks/useFetch";
 import AllStories from "../../models/response/AllStories";
 import ApiResponse from "../../models/response/ApiResponse";
 import StoryCardV2 from "../../components/global/StoryCardV2";
 import SpinnerLoader from "../../components/global/SpinnerLoader";
+import StoriesNavigation from "../../components/stories/StoriesNavigation";
 
 const StoriesPodcasts: React.FC = () => {
     const {response, loading, error} = useFetch<ApiResponse<AllStories[]>>("http://localhost:8080/api/podcasts");
@@ -301,20 +301,7 @@ const StoriesPodcasts: React.FC = () => {
     return (
         <StoriesStyled>
             <h1>Podcasts</h1>
-            <StoriesNavigation>
-                <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
-                                      to="/stories/blogs">BLOGS</NavigationItemStyled>
-                <NavigationItemStyled className="storiesNavigation active" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
-                                      to="/stories/podcasts">PODCASTS</NavigationItemStyled>
-                <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
-                                      to="/stories/events">EVENTS</NavigationItemStyled>
-                <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
-                                      to="/stories/producers">PRODUCERS</NavigationItemStyled>
-                <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
-                                      to="/stories/interviews">INTERVIEWS</NavigationItemStyled>
-                <NavigationItemStyled className="storiesNavigation" fontSizeSmall="1.8rem" fontSize="2rem" fontWeight={400} color='black'
-                                      to="/stories/recipies">RECIPIES</NavigationItemStyled>
-            </StoriesNavigation>
+            <StoriesNavigation />
             <StoriesContainer>
                 {loading ? (
                     <SpinnerLoader />
