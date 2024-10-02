@@ -6,8 +6,12 @@ import ApiResponse from "../../models/response/ApiResponse";
 import StoryCardV2 from "../../components/global/StoryCardV2";
 import SpinnerLoader from "../../components/global/SpinnerLoader";
 import StoriesNavigation from "../../components/stories/StoriesNavigation";
+import useScreenSize from "../../hooks/useScreenSize";
+import MobileStoriesNavigation from "../../components/stories/MobileStoriesNavigation";
 
 const Stories: React.FC = () => {
+    const isSmallScreen = useScreenSize({minWidth: 200, maxWidth: 1024});
+
     const {response, loading, error} = useFetch<ApiResponse<AllStories[]>>("http://localhost:8080/api/story");
     const [listStories, setListStories] = useState<number>(12)
 
@@ -301,7 +305,7 @@ const Stories: React.FC = () => {
     return (
         <StoriesStyled>
             <h1>Stories</h1>
-            <StoriesNavigation />
+            {isSmallScreen ? <MobileStoriesNavigation currentPage="All" /> : <StoriesNavigation />}
             <StoriesContainer>
                 {loading ? (
                     <SpinnerLoader />

@@ -1,4 +1,5 @@
 import {styled} from "styled-components";
+import {motion} from "framer-motion";
 
 export const StoriesStyled = styled.main`
     width: 90%;
@@ -79,7 +80,35 @@ export const StoriesNavigationStyled = styled.div`
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             font-size: 1.2rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            margin-top: 1rem;
+            font-size: 2.6rem;
+        }
     }
+
+`
+
+export const StoriesMobileNavigationStyled = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+
+
+    & .storiesNavigation{
+        opacity: 0.5;
+        transition: 0.4s;
+        margin-top: 1rem;
+        font-size: 2.6rem;
+
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+
 `
 
 export const StoriesContainer = styled.div`
