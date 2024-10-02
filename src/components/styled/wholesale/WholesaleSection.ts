@@ -9,14 +9,22 @@ export const WholesaleSection = styled.section`
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
+    
+    #wholesaleFistSection{
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            margin-top: 40%;
+        }
+        
+    }
+    
 
     
 
     & svg {
         position: absolute;
         z-index: 2;
-        width: 100%;
-        height: 100%;
+        width: 90vw;
+        height: 85vh;
 
         & image {
             width: 100%;

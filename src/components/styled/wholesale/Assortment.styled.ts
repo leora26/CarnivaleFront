@@ -48,6 +48,10 @@ export const AssortmentStyled = styled.section`
         margin-top: 10%;
     }
 
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        margin: 0;
+    }
+
     @media (max-width: ${({theme}) => theme.display.mobile}) {
         margin: 0;
         height: 50vh;

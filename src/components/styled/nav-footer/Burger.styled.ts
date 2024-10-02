@@ -57,6 +57,10 @@ export const NavigationContainer = styled.div<OpenProps>`
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 6rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
+        }
     }
 `
 

@@ -72,7 +72,10 @@ const TextOverlay = styled.div`
         font-family:  ${({theme}) => theme.fonts.primary};
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 70%;
             font-size: 3rem;
+            margin-top: 50%;
+            margin-bottom: 5%;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
@@ -88,13 +91,13 @@ const TextOverlay = styled.div`
     }
 
     & #p-wholesale {
-        width: 60%;
+        width: 50%;
         font-size: 1.5rem;
-        margin-left: -30%;
+        margin-left: -40%;
         font-weight: 200;
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.3rem;
+            margin: 0 0 0 -40%;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {

@@ -28,12 +28,18 @@ export const WholesaleStyled = styled.main`
     & #paragraphs{
         flex-direction: row;
         height: 10vh;
-        margin: -10% auto 10% auto;
+        margin: -5% auto 10% auto;
         justify-content: space-around;
         align-items: start;
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             margin-bottom: 15%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            margin-bottom: 15%;
+            margin-top: 30%;
+            flex-direction: column;
         }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {

@@ -22,6 +22,7 @@ import MobileHomePage from "./pages/mobile/MobileHomePage";
 import MobileWholesalePage from "./pages/mobile/MobileWholesalePage";
 import TabletHomePage from "./pages/tablet/TabletHomePage";
 import useScreenSize from "./hooks/useScreenSize";
+import TabletWholesalePage from "./pages/tablet/TabletWholesalePage";
 
 function App() {
 
@@ -35,9 +36,12 @@ function App() {
                     <Route path="" element={<DefaultLayout isMobile={isMobile} isTablet={isTablet} />}>
                         <Route index element={
                             isMobile ? <MobileHomePage /> : isTablet ? <TabletHomePage /> : <HomePage />
-                        }/>                        <Route path="login" element={<Login />} />
+                        }/>
+                        <Route path="login" element={<Login />} />
                         <Route path="register" element={<Register />} />
-                        <Route path="wholesale" element={isMobile ? <MobileWholesalePage /> : <Wholesale />}/>
+                        <Route path="wholesale" element={
+                            isMobile ? <MobileWholesalePage /> : isTablet ? <TabletWholesalePage /> : <Wholesale />
+                        }/>
                         <Route path="stories" element={<Stories />}/>
                         <Route path="stories/blogs" element={<StoriesBlogs />}/>
                         <Route path="stories/podcasts" element={<StoriesPodcasts />}/>
