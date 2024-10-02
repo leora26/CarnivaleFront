@@ -19,7 +19,6 @@ const StoriesNavigation: React.FC<CurrentPageProps> = ({currentPage}) => {
         <>
             <StoriesMenuHeader onClick={handleClick}>
                 <h4>{currentPage}</h4>
-                {/* Animated SVG with rotation effect */}
                 <motion.svg
                     initial={{rotate: 0}}
                     animate={{rotate: open ? 180 : 0}}

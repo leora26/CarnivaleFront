@@ -14,10 +14,19 @@ export const StoriesMenuHeader = styled.div`
         font-family: "Lexend", sans-serif;
         font-weight: 400;
         text-transform: uppercase;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
+        }
     }
     
     & svg {
         width: 60px;
         height: 60px;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 40px;
+            height: 40px;
+        }
     }
 `

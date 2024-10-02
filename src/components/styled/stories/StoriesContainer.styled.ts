@@ -17,6 +17,11 @@ export const StoriesContainerStyled = styled.div`
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             width: 50%;
         }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 90%;
+            margin-left: 5%;
+        }
         
     }
 `

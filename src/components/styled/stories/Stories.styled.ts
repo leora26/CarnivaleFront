@@ -15,6 +15,12 @@ export const StoriesStyled = styled.main`
         font-weight: 500;
         width: 100%;
         border-bottom: 15px solid #FFDD5A;
+
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 3rem;
+            margin-top: 10%;
+        }
     }
     
     & button {
@@ -42,17 +48,36 @@ export const StoriesStyled = styled.main`
             width: 17%;
         }
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            width: 19%;
+            font-size: 2rem;
+            width: 29%;
+            border: 2px solid #000000;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            width: 24%;
+            width: 38%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 50%;
+            margin-top: 10%;
+            font-size: 1.2rem;
         }
         
         & svg {
             width: 20px;
             height: 20px;
             margin-left: 5%;
+
+            @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+                width: 30px;
+                height: 30px;
+                margin-left: 7%;
+            }
+
+            @media (max-width: ${({theme}) => theme.display.mobile}) {
+                width: 20px;
+                height: 20px;
+            }
         }
 
     }
@@ -105,6 +130,10 @@ export const StoriesMobileNavigationStyled = styled(motion.div)`
 
         &:hover {
             opacity: 1;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
         }
 
     }

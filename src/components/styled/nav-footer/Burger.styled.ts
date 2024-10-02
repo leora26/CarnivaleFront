@@ -53,6 +53,10 @@ export const NavigationContainer = styled.div<OpenProps>`
     
     & a{
         margin-top: 10%;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 6rem;
+        }
     }
 `
 
