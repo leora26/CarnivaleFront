@@ -1,6 +1,6 @@
 import {NavigationItemStyled} from "../styled/nav-footer/NavigationItem.styled";
 import React, {useState} from "react";
-import {StoriesMobileNavigationStyled, StoriesNavigationStyled} from "../styled/stories/Stories.styled";
+import {StoriesMobileNavigationStyled} from "../styled/stories/Stories.styled";
 import {StoriesMenuHeader} from "../styled/stories/StoriesMenuHeader";
 import {motion, AnimatePresence} from "framer-motion";
 

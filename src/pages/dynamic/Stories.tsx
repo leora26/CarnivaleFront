@@ -1,13 +1,13 @@
-import {StoriesContainer, StoriesStyled} from "../../components/styled/stories/Stories.styled";
+import {StoriesStyled} from "../../components/styled/stories/Stories.styled";
 import React, {useState} from "react";
 import useFetch from "../../hooks/useFetch";
 import AllStories from "../../models/response/AllStories";
 import ApiResponse from "../../models/response/ApiResponse";
-import StoryCardV2 from "../../components/global/StoryCardV2";
-import SpinnerLoader from "../../components/global/SpinnerLoader";
 import StoriesNavigation from "../../components/stories/StoriesNavigation";
 import useScreenSize from "../../hooks/useScreenSize";
 import MobileStoriesNavigation from "../../components/stories/MobileStoriesNavigation";
+import StoriesContainer from "../../components/stories/StoriesContainer";
+import LoadMoreButton from "../../components/global/LoadMoreButton";
 
 const Stories: React.FC = () => {
     const isSmallScreen = useScreenSize({minWidth: 200, maxWidth: 1024});
@@ -306,23 +306,8 @@ const Stories: React.FC = () => {
         <StoriesStyled>
             <h1>Stories</h1>
             {isSmallScreen ? <MobileStoriesNavigation currentPage="All" /> : <StoriesNavigation />}
-            <StoriesContainer>
-                {loading ? (
-                    <SpinnerLoader />
-                ) : (
-                    allStories.slice(0, listStories).map(story => {
-                        return <StoryCardV2 key={story.id} story={story} />;
-                    })
-                )}
-
-
-            </StoriesContainer>
-            <button onClick={handleLoadMore}>Load more
-                <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L12 14L21 3" stroke="black" stroke-width="3" stroke-linecap="square"
-                          stroke-linejoin="round"/>
-                </svg>
-            </button>
+            <StoriesContainer listStories={listStories} loading={loading} allStories={allStories} />
+            <LoadMoreButton handleLoadMore={handleLoadMore}/>
         </StoriesStyled>
     )
 }

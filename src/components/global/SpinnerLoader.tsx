@@ -1,8 +1,16 @@
 import SpinnerGIF from "../../assets/videos/Spinner.gif";
+import {SpinnerLoaderStyled} from "../styled/global/SpinnerLoader.styled";
+import React from "react";
 
-const SpinnerLoader = () => {
+interface SpinnerProps {
+    height: number;
+}
+
+const SpinnerLoader: React.FC<SpinnerProps> = (props) => {
     return (
-        <img src={SpinnerGIF} alt="Loading Spinner" />
+        <SpinnerLoaderStyled height={props.height}>
+            <img src={SpinnerGIF} alt="Loading Spinner"/>
+        </SpinnerLoaderStyled>
     );
 }
 

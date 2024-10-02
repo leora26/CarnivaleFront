@@ -13,6 +13,7 @@ export const StoriesMenuHeader = styled.div`
         font-size: 3rem;
         font-family: "Lexend", sans-serif;
         font-weight: 400;
+        text-transform: uppercase;
     }
     
     & svg {
