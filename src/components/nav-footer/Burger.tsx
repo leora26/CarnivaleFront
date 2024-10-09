@@ -21,7 +21,7 @@ const Burger = () => {
                                       to="/wholesale">WHOLESALE</NavigationItemStyled>
                 <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="4rem"  fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
                 <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="4rem" fontWeight={600} color='black'
-                                      to="/corporate">CORPORATE</NavigationItemStyled>
+                                      to="/corporate">COMPANIES</NavigationItemStyled>
                 <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="4rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
             </NavigationContainer>
         </>
