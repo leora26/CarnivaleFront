@@ -11,6 +11,9 @@ const theme = {
         tabletVertical: "1024px",
         smallTabletVertical: "820px",
         mobile:"600px"
+    },
+    colors: {
+        primary: "#FFDD5A"
     }
 
 }
