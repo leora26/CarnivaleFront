@@ -282,3 +282,35 @@ export const stories: AllStories[] = [
         ]
     }
 ]
+
+
+export const latestStories: AllStories[] = [
+    {
+        "id": 1,
+        "title": "Name of the story number one",
+        "subTitle": "A small description about story number one. And a second sentence about story number one.",
+        "createdAt": "24/02/2023",
+        "type": "Podcast",
+        "mediaContents": [
+            {
+                "id": 1,
+                "url": "https://placehold.co/644x600",
+                "mediaType": "IMAGE"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Name of the story number two",
+        "subTitle": "A small description about story number two. And a second sentence about story number two.",
+        "createdAt": "25/02/2023",
+        "type": "Podcast",
+        "mediaContents": [
+            {
+                "id": 2,
+                "url": "https://placehold.co/644x600",
+                "mediaType": "IMAGE"
+            }
+        ]
+    }
+]

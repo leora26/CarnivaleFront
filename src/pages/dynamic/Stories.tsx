@@ -19,7 +19,7 @@ const Stories: React.FC = () => {
         setListStories((prevState) => prevState + 10)
     }
 
-    const allStories: AllStories[] = error ? stories : data || [];
+    const allStories: AllStories[] = error ? stories : data?.data || [];
 
     return (
         <StoriesStyled>

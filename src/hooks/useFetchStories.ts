@@ -1,12 +1,13 @@
 import axios from "axios";
 import {useQuery} from "react-query";
 import AllStories from "../models/response/AllStories";
+import ApiResponse from "../models/response/ApiResponse";
 
 interface FetchStoriesProps {
     category: string;
 }
 
-const fetchStories = async (data: FetchStoriesProps): Promise<AllStories[]> => {
+const fetchStories = async (data: FetchStoriesProps): Promise<ApiResponse<AllStories[]>> => {
     const backendUrl = process.env.REACT_API_URL
     const response = await axios.get(`${backendUrl}${data.category}`)
     return response.data
