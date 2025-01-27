@@ -1,13 +1,20 @@
 import {CompanyPageStyled} from "../../components/styled/companies/CompanyPage.styled";
 import {CompanySection} from "../../components/styled/companies/CompanySection";
+import React from "react";
+import FirstSectionPicture from "../../assets/pictures/companyFirstSection.jpg"
+import TextOverlay from "../../components/styled/global/TextOverlay";
 
 const CompanyPage = () => {
     return (
         <CompanyPageStyled>
-            <CompanySection>
-                <svg width="1372" height="467" viewBox="0 0 1372 467" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <CompanySection id="firstSection" direction="column">
+                <svg className="tabletSVGs" width="90vw" height="60vh" viewBox="0 0 1340 490"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <image href={FirstSectionPicture} width="100%" height="100%" clipPath="url(#companiesFirstSection)"
+                           preserveAspectRatio="xMidYMid slice"/>
+
                     <g clip-path="url(#clip0_2293_476)">
-                        <rect x="31" width="1318" height="467" rx="24" fill="#C4C4C4"/>
+
                         <path
                             d="M911.471 331.136L924.932 306.23L916.023 301.31L919.239 295.359L943.871 308.962L940.654 314.913L931.483 309.848L918.022 334.754L911.471 331.136Z"
                             fill="white"/>
@@ -112,12 +119,22 @@ const CompanyPage = () => {
                             fill="white"/>
                     </g>
                     <defs>
-                        <clipPath id="clip0_2293_476">
-                            <rect width="1372" height="467" fill="white"/>
+                        <clipPath id="companiesFirstSection">
+                            <rect x="31" width="1318" height="467" rx="24" fill="#C4C4C4"/>
                         </clipPath>
                     </defs>
                 </svg>
 
+                <TextOverlay>
+                    <p id="p-companyFirstSection">
+                        Be it for your clients, co-workers, and employees, offer handpicked artisanal foods from across Europe. Make work delicious with our foods bursting with impact, flavor, and identity!
+                    </p>
+                </TextOverlay>
+
+            </CompanySection>
+
+            <CompanySection id="secondSection">
+                <h2>CRAVING EXTRAORDINARY FOOD, SNACKS & DRINKS @ THE OFFICE?</h2>
             </CompanySection>
         </CompanyPageStyled>
     )

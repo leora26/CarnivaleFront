@@ -67,6 +67,15 @@ const TextOverlay = styled.div`
         }
     }
 
+    & #p-companyFirstSection {
+        width: 50%;
+        align-self: start;
+        margin-left: 10%;
+        margin-top: 25%;
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;
+    }
+
     & #h2-wholesale {
         font-size: 4rem;
         font-family:  ${({theme}) => theme.fonts.primary};

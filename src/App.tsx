@@ -41,7 +41,7 @@ function App() {
                         <Route path="wholesale" element={
                             isMobile ? <MobileWholesalePage /> : isTablet ? <TabletWholesalePage /> : <Wholesale />
                         }/>
-                        <Route path="comapnies" element={<CompanyPage />} />
+                        <Route path="companies" element={<CompanyPage />} />
                         <Route path="login" element={<Login />} />
                         <Route path="register" element={<Register />} />
                         <Route path="stories" element={<Stories />}/>

@@ -53,7 +53,7 @@ const Navigation: React.FC = () => {
                                           to="/wholesale">WHOLESALE</NavigationItemStyled>
                     <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem"  fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
                     <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black'
-                                          to="/corporate">COMPANIES</NavigationItemStyled>
+                                          to="/companies">COMPANIES</NavigationItemStyled>
                     <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
                 </Container>
 
