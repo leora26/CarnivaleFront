@@ -14,7 +14,6 @@ const Login: React.FC = () => {
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const [error, setError] = useState<boolean>(false);
-    // const [success, setSuccess] = useState<boolean>(false);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

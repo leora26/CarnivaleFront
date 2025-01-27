@@ -31,7 +31,7 @@ export const NavigationContainer = styled.div<NavigationStyledProperties>`
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 25%;
 

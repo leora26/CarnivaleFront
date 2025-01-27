@@ -18,10 +18,9 @@ const Burger = () => {
             </BurgerStyled>
             <NavigationContainer open={open}>
                 <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="4rem" fontWeight={600} color='black'
-                                      to="/wholesale">WHOLESALE</NavigationItemStyled>
-                <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="4rem"  fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
+                                      to="/">HOME</NavigationItemStyled>
                 <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="4rem" fontWeight={600} color='black'
-                                      to="/companies">COMPANIES</NavigationItemStyled>
+                                      to="/wholesale">WHOLESALE</NavigationItemStyled>
                 <NavigationItemStyled onClick={handleClick} fontSizeSmall="2rem" fontSize="4rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
             </NavigationContainer>
         </>

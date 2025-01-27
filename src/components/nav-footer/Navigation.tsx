@@ -50,10 +50,9 @@ const Navigation: React.FC = () => {
             <NavigationStyled visible={visible}>
                 <Container>
                     <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black'
-                                          to="/wholesale">WHOLESALE</NavigationItemStyled>
-                    <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem"  fontWeight={600} color='black' to="/shop">SHOP</NavigationItemStyled>
+                                          to="/">HOME</NavigationItemStyled>
                     <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black'
-                                          to="/companies">COMPANIES</NavigationItemStyled>
+                                          to="/wholesale">WHOLESALE</NavigationItemStyled>
                     <NavigationItemStyled fontSizeSmall="1rem" fontSize="1.2rem" fontWeight={600} color='black' to="/stories">STORIES</NavigationItemStyled>
                 </Container>
 

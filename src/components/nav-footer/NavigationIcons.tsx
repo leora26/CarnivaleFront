@@ -9,12 +9,6 @@ export default function NavigationIcons() {
             <NavigationIcon to="/login">
                 <img src={ManIcon} alt="Man Icon"/>
             </NavigationIcon>
-            <NavigationIcon to="#" className="searchIcon">
-                <img src={MagnifierIcon} alt="Search Icon"/>
-            </NavigationIcon>
-            <NavigationIcon to="#">
-                <img src={CartIcon} alt="Cart Icon"/>
-            </NavigationIcon>
         </NavigationIconsStyled>
     )
 }
