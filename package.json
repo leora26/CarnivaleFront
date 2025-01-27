@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "@types/react-curved-text": "^2.0.3",
+    "dotenv-webpack": "^8.1.0",
     "gh-pages": "^6.1.1",
     "react-app-rewired": "^2.2.1"
   }
