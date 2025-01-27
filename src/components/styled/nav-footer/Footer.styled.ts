@@ -8,6 +8,7 @@ export const FooterStyled = styled.footer`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Lexend", sans-serif;
 `
 
 export const SignUpSection = styled.section`

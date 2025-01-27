@@ -6,7 +6,7 @@ export const LegalPagesStyled = styled.section`
     flex-direction: row;
     justify-content: space-between;
     align-self: end;
-    width: 30%;
+    width: 35%;
     align-items: center;
     font-size: 1.1rem;
     margin-right: 5%;
