@@ -17,7 +17,6 @@ import ChangingText from "../../components/global/ChangingText";
 import WeWorkWithLink from "../../components/homepage/WeWorkWithLink";
 
 
-import HeroPicture from "../../assets/pictures/hero.png";
 import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
 import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
@@ -58,11 +57,6 @@ const HomePage = () => {
                     }}
                 >
                     <HomePageSectionStyled
-                        initial="hidden"
-                        animate={controls}
-                        variants={sectionVariants}
-                        whileInView="visible"
-                        viewport={{once: false, amount: 0.4}}
                         tabletHorizontalSectionHeight="60vh"
                         tabletVerticalSectionHeight="30vh"
                         direction="column"
@@ -99,11 +93,6 @@ const HomePage = () => {
                 </TextSection>
 
                 <HomePageSectionStyled
-                    initial="hidden"
-                    animate={controls}
-                    variants={sectionVariants}
-                    whileInView="visible"
-                    viewport={{once: false, amount: 0.4}}
                     direction="column"
                     tabletHorizontalSectionHeight="60vh"
                     tabletVerticalSectionHeight="30vh">
@@ -119,11 +108,7 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled
-                    initial="hidden"
-                    animate={controls}
-                    variants={sectionVariants}
-                    whileInView="visible"
-                    viewport={{once: false, amount: 0.4}}
+
                     direction="row">
                     <h2 id="whatDoWeHave">what do we have?</h2>
                     <CategoryCard to="/beef">
@@ -159,11 +144,7 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled
-                    initial="hidden"
-                    animate={controls}
-                    variants={sectionVariants}
-                    whileInView="visible"
-                    viewport={{once: false, amount: 0.4}}
+
                     direction="column"
                     id="weWorkWithSection"
                 >
@@ -182,11 +163,7 @@ const HomePage = () => {
             <HomepageStyled>
 
                 <HomePageSectionStyled
-                    initial="hidden"
-                    animate={controls}
-                    variants={sectionVariants}
-                    whileInView="visible"
-                    viewport={{once: false, amount: 0.4}}
+
                     direction="column">
                     <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
                     <TextOverlay>

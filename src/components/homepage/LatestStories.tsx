@@ -20,11 +20,6 @@ const LatestStories = () => {
 
     return (
         <LatestStoriesStyled
-            initial="hidden"
-            animate={controls}
-            variants={sectionVariants}
-            whileInView="visible"
-            viewport={{once: false, amount: 0.4}}
         >
             {stories?.map(story => {
                 return (
