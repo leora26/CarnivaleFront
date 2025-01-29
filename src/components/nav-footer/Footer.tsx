@@ -6,9 +6,26 @@ import {IoIosArrowRoundForward} from "react-icons/io";
 import {Link} from "react-router-dom";
 import SocialIcons from "./SocialIcons";
 import LegalPages from "./LegalPages";
+import useNewsletterMutation from "../../hooks/useNewsletterMutation";
+import {useState} from "react";
 
 
 const Footer = () => {
+    const [email, setEmail] = useState<string | undefined>(undefined);
+
+    const newsletterMutation = useNewsletterMutation();
+
+    const handleNewsletterSubmit = async () => {
+        if(email) {
+            try {
+                await newsletterMutation.mutateAsync({email});
+                setEmail(undefined);
+            } catch (error) {
+                console.error("Error subscribing to newsletter:", error);
+            }
+        }
+    }
+
     return (
         <FooterStyled>
             <SignUpSection>
@@ -18,7 +35,7 @@ const Footer = () => {
 
                 <EmailInputContainer>
                     <input type="email" placeholder="email@gmail.com"/>
-                    <IoIosArrowRoundForward className="submitButton"/>
+                    <IoIosArrowRoundForward className="submitButton" onClick={handleNewsletterSubmit}/>
                 </EmailInputContainer>
             </SignUpSection>
 
