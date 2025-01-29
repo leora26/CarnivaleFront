@@ -1,12 +1,39 @@
-import HeroPicture from "../pictures/hero.png";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import HeroPicture1 from "../pictures/homepage/hero.png"
+import HeroPicture2 from "../pictures/homepage/hero2.jpg"
+import HeroPicture3 from "../pictures/homepage/hero3.jpg"
+import HeroPicture4 from "../pictures/homepage/hero4.jpg"
+import { motion } from "framer-motion";
+
+const images = [HeroPicture1, HeroPicture2, HeroPicture3, HeroPicture4];
 
 const HomepageHeroSVG = () => {
+
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <svg className="tabletSVGs" width="90vw" height="60vh" viewBox="0 0 1340 490"
              xmlns="http://www.w3.org/2000/svg">
-            <image href={HeroPicture} width="100%" height="100%" clipPath="url(#homepageFirstSection)"
-                   preserveAspectRatio="xMidYMid slice"/>
+            <motion.image
+                key={currentIndex}
+                href={images[currentIndex]}
+                width="100%"
+                height="100%"
+                clipPath="url(#homepageFirstSection)"
+                preserveAspectRatio="xMidYMid slice"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                exit={{opacity: 0}}
+                transition={{duration: 2}}
+            />
             <g filter="url(#filter0_d_2129_429)">
                 <mask id="path-1-inside-1_2129_429" fill="white">
                     <path fill-rule="evenodd" clip-rule="evenodd"

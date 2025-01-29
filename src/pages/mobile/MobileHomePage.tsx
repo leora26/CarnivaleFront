@@ -16,7 +16,7 @@ import ChangingText from "../../components/global/ChangingText";
 import WeWorkWithLink from "../../components/homepage/WeWorkWithLink";
 
 
-import HeroPicture from "../../assets/pictures/hero.png";
+import HeroPicture from "../../assets/pictures/homepage/hero.png";
 import HomePageBoxes from "../../assets/pictures/product-section.png"
 import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"

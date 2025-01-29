@@ -4,7 +4,7 @@ import {
     HomepageStyled
 } from "../../components/styled/homepage/Homepage.styled";
 import {HomePageSectionStyled} from "../../components/styled/homepage/HomepageSection.styled";
-import HeroPicture from "../../assets/pictures/hero.png";
+import HeroPicture from "../../assets/pictures/homepage/hero.png";
 import TextOverlay from "../../components/styled/global/TextOverlay";
 import {ChangingTextContainer} from "../../components/styled/homepage/ChangingText.styled";
 import ChangingText from "../../components/global/ChangingText";

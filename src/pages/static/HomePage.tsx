@@ -5,7 +5,7 @@ import {
     BackVideo, GetInTouchContainer
 } from "../../components/styled/homepage/Homepage.styled";
 import TextOverlay from "../../components/styled/global/TextOverlay";
-import {HomePageSectionStyled, TextSection} from "../../components/styled/homepage/HomepageSection.styled";
+import {HeroSection, HomePageSectionStyled, TextSection} from "../../components/styled/homepage/HomepageSection.styled";
 import CategoryCard from "../../components/styled/homepage/CategoryCard";
 import {ChangingTextContainer} from "../../components/styled/homepage/ChangingText.styled";
 
@@ -48,18 +48,13 @@ const HomePage = () => {
     return (
         <>
             <HomepageStyled>
-                <a
-                    id="firstSectionScroll"
-                    href="#weWorkWithSection"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        document.getElementById("weWorkWithSection")?.scrollIntoView({behavior: "smooth"});
-                    }}
-                >
-                    <HomePageSectionStyled
-                        tabletHorizontalSectionHeight="60vh"
-                        tabletVerticalSectionHeight="30vh"
-                        direction="column"
+                    <HeroSection
+                        id="firstSectionScroll"
+                        href="#weWorkWithSection"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("weWorkWithSection")?.scrollIntoView({behavior: "smooth"});
+                        }}
                         className="first-section">
 
                         <HomepageHeroSVG/>
@@ -71,9 +66,8 @@ const HomePage = () => {
                             </p>
                         </TextOverlay>
 
-                    </HomePageSectionStyled>
+                    </HeroSection>
 
-                </a>
 
                 <TextSection>
                     <HomepageParagraph>
@@ -101,7 +95,7 @@ const HomePage = () => {
                         <ChangingText animationOrder={0} staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
                         <ChangingText animationOrder={1} staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
                         <ChangingText animationOrder={2} staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText animationOrder={3} staticText="INGREDIENTS BURSTING WITH "
+                        <ChangingText animationOrder={3} staticText="OF INGREDIENTS BURSTING WITH "
                                       dynamicText={ingredientsText}/>
                     </ChangingTextContainer>
 

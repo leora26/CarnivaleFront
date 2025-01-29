@@ -144,10 +144,46 @@ export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyle
 
 `
 
+export const HeroSection = styled.a`
+    width: 100%;
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+
+    & .tabletSVGs {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 95vw;
+            height: 90vh;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            width: 95vw;
+            height: 70vh;
+        }
+
+        & image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    }
+`
+
 export const TextSection = styled.section`
     width: 100%;
     height: 30vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5%;
 `
