@@ -8,6 +8,12 @@ export const HomepageStyled = styled.main`
     justify-content: center;
     margin: 0 auto;
     
+    #firstSectionScroll {
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+    }
+    
     & h4{
         font-size: 5rem;
         margin-bottom: 2%;

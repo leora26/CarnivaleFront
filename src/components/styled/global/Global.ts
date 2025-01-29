@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         width: 100%;
+        scroll-behavior: smooth;
     }
 
     @font-face {

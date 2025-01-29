@@ -8,7 +8,7 @@ interface HomePageSectionStyledProps {
 }
 
 
-    export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyledProps>`
+export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyledProps>`
     width: 100%;
     height: 80vh;
     border-radius: 2rem;
@@ -137,10 +137,17 @@ interface HomePageSectionStyledProps {
         width: 100vw;
         height: 80vh;
 
-       
-     
+
     }
 
 
 
+`
+
+export const TextSection = styled.section`
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 `

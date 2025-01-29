@@ -3,7 +3,7 @@ import {WholesaleStyled} from "../../components/styled/wholesale/Wholesale.style
 import HeroPicture from "../../assets/pictures/wholesale-hero.jpg";
 import TextOverlay from "../../components/styled/global/TextOverlay";
 import {WholesaleSection} from "../../components/styled/wholesale/WholesaleSection";
-import {WholesaleParagraph} from "../../components/styled/wholesale/WholesaleParagraph";
+import {HomepageParagraph} from "../../components/styled/homepage/HomepageParagraph";
 import GetTheApp from "../../components/wholesale/GetTheApp";
 import ContactUsPic from "../../assets/pictures/contact-us-wholesale.webp";
 import BookingSection from "../../components/wholesale/BookingSection";
@@ -44,25 +44,25 @@ const MobileWholesalePage = () => {
             </WholesaleSection>
 
             <WholesaleSection id="paragraphs">
-                <WholesaleParagraph>
+                <HomepageParagraph>
                     The <span>ingredients</span> we offer are the most beautiful souvenirs of the encounters
                     we have with farmers and producers across Europe. Sourcing ingredients is our passion, especially
                     for foods
                     that <span>reflect the craft and soul</span> of their makers.
-                </WholesaleParagraph>
+                </HomepageParagraph>
 
-                <WholesaleParagraph>
+                <HomepageParagraph>
                     Such products tell a stories about the makers, their land, and their history,
                     reminding us of something we already carry in our hearts and ancient memory. Whenever we find that
                     distinctive ‘taste’, it always also comes with <span>originality, seasonality, transparency,patience,
                     and
                     kindness</span>.
-                </WholesaleParagraph>
-                <WholesaleParagraph>
+                </HomepageParagraph>
+                <HomepageParagraph>
                     <span>A total lack of compromise</span> is key, always hoping that the choices we make reflect who
                     we are and
                     what we want to convey, so we can connect with those who recognize themselves in us.
-                </WholesaleParagraph>
+                </HomepageParagraph>
 
                 <svg width="264" height="263" viewBox="0 0 164 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

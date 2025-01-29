@@ -1,9 +1,10 @@
 import {styled} from "styled-components";
 
-export const WholesaleParagraph = styled.p`
-    font-family: ${({theme}) => theme.fonts.primary};
+export const HomepageParagraph = styled.p`
     width: 30%;
     font-size: 1.4rem;
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
 
     & span {
         background-color: #FFDD5A;
