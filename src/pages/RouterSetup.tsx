@@ -1,0 +1,50 @@
+import {Route, Routes} from "react-router-dom";
+import DefaultLayout from "../layout/DefaultLayout";
+import MobileHomePage from "./mobile/MobileHomePage";
+import TabletHomePage from "./tablet/TabletHomePage";
+import HomePage from "./static/HomePage";
+import MobileWholesalePage from "./mobile/MobileWholesalePage";
+import TabletWholesalePage from "./tablet/TabletWholesalePage";
+import Wholesale from "./static/Wholesale";
+import CompanyPage from "./static/CompanyPage";
+import Login from "./static/Login";
+import Register from "./static/Register";
+import Stories from "./dynamic/Stories";
+import StoriesBlogs from "./dynamic/StoriesBlogs";
+import StoriesPodcasts from "./dynamic/StoriesPodcasts";
+import StoriesEvents from "./dynamic/StoriesEvents";
+import StoriesProducers from "./dynamic/StoriesProducers";
+import StoriesInterviews from "./dynamic/StoriesInterviews";
+import StoriesRecipies from "./dynamic/StoriesRecipies";
+import React from "react";
+import useScreenSize from "../hooks/useScreenSize";
+
+const RouterSetup = () => {
+    const isMobile = useScreenSize({minWidth: 200, maxWidth: 600});
+    const isTablet = useScreenSize({minWidth: 601, maxWidth: 1024});
+
+    return(
+        <Routes>
+            <Route path="" element={<DefaultLayout isMobile={isMobile} isTablet={isTablet} />}>
+                <Route index element={
+                    isMobile ? <MobileHomePage /> : isTablet ? <TabletHomePage /> : <HomePage />
+                }/>
+                <Route path="wholesale" element={
+                    isMobile ? <MobileWholesalePage /> : isTablet ? <TabletWholesalePage /> : <Wholesale />
+                }/>
+                <Route path="companies" element={<CompanyPage />} />
+                <Route path="login" element={<Login />} />
+                <Route path="register" element={<Register />} />
+                <Route path="stories" element={<Stories />}/>
+                <Route path="stories/blogs" element={<StoriesBlogs />}/>
+                <Route path="stories/podcasts" element={<StoriesPodcasts />}/>
+                <Route path="stories/events" element={<StoriesEvents />}/>
+                <Route path="stories/producers" element={<StoriesProducers />}/>
+                <Route path="stories/interviews" element={<StoriesInterviews />}/>
+                <Route path="stories/recipies" element={<StoriesRecipies />}/>
+            </Route>
+        </Routes>
+    )
+}
+
+export default RouterSetup;

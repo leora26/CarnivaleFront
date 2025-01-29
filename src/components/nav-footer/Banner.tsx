@@ -1,34 +1,14 @@
 import BannerStyled from "../styled/nav-footer/Banner.styled";
+import {useContext} from "react";
+import {HomepageContext} from "../../context/HomepageContext";
 
 const Banner = () => {
+
+    const homepageInfo = useContext(HomepageContext);
+
     return (
         <BannerStyled>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
-                <p>HAPPINESS IS AN OLD AND FAT COW</p>
-                <span>*</span>
+            <p>{homepageInfo?.homepageInfo?.bannerText}</p>
         </BannerStyled>
     )
 }
