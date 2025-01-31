@@ -2,12 +2,17 @@ import React from "react";
 import AllStories from "../../models/response/AllStories";
 import {StoryCardImage, StoryCardStyled} from "../styled/global/StoryCard.styled";
 
-const StoryCard: React.FC<{story: AllStories }> = (props) => {
+interface StoryCardProps {
+    story: AllStories;
+    className?: string;
+}
+
+const StoryCard= ({story, className}: StoryCardProps): JSX.Element => {
     return (
-        <StoryCardStyled>
-            <StoryCardImage src={props.story.mediaContents[0].url} alt="Story picture"/>
-            <h2>{props.story.title}</h2>
-            <p>{props.story.subTitle}</p>
+        <StoryCardStyled className={className}>
+            {className != 'latestStoryCard' ? <StoryCardImage src={story.mediaContents[0].url} alt="Story picture"/> : null}
+            <h2>{story.title}</h2>
+            <p>{story.subTitle}</p>
         </StoryCardStyled>
     )
 }

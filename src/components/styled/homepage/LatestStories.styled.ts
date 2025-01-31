@@ -16,3 +16,14 @@ export const LatestStoriesStyled = styled(motion.section)`
         
     }
 `
+
+export const LatestStoryCardContainer = styled.div`
+    position: relative;
+    
+    
+    &:first-child {
+        position: relative;
+    }
+    
+    
+`
