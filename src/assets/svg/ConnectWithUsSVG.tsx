@@ -1,11 +1,19 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 const ConnectWithUsSVG = () => {
+        const navigate = useNavigate();
+
+        const handleClick = () => {
+                navigate("/register");
+        }
+
     return (
-        <svg width="264" height="263" viewBox="0 0 164 163" fill="none" xmlns="http://www.w3.org/2000/svg" id="connectWithUse">
-            <path
-                d="M76.5 142.5C106.323 142.5 130.5 118.323 130.5 88.5C130.5 58.6766 106.323 34.5 76.5 34.5C46.6766 34.5 22.5 58.6766 22.5 88.5C22.5 118.323 46.6766 142.5 76.5 142.5Z"
-                fill="black" stroke="white" stroke-width="27"></path>
+        <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" id="connectWithUs" onClick={handleClick}>
+                {/*white background*/}
+            {/*<path*/}
+            {/*    d="M76.5 142.5C106.323 142.5 130.5 118.323 130.5 88.5C130.5 58.6766 106.323 34.5 76.5 34.5C46.6766 34.5 22.5 58.6766 22.5 88.5C22.5 118.323 46.6766 142.5 76.5 142.5Z"*/}
+            {/*    fill="black" stroke="white" stroke-width="27"></path>*/}
             <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M76.5 129C98.8675 129 117 110.868 117 88.5C117 66.1325 98.8675 48 76.5 48C54.1325 48 36 66.1325 36 88.5C36 110.868 54.1325 129 76.5 129Z"
                   fill="black"></path>

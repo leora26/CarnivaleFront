@@ -19,6 +19,7 @@ import CurvedTextV2 from "../../components/homepage/CurvedTextV2";
 import {useAnimation} from "framer-motion";
 import HomepageHeroSVG from "../../assets/svg/HomepageHeroSVG";
 import {HomepageParagraph} from "../../components/styled/homepage/HomepageParagraph";
+import ConnectWithUsSVG from "../../assets/svg/ConnectWithUsSVG";
 
 const sectionVariants = {
     hidden: {opacity: 0, y: 50},
@@ -41,14 +42,14 @@ const HomePage = () => {
     return (
         <>
             <HomepageStyled>
-
+                <ConnectWithUsSVG/>
                 <HeroSection
                     href="#weWorkWithSection"
                     onClick={(e) => {
                         e.preventDefault();
                         document.getElementById("weWorkWithSection")?.scrollIntoView({behavior: "smooth"});
                     }}
-                    id="first-section">
+                    id="firstSection">
 
                     <HomepageHeroSVG/>
 
@@ -98,7 +99,6 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled
-
                     direction="row">
                     <h2 id="whatDoWeHave">what do we have?</h2>
                     <CategoryCard to="/beef">

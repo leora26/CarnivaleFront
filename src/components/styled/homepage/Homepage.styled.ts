@@ -49,7 +49,7 @@ export const HomepageStyled = styled.main`
         }
     }
     
-    #first-section{
+    #firstSection{
         margin-top: 10%;
         height: 80vh;
         
@@ -78,6 +78,16 @@ export const HomepageStyled = styled.main`
             margin: 18rem 0 15rem 0;
         }
     }
+    
+    #connectWithUs {
+        width: 10rem;
+        height: 10rem;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 10;
+    }
+    
 `
 
 export const BackPicture = styled.img`
