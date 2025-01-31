@@ -5,7 +5,6 @@ import {
 import {HomePageSectionStyled} from "../../components/styled/homepage/HomepageSection.styled";
 import HeroPicture from "../../assets/pictures/homepage/hero.png";
 import TextOverlay from "../../components/styled/global/TextOverlay";
-import {ChangingTextContainer} from "../../components/styled/homepage/ChangingText.styled";
 import ChangingText from "../../components/global/ChangingText";
 import CategoryCard from "../../components/styled/homepage/CategoryCard";
 import BeefCategory from "../../assets/pictures/category-beef.png";
@@ -18,9 +17,9 @@ import ProductSection from "../../components/homepage/ProductSection";
 import HomePageBoxesV2 from "../../assets/pictures/homepage-boxesV2.jpg"
 import {ScrollingText} from "../../components/homepage/ScrollingText";
 import GetInTouch from "../../components/homepage/GetInTouch";
-import HomePageVideo from "../../assets/videos/homepage-video.mp4";
 import React from "react";
 import {useAnimation} from "framer-motion";
+import {ChangingTextContainer} from "../../components/styled/homepage/ChangingTextSection.styled";
 
 const sectionVariants = {
     hidden: { opacity: 0, y: 50 },

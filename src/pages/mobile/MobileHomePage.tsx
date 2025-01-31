@@ -6,7 +6,6 @@ import {
 import TextOverlay from "../../components/styled/global/TextOverlay";
 import {HomePageSectionStyled} from "../../components/styled/homepage/HomepageSection.styled";
 import CategoryCard from "../../components/styled/homepage/CategoryCard";
-import {ChangingTextContainer} from "../../components/styled/homepage/ChangingText.styled";
 
 import LatestStories from "../../components/homepage/LatestStories";
 import {ScrollingText} from "../../components/homepage/ScrollingText";
@@ -22,6 +21,7 @@ import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
 import {useAnimation} from "framer-motion";
+import {ChangingTextContainer} from "../../components/styled/homepage/ChangingTextSection.styled";
 
 const sectionVariants = {
     hidden: { opacity: 0, y: 50 },

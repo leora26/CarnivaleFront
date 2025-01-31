@@ -39,38 +39,6 @@ const TextOverlay = styled.div`
         }
     }
 
-    & h2 {
-        width: 100%;
-        color: white;
-        font-size: 8em;
-        margin: 0 0 0 5%;
-        align-self: flex-start;
-        font-family: ${({theme}) => theme.fonts.primaryBold};
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            margin-top: 70%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 2rem;
-            margin-top: 95%;
-        }
-    }
-
-    & h3 {
-        color: white;
-        font-size: 2em;
-        margin: 0 0 0 6%;
-        align-self: flex-start;
-        font-family: "Lexend", sans-serif;
-        font-weight: 400;
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 1rem;
-            font-weight: 300;
-        }
-    }
-
     & p {
         color: white;
         width: 20%;
@@ -140,15 +108,6 @@ const TextOverlay = styled.div`
             font-size: 0.8rem;
             margin: 15% 20% 0 0;
         }
-    }
-
-    & input {
-        width: 80%;
-        padding: 2.5rem;
-        border: none;
-        border-radius: 1rem;
-        align-self: center;
-        margin-bottom: -10%;
     }
 
     @media (max-width: ${({theme}) => theme.display.mobile}) {
