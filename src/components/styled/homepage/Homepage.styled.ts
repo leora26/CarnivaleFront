@@ -28,57 +28,6 @@ export const HomepageStyled = styled.main`
         margin: 0 3rem 0 0 ;
     }
     
-    #weWorkWithSection{
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            height: 40vh;
-            margin: 10% 0 10% 0;
-        }
-    }
-    
-    #changingTextSection{
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            height: 40vh;
-        }
-    }
-    
-    #whatDoWeHaveSection{
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            height: 40vh;
-            margin: 0;
-        }
-    }
-    
-    #firstSection{
-        margin-top: 5%;
-        height: 80vh;
-        
-        &:hover{
-            & *{
-                color: #FFDD5A;
-            }
-        }
-
-        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            height: 60vh;
-
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-            height: 60vh;
-        }
-        
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            margin-top: 30%;
-            margin-left: 3rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            height: 35vh;
-            margin: 18rem 0 15rem 0;
-        }
-    }
-    
     #connectWithUs {
         width: 10rem;
         height: 10rem;

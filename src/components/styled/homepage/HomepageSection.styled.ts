@@ -77,7 +77,14 @@ export const HeroSection = styled.a`
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    height: 80vh;
+    margin-top: 5%;
 
+    &:hover {
+        & * {
+            color: #FFDD5A;
+        }
+    }
 
     & .tabletSVGs {
         position: absolute;
@@ -100,7 +107,26 @@ export const HeroSection = styled.a`
             height: 100%;
         }
     }
+
+    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+        height: 60vh;
+
     }
+
+    @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+        height: 60vh;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        margin-top: 30%;
+        margin-left: 3rem;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.mobile}) {
+        height: 35vh;
+        margin: 18rem 0 15rem 0;
+    }
+
 `
 
 export const TextSection = styled.section`
