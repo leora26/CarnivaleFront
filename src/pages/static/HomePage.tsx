@@ -1,8 +1,6 @@
 import React, {useEffect} from "react";
 import {
-    BackPicture,
     HomepageStyled,
-    BackVideo, GetInTouchContainer
 } from "../../components/styled/homepage/Homepage.styled";
 import TextOverlay from "../../components/styled/global/TextOverlay";
 import {HeroSection, HomePageSectionStyled, TextSection} from "../../components/styled/homepage/HomepageSection.styled";
@@ -10,18 +8,13 @@ import CategoryCard from "../../components/styled/homepage/CategoryCard";
 import {ChangingTextContainer} from "../../components/styled/homepage/ChangingText.styled";
 
 import LatestStories from "../../components/homepage/LatestStories";
-import {ScrollingText} from "../../components/homepage/ScrollingText";
-import ProductSection from "../../components/homepage/ProductSection";
-import GetInTouch from "../../components/homepage/GetInTouch";
 import ChangingText from "../../components/global/ChangingText";
 import WeWorkWithLink from "../../components/homepage/WeWorkWithLink";
 
 
-import HomePageBoxes from "../../assets/pictures/homepage-boxes.png"
 import BeefCategory from "../../assets/pictures/category-beef.png"
 import DairyCategory from "../../assets/pictures/category-dairy.png"
 import PoultryCategory from "../../assets/pictures/category-poultry.png"
-import HomePageVideo from "../../assets/videos/homepage-video.mp4"
 import CurvedTextV2 from "../../components/homepage/CurvedTextV2";
 import {useAnimation} from "framer-motion";
 import HomepageHeroSVG from "../../assets/svg/HomepageHeroSVG";
@@ -48,30 +41,32 @@ const HomePage = () => {
     return (
         <>
             <HomepageStyled>
-                    <HeroSection
-                        id="firstSectionScroll"
-                        href="#weWorkWithSection"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            document.getElementById("weWorkWithSection")?.scrollIntoView({behavior: "smooth"});
-                        }}
-                        className="first-section">
 
-                        <HomepageHeroSVG/>
+                <HeroSection
+                    href="#weWorkWithSection"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById("weWorkWithSection")?.scrollIntoView({behavior: "smooth"});
+                    }}
+                    id="first-section">
 
-                        <TextOverlay>
-                            <h1>CARNIVALE</h1>
-                            <p>
-                                Supplying ingredients to over 200 of the best kitchens in the Low Countries.
-                            </p>
-                        </TextOverlay>
+                    <HomepageHeroSVG/>
 
-                    </HeroSection>
+                    <TextOverlay>
+                        <h1>CARNIVALE</h1>
+                        <p>
+                            Supplying ingredients to over 200 of the best kitchens in the Low Countries.
+                        </p>
+                    </TextOverlay>
+
+                </HeroSection>
 
 
                 <TextSection>
                     <HomepageParagraph>
-                        The <span>ingredients</span> we offer are the most beautiful souvenirs of the encounters we have with
+                        The <span>ingredients</span> we offer are the most beautiful souvenirs of the encounters we have
+                        with
+                        farmers and producers across Europe. Sourcing ingredients is our passion, especially for foods
                         farmers and producers across Europe. Sourcing ingredients is our passion, especially for foods
                         that <span>reflect the craft and soul</span> of their makers.
                     </HomepageParagraph>
@@ -81,7 +76,8 @@ const HomePage = () => {
                         'taste', it always also comes with <span>originality, seasonality, transparency, patience, and kindness.</span>
                     </HomepageParagraph>
                     <HomepageParagraph>
-                        <span>A total lack of compromise</span> is key, always hoping that the choices we make reflect who we
+                        <span>A total lack of compromise</span> is key, always hoping that the choices we make reflect
+                        who we
                         are and what we want to convey, so we can connect with those who recognize themselves in us.
                     </HomepageParagraph>
                 </TextSection>
@@ -138,7 +134,6 @@ const HomePage = () => {
                 </HomePageSectionStyled>
 
                 <HomePageSectionStyled
-
                     direction="column"
                     id="weWorkWithSection"
                 >
@@ -153,31 +148,8 @@ const HomePage = () => {
                 <LatestStories/>
 
             </HomepageStyled>
-            <ProductSection/>
-            <HomepageStyled>
-
-                <HomePageSectionStyled
-
-                    direction="column">
-                    <BackPicture src={HomePageBoxes} alt="Boxes picture"/>
-                    <TextOverlay>
-                        <h2>BOXES</h2>
-                        <h3>For your company</h3>
-                    </TextOverlay>
-                </HomePageSectionStyled>
-
-            </HomepageStyled>
-            <GetInTouchContainer>
-                <ScrollingText direction="left" backgroundColor="white">
-                    <GetInTouch/>
-                </ScrollingText>
-                <ScrollingText direction="right" backgroundColor="white">
-                    <GetInTouch/>
-                </ScrollingText>
-            </GetInTouchContainer>
 
 
-            <BackVideo src={HomePageVideo} autoPlay loop muted/>
 
         </>
     )

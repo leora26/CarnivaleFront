@@ -133,13 +133,6 @@ export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyle
         }
     }
 
-    & #boxesPicture {
-        width: 100vw;
-        height: 80vh;
-
-
-    }
-
 
 
 `

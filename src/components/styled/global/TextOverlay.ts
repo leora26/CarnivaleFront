@@ -39,6 +39,37 @@ const TextOverlay = styled.div`
         }
     }
 
+    & h2 {
+        width: 100%;
+        color: white;
+        font-size: 8em;
+        margin: 0 0 0 5%;
+        align-self: flex-start;
+        font-family: ${({theme}) => theme.fonts.primaryBold};
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            margin-top: 70%;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 2rem;
+            margin-top: 95%;
+        }
+    }
+
+    & h3 {
+        color: white;
+        font-size: 2em;
+        margin: 0 0 0 6%;
+        align-self: flex-start;
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;
+
+        @media (max-width: ${({theme}) => theme.display.mobile}) {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
 
     & p {
         color: white;
@@ -67,14 +98,6 @@ const TextOverlay = styled.div`
         }
     }
 
-    & #p-companyFirstSection {
-        width: 50%;
-        align-self: start;
-        margin-left: 10%;
-        margin-top: 25%;
-        font-family: "Lexend", sans-serif;
-        font-weight: 400;
-    }
 
     & #h2-wholesale {
         font-size: 4rem;
@@ -116,146 +139,6 @@ const TextOverlay = styled.div`
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 0.8rem;
             margin: 15% 20% 0 0;
-        }
-    }
-
-    #contactUsInfo {
-        font-size: 2rem;
-        text-align: center;
-        width: 90%;
-        align-self: center;
-        font-family: ${({theme}) => theme.fonts.primary};
-        font-weight: 300;
-        margin: 0 0 5% 0;
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-            font-size: 1.2rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 1rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-    }
-
-    .highlighted {
-        background-color: #FFDD5A;
-        font-size: 2rem;
-        color: black;
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-            font-size: 1.2rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 1rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 1.5rem;
-        }
-    }
-
-    #phoneNumber {
-        background-color: #FFDD5A;
-        font-size: 2rem;
-        color: black;
-        font-family: ${({theme}) => theme.fonts.primary};
-        font-weight: 500;
-        width: 15%;
-        margin: 0 80% -5% 0;
-        @media (max-width: ${({theme}) => theme.display.laptop}) {
-            width: 20%;
-            margin-right: 70%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
-            font-size: 1.2rem;
-            width: 15%;
-            margin-right: 75%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 1rem;
-            width: 20%;
-            margin-right: 70%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 1rem;
-            width: 50%;
-            margin-right: -40%;
-            margin-top: 10%;
-        }
-    }
-
-   
-
-
-    & #booking-heading {
-        letter-spacing: 0 !important;
-        font-size: 6em;
-        margin-bottom: 10%;
-    }
-
-    & span {
-        width: 50%;
-        color: white;
-        font-size: 2em;
-        letter-spacing: 0.1rem;
-        text-align: center;
-        align-self: center;
-        font-family: ${({theme}) => theme.fonts.secondaryRegular};
-        font-weight: lighter;
-        margin: 0 auto;
-
-        & b {
-            background-color: #FFDD5A;
-            color: black;
-            padding: 0 0.5rem 0 0.5rem;
-            line-height: 3rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.laptop}) {
-            width: 65%;
-        }
-
-
-    }
-
-    & h2 {
-        width: 100%;
-        color: white;
-        font-size: 8em;
-        margin: 0 0 0 5%;
-        align-self: flex-start;
-        font-family: ${({theme}) => theme.fonts.primaryBold};
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            margin-top: 70%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 2rem;
-            margin-top: 95%;
-        }
-    }
-
-    & h3 {
-        color: white;
-        font-size: 2em;
-        margin: 0 0 0 6%;
-        align-self: flex-start;
-        font-family: "Lexend", sans-serif;
-        font-weight: 400;
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 1rem;
-            font-weight: 300;
         }
     }
 

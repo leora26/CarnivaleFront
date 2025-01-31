@@ -1,5 +1,4 @@
 import {
-    BackVideo,
     GetInTouchContainer,
     HomepageStyled
 } from "../../components/styled/homepage/Homepage.styled";
@@ -212,8 +211,6 @@ const TabletHomePage = () => {
                     <GetInTouch/>
                 </ScrollingText>
             </GetInTouchContainer>
-
-            <BackVideo src={HomePageVideo} autoPlay loop muted/>
 
         </>
     )
