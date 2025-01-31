@@ -20,6 +20,7 @@ import {useAnimation} from "framer-motion";
 import HomepageHeroSVG from "../../assets/svg/HomepageHeroSVG";
 import {HomepageParagraph} from "../../components/styled/homepage/HomepageParagraph";
 import ConnectWithUsSVG from "../../assets/svg/ConnectWithUsSVG";
+import CategoriesSection from "../../components/homepage/CategoriesSection";
 
 const sectionVariants = {
     hidden: {opacity: 0, y: 50},
@@ -98,40 +99,8 @@ const HomePage = () => {
 
                 </HomePageSectionStyled>
 
-                <HomePageSectionStyled
-                    direction="row">
-                    <h2 id="whatDoWeHave">what do we have?</h2>
-                    <CategoryCard to="/beef">
-                        <img src={BeefCategory} alt="Beef category link"/>
-                        <h3>beef</h3>
-                        <p>
-                            Happiness is an old and fat cow
-                        </p>
-                    </CategoryCard>
+                <CategoriesSection />
 
-                    <CategoryCard to="/beef">
-                        <img src={DairyCategory} alt="Dairy category link"/>
-                        <h3>dairy</h3>
-                        <p>
-                            With a weakness for fresh cheeses
-                        </p>
-                    </CategoryCard>
-
-                    <CategoryCard to="/beef">
-                        <CurvedTextV2
-                            text="See all we have See all we have"
-                            color="#DC3618"
-                            fontSize="1.4rem"
-                            width={200}
-                            height={200}
-                        />
-                        <img src={PoultryCategory} alt="Poutry category link"/>
-                        <h3>poultry</h3>
-                        <p>
-                            Free range is no joke
-                        </p>
-                    </CategoryCard>
-                </HomePageSectionStyled>
 
                 <HomePageSectionStyled
                     direction="column"

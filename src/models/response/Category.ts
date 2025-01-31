@@ -1,3 +1,7 @@
+import CategoryCard from "../../components/styled/homepage/CategoryCard";
+import {dummyCategories} from "../dataFaker";
+import React from "react";
+
 class Category {
     constructor(
         public id: string,
@@ -7,6 +11,7 @@ class Category {
         public descriptionEn: string,
         public descriptionNl: string,
         public descriptionFr: string,
+        public imgUrl: string
     ) {
     }
 }

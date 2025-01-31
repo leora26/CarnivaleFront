@@ -1,4 +1,5 @@
 import AllStories from "./response/AllStories";
+import Category from "./response/Category";
 
 export const stories: AllStories[] = [
     {
@@ -312,5 +313,38 @@ export const latestStories: AllStories[] = [
                 "mediaType": "IMAGE"
             }
         ]
+    }
+]
+
+export const dummyCategories: Category[] = [
+    {
+        id: "alshdas",
+        titleEn: "beef",
+        titleNl: "runfvlees",
+        titleFr: "bœuf",
+        descriptionEn: "Happiness is an old and fat cow",
+        descriptionNl: "Geluk is een oude en vette koe",
+        descriptionFr: "Le bonheur est une vieille et grosse vache",
+        imgUrl: "../../assets/pictures/category-beef.png"
+    },
+    {
+        id: "asfafsh",
+        titleEn: "dairy",
+        titleNl: "zuivel",
+        titleFr: "laitière",
+        descriptionEn: " With a weakness for fresh cheeses",
+        descriptionNl: "Met een zwak voor verse kazen",
+        descriptionFr: "Avec un faible pour les fromages frais",
+        imgUrl: "../../assets/pictures/category-dairy.png"
+    },
+    {
+        id: "fghjghj",
+        titleEn: "poultry",
+        titleNl: "gevogelte",
+        titleFr: "volaille",
+        descriptionEn: "Free range is no joke",
+        descriptionNl: "Vrije uitloop is geen grap",
+        descriptionFr: "L'élevage en liberté n'est pas une blague",
+        imgUrl: "../../assets/pictures/category-poultry.png"
     }
 ]
