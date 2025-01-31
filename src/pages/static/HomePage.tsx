@@ -4,23 +4,19 @@ import {
 } from "../../components/styled/homepage/Homepage.styled";
 import TextOverlay from "../../components/styled/global/TextOverlay";
 import {HeroSection, HomePageSectionStyled, TextSection} from "../../components/styled/homepage/HomepageSection.styled";
-import CategoryCard from "../../components/styled/homepage/CategoryCard";
 import {ChangingTextContainer} from "../../components/styled/homepage/ChangingText.styled";
 
 import LatestStories from "../../components/homepage/LatestStories";
 import ChangingText from "../../components/global/ChangingText";
 import WeWorkWithLink from "../../components/homepage/WeWorkWithLink";
 
-
-import BeefCategory from "../../assets/pictures/category-beef.png"
-import DairyCategory from "../../assets/pictures/category-dairy.png"
-import PoultryCategory from "../../assets/pictures/category-poultry.png"
-import CurvedTextV2 from "../../components/homepage/CurvedTextV2";
 import {useAnimation} from "framer-motion";
 import HomepageHeroSVG from "../../assets/svg/HomepageHeroSVG";
 import {HomepageParagraph} from "../../components/styled/homepage/HomepageParagraph";
 import ConnectWithUsSVG from "../../assets/svg/ConnectWithUsSVG";
 import CategoriesSection from "../../components/homepage/CategoriesSection";
+import {WeWorkWithSectionStyled} from "../../components/styled/homepage/WeWorkWithSection.styled";
+import WeWorkWithSection from "../../components/homepage/WeWorkWithSection";
 
 const sectionVariants = {
     hidden: {opacity: 0, y: 50},
@@ -101,17 +97,7 @@ const HomePage = () => {
 
                 <CategoriesSection />
 
-
-                <HomePageSectionStyled
-                    direction="column"
-                    id="weWorkWithSection"
-                >
-                    <span id="workWithSpan">We work with</span>
-                    <WeWorkWithLink link="/professionals">professionals</WeWorkWithLink>
-                    <WeWorkWithLink link="/companies">companies</WeWorkWithLink>
-                    <WeWorkWithLink link="/enthusiasts">enthusiasts</WeWorkWithLink>
-                </HomePageSectionStyled>
-
+                <WeWorkWithSection />
 
                 <h4>LATEST STORIES</h4>
                 <LatestStories/>

@@ -90,13 +90,6 @@ export const HomepageStyled = styled.main`
     
 `
 
-export const BackPicture = styled.img`
-    border-radius: 2rem;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-`
-
 
 export const GetInTouchContainer = styled.div`
     width: 100%;

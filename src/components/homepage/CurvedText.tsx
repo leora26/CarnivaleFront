@@ -1,36 +1,96 @@
 import React from 'react';
+import ReactCurvedText from 'react-curved-text';
+import {styled} from "styled-components";
 
-const CurvedText: React.FC<{ text: string, color: string }> = ({ text, color }) => {
-    let fontSize = 20;
-    let letterSpacing = 8;
-    let viewBox = "25 0 200 200"
-    let d = "M 50,180 A 100,100 0 0,1 300,100"
-    if(window.innerWidth <= 900){
-        fontSize = 15
-        letterSpacing = 3;
-        viewBox = "0 25 200 200"
-        d = "M 50,150 A 100,100 0 0,1 250,120"
-    } else if(window.innerWidth <= 1600){
-        fontSize = 15
-        letterSpacing = 5;
-        viewBox = "0 0 200 200"
-        d = "M 50,150 A 100,100 0 0,1 300,100"
+interface CurvedTextProps {
+    text: string;
+    color: string;
+    fontSize: string;
+    width: number;
+    height: number;
+}
+
+const CurvedTextStyled = styled.div`
+    position: absolute;
+    top: -10%;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 8rem;
+        height: 8rem;
     }
 
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        width: 7rem;
+        height: 7rem;
+    }
+`
+
+const CurvedTextComponent: React.FC<CurvedTextProps> = (props) => {
+    const windowSize = window.innerWidth;
+    let fontSize = props.fontSize;
+    let width = props.width;
+    let height = props.height;
+    let rx = 75;
+    let ry = 75;
+    let cx = 85;
+    let cy = 75;
+    if(windowSize <= 1600 && windowSize > 1400){
+        fontSize = "1.3rem"
+        width = 190;
+        height = 170;
+    } else if(windowSize <= 1400 && windowSize > 1024){
+        fontSize = "1rem"
+        width = 150;
+        height = 150;
+        rx = 60;
+        ry = 60;
+        cx = 80;
+        cy = 70;
+
+    } else if(windowSize <= 1024 && windowSize > 820 ){
+        fontSize = "1rem"
+        width = 120;
+        height = 120;
+        rx = 50;
+        ry = 50;
+        cx = 60;
+        cy = 60;
+    } else if (windowSize <= 820){
+        fontSize = "0.8rem"
+        width = 100;
+        height = 100;
+        rx = 40;
+        ry = 40;
+        cx = 50;
+        cy = 60;
+
+    }
+
+
     return (
-        <svg width="300" height="200" viewBox={viewBox} id="curvedTextV1">
-            <defs>
-                <path
-                    id="curve"
-                    d={d}
-                    fill="none"
-                />
-            </defs>
-            <text width="150" fontSize={fontSize} fill={color} letterSpacing={letterSpacing}>
-                <textPath href="#curve">{text}</textPath>
-            </text>
-        </svg>
+        <CurvedTextStyled>
+            <ReactCurvedText
+                text={props.text}
+                width={width}
+                height={height}
+                cx={cx}
+                cy={cy}
+                rx={rx}
+                ry={ry}
+                startOffset={0}
+                textProps={{ style: { fontSize: fontSize, fill: props.color, letterSpacing: "5px" } }}
+            />
+        </CurvedTextStyled>
     );
 };
 
-export default CurvedText;
+export default CurvedTextComponent;

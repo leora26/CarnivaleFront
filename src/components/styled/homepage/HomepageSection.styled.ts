@@ -19,31 +19,6 @@ export const HomePageSectionStyled = styled(motion.section)<HomePageSectionStyle
     justify-content: center;
     margin-bottom: 10%;
 
-    & #categories {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-    }
-
-    & #workWithSpan {
-        font-family: "Lexend", sans-serif;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-size: 2rem;
-        color: black;
-        margin-right: auto;
-        margin-bottom: 1rem;
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.5rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            display: none;
-        }
-    }
-
     @media (max-width: ${({theme}) => theme.display.laptop}) {
         height: 100vh;
     }

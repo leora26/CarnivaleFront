@@ -10,7 +10,7 @@ import ChangingText from "../../components/global/ChangingText";
 import CategoryCard from "../../components/styled/homepage/CategoryCard";
 import BeefCategory from "../../assets/pictures/category-beef.png";
 import DairyCategory from "../../assets/pictures/category-dairy.png";
-import CurvedTextV2 from "../../components/homepage/CurvedTextV2";
+import CurvedTextV2 from "../../components/homepage/CurvedText";
 import PoultryCategory from "../../assets/pictures/category-poultry.png";
 import WeWorkWithLink from "../../components/homepage/WeWorkWithLink";
 import LatestStories from "../../components/homepage/LatestStories";
