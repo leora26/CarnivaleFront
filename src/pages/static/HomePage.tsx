@@ -15,8 +15,8 @@ import HomepageHeroSVG from "../../assets/svg/HomepageHeroSVG";
 import {HomepageParagraph} from "../../components/styled/homepage/HomepageParagraph";
 import ConnectWithUsSVG from "../../assets/svg/ConnectWithUsSVG";
 import CategoriesSection from "../../components/homepage/CategoriesSection";
-import {WeWorkWithSectionStyled} from "../../components/styled/homepage/WeWorkWithSection.styled";
 import WeWorkWithSection from "../../components/homepage/WeWorkWithSection";
+import ChangingTextSection from "../../components/homepage/ChangingTextSection";
 
 const sectionVariants = {
     hidden: {opacity: 0, y: 50},
@@ -31,10 +31,6 @@ const HomePage = () => {
     }, [controls])
 
 
-    const weSeekForText: string[] = ["FARMERS", "PRODUCERS", "HEROES", "PROTAGONISTS", "PEOPLE WITH IMPACT"];
-    const offerText: string[] = ["CHEF", "ENTHUSIASTS", "HOMECHEFS", "YOU"];
-    const aimingForText: string[] = ["Awareness", "Wise", "Natural", "Seasonal", "Tradition", "Culture ", "Craft", "Sustainability"];
-    const ingredientsText: string[] = ["identity", "taste", "happiness", "impact", "personality", "satisfaction ", "transparency", "value"];
 
     return (
         <>
@@ -80,20 +76,7 @@ const HomePage = () => {
                     </HomepageParagraph>
                 </TextSection>
 
-                <HomePageSectionStyled
-                    direction="column"
-                    tabletHorizontalSectionHeight="60vh"
-                    tabletVerticalSectionHeight="30vh">
-
-                    <ChangingTextContainer>
-                        <ChangingText animationOrder={0} staticText="WE SEEK FOR" dynamicText={weSeekForText}/>
-                        <ChangingText animationOrder={1} staticText="GLADLY OFFER IT TO" dynamicText={offerText}/>
-                        <ChangingText animationOrder={2} staticText="AIMING FOR" dynamicText={aimingForText}/>
-                        <ChangingText animationOrder={3} staticText="OF INGREDIENTS BURSTING WITH "
-                                      dynamicText={ingredientsText}/>
-                    </ChangingTextContainer>
-
-                </HomePageSectionStyled>
+                <ChangingTextSection/>
 
                 <CategoriesSection />
 

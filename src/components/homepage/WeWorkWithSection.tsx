@@ -17,7 +17,7 @@ const WeWorkWithSection = () => {
     }
 
     return (
-        <WeWorkWithSectionStyled>
+        <WeWorkWithSectionStyled id="weWorkWithSection">
             <span>We work with</span>
             <WeWorkWithHeading>
                 <ChangingText animationOrder={0} dynamicText={firstText} className="headingText"/>

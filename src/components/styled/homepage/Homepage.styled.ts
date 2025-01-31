@@ -50,7 +50,7 @@ export const HomepageStyled = styled.main`
     }
     
     #firstSection{
-        margin-top: 10%;
+        margin-top: 5%;
         height: 80vh;
         
         &:hover{
