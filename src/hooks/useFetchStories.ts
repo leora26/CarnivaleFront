@@ -8,8 +8,8 @@ interface FetchStoriesProps {
 }
 
 const fetchStories = async (data: FetchStoriesProps): Promise<ApiResponse<AllStories[]>> => {
-    const backendUrl = process.env.REACT_API_URL
-    const response = await axios.get(`${backendUrl}${data.category}`)
+    const backendUrl = process.env.REACT_APP_API_URL;
+    const response = await axios.get(`${backendUrl}stories/${data.category}`)
     return response.data
 }
 

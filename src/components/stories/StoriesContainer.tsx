@@ -6,7 +6,7 @@ import {StoriesContainerStyled} from "../styled/stories/StoriesContainer.styled"
 
 interface StoriesContainerProps {
     loading: boolean;
-    allStories: AllStories[];
+    allStories: AllStories[] | null;
     listStories: number;
 }
 
@@ -16,7 +16,7 @@ const StoriesContainer: React.FC<StoriesContainerProps> = ({loading, listStories
             {loading ? (
                 <SpinnerLoader height={40} />
             ) : (
-                allStories.slice(0, listStories).map(story => {
+                allStories && allStories.slice(0, listStories).map(story => {
                     return <StoryCardV2 key={story.id} story={story} />;
                 })
             )}

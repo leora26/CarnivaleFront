@@ -8,7 +8,7 @@ interface NewsletterProps {
 
 
 const newsletter = async ({email}: NewsletterProps): Promise<AxiosResponse<ApiResponse<string>>> => {
-    const backendUrl = process.env.REACT_API_URL;
+    const backendUrl = process.env.REACT_APP_API_URL;
     return await axios.post(`${backendUrl}newsletter`, {
         email
     })

@@ -10,9 +10,9 @@ interface StoryCardProps {
 const StoryCard= ({story, className}: StoryCardProps): JSX.Element => {
     return (
         <StoryCardStyled className={className}>
-            {className != 'latestStoryCard' ? <StoryCardImage src={story.mediaContents[0].url} alt="Story picture"/> : null}
-            <h2>{story.title}</h2>
-            <p>{story.subTitle}</p>
+            {className != 'latestStoryCard' ? <StoryCardImage src={story.mediaContentDTOS[0].url} alt="Story picture"/> : null}
+            <h2>{story.titleEn}</h2>
+            <p>{story.descriptionEn}</p>
         </StoryCardStyled>
     )
 }

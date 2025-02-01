@@ -16,7 +16,7 @@ export const HomepageContextProvider = ({children}: HomepageContextProvideProps)
     const {data: homepageInfo, isLoading, error} = useFetchHomepage();
 
     return (
-        <HomepageContext.Provider value={{ homepageInfo: homepageInfo ?? null }}>
+        <HomepageContext.Provider value={{ homepageInfo: homepageInfo?.data ?? null }}>
             {children}
         </HomepageContext.Provider>
     )
