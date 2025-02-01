@@ -14,6 +14,7 @@ import ConnectWithUsSVG from "../../assets/svg/ConnectWithUsSVG";
 import CategoriesSection from "../../components/homepage/CategoriesSection";
 import WeWorkWithSection from "../../components/homepage/WeWorkWithSection";
 import ChangingTextSection from "../../components/homepage/ChangingTextSection";
+import LookAtUsSection from "../../components/homepage/LookAtUsSection";
 
 const HomePage = () => {
     const controls = useAnimation();
@@ -73,6 +74,8 @@ const HomePage = () => {
 
             <h4>LATEST STORIES</h4>
             <LatestStories/>
+
+            <LookAtUsSection />
 
         </HomepageStyled>
     )

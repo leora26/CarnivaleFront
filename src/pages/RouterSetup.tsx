@@ -1,10 +1,6 @@
 import {Route, Routes} from "react-router-dom";
 import DefaultLayout from "../layout/DefaultLayout";
-import MobileHomePage from "./mobile/MobileHomePage";
-import TabletHomePage from "./tablet/TabletHomePage";
 import HomePage from "./static/HomePage";
-import MobileWholesalePage from "./mobile/MobileWholesalePage";
-import TabletWholesalePage from "./tablet/TabletWholesalePage";
 import Wholesale from "./static/Wholesale";
 import CompanyPage from "./static/CompanyPage";
 import Login from "./static/Login";
@@ -26,11 +22,9 @@ const RouterSetup = () => {
     return(
         <Routes>
             <Route path="" element={<DefaultLayout isMobile={isMobile} isTablet={isTablet} />}>
-                <Route index element={
-                    isMobile ? <MobileHomePage /> : isTablet ? <TabletHomePage /> : <HomePage />
+                <Route index element={<HomePage />
                 }/>
-                <Route path="wholesale" element={
-                    isMobile ? <MobileWholesalePage /> : isTablet ? <TabletWholesalePage /> : <Wholesale />
+                <Route path="wholesale" element={<Wholesale />
                 }/>
                 <Route path="companies" element={<CompanyPage />} />
                 <Route path="login" element={<Login />} />
