@@ -13,5 +13,6 @@ export const WholesaleStyled = styled.main`
         align-self: center;
         font-family: ${({theme}) => theme.fonts.primaryBold};
         border-bottom: 10px solid ${({theme}) => theme.colors.primary};
+        text-transform: uppercase;
     }
 `

@@ -9,6 +9,8 @@ import ManEatingRibs from "../../assets/pictures/wholesale/N1060008.jpg"
 import GuysInForest from "../../assets/pictures/wholesale/native_cooking_awards_015_©_kris_vlegels_0031.jpg"
 import GetTheApp from "../../components/wholesale/GetTheApp";
 import BecomeCustomerSection from "../../components/wholesale/BecomeCustomerSection";
+import FAQ from "../../models/response/FAQ";
+import FAQSection from "../../components/wholesale/FAQSection";
 
 const Wholesale = () => {
     return (
@@ -98,8 +100,9 @@ const Wholesale = () => {
 
             </WholesaleParagraph>
 
-            <BecomeCustomerSection />
+            <BecomeCustomerSection/>
 
+            <FAQSection />
         </WholesaleStyled>
     )
 }
