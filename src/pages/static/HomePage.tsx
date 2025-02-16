@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {
     HomepageStyled,
 } from "../../components/styled/homepage/Homepage.styled";
-import TextOverlay from "../../components/styled/global/TextOverlay";
+import {HomePageOverlay, TextOverlay} from "../../components/styled/global/TextOverlay";
 import {HeroSection, TextSection} from "../../components/styled/homepage/HomepageSection.styled";
 
 import LatestStories from "../../components/homepage/LatestStories";
@@ -37,10 +37,12 @@ const HomePage = () => {
                 <HomepageHeroSVG/>
 
                 <TextOverlay>
-                    <h1>CARNIVALE</h1>
-                    <p>
-                        Supplying ingredients to over 200 of the best kitchens in the Low Countries.
-                    </p>
+                    <HomePageOverlay>
+                        <h1>CARNIVALE</h1>
+                        <p>
+                            Supplying ingredients to over 200 of the best kitchens in the Low Countries.
+                        </p>
+                    </HomePageOverlay>
                 </TextOverlay>
 
             </HeroSection>
@@ -75,7 +77,7 @@ const HomePage = () => {
             <h4>LATEST STORIES</h4>
             <LatestStories/>
 
-            <LookAtUsSection />
+            <LookAtUsSection/>
 
         </HomepageStyled>
     )

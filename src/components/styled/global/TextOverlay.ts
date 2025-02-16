@@ -1,15 +1,16 @@
 import {styled} from "styled-components";
 
-const TextOverlay = styled.div`
+export const TextOverlay = styled.div`
     z-index: 2;
     position: relative;
-    padding: 2rem;
-    border-radius: 1rem;
+    width: 100%;
+`;
+
+export const HomePageOverlay = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
 
-    & h1 {
+    h1 {
         color: white;
         font-size: 8em;
         letter-spacing: 1.5rem;
@@ -39,7 +40,7 @@ const TextOverlay = styled.div`
         }
     }
 
-    & p {
+    p {
         color: white;
         width: 20%;
         align-self: center;
@@ -65,56 +66,26 @@ const TextOverlay = styled.div`
             width: 60%;
         }
     }
+`
+export const WholesaleOverlay = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 5%;
+    font-family: ${({theme}) => theme.fonts.primaryBold};
 
 
-    & #h2-wholesale {
+    h2 {
         font-size: 4rem;
         font-family:  ${({theme}) => theme.fonts.primary};
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            width: 70%;
-            font-size: 3rem;
-            margin-top: 50%;
-            margin-bottom: 5%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 2rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            width: 90%;
-            font-size: 2rem;
-            margin-top: 60%;
-            text-align: center;
-        }
+        color: white;
+        margin-bottom: 1rem;
     }
 
-    & #p-wholesale {
+    p {
         width: 50%;
         font-size: 1.5rem;
-        margin-left: -40%;
         font-weight: 200;
-
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            margin: 0 0 0 -40%;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 1rem;
-        }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            font-size: 0.8rem;
-            margin: 15% 20% 0 0;
-        }
+        color: white;
     }
-
-    @media (max-width: ${({theme}) => theme.display.mobile}) {
-        padding: 0;
-        height: 100%;
-    }
-
-`;
-
-export default TextOverlay;
+`

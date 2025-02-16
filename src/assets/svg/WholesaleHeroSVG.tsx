@@ -1,4 +1,4 @@
-import HeroPicture from "../../assets/pictures/wholesale-hero.jpg";
+import HeroPicture from "../pictures/wholesale/wholesale-hero.jpg";
 import React from "react";
 
 const WholesaleHeroSVG = () => {

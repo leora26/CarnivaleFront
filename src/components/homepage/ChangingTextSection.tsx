@@ -1,7 +1,7 @@
 import {ChangingTextContainer, ChangingTextSectionStyled} from "../styled/homepage/ChangingTextSection.styled";
 import ChangingText from "../global/ChangingText";
 import React from "react";
-import TextOverlay from "../styled/global/TextOverlay";
+import {TextOverlay} from "../styled/global/TextOverlay";
 import WeSeekForSVG from "../../assets/svg/WeSeekForSVG";
 import {useNavigate} from "react-router-dom";
 
