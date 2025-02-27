@@ -38,7 +38,7 @@ export const CheckBoxStyled = styled.div<CheckBoxStyledProps>`
 
     label {
         font-family: "Lexend", sans-serif;
-        font-weight: 300;
+        font-weight: 500;
         cursor: pointer;
     }
 `;

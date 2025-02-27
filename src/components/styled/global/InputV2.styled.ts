@@ -8,7 +8,7 @@ export const InputV2Styled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 90%;
+    width: 100%;
     align-self: center;
 `
 

@@ -18,11 +18,22 @@ export const RegisterForm = styled.form`
         padding: 2rem 3rem 2rem 3rem;
         height: 80vh;
 
+        #city-postal {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            :first-child {
+                margin-right: 1rem;
+            }
+        }
+
         & span {
             font-family: "Lexend", sans-serif;
             font-weight: 600;
             font-size: 1.2em;
-            margin: 5% 0 5% 5%;
+            margin: 5% 0 5%;
         }
 
         & h2 {
@@ -66,13 +77,15 @@ export const RegisterForm = styled.form`
         border-bottom-right-radius: 1rem;
 
         & button {
-            align-self: flex-end;
+            align-self: center;
             background-color: black;
             color: white;
-            padding: 1rem 2rem 1rem 2rem;
-            border-radius: 1rem;
-            width: 30%;
-            margin-top: 10%;
+            padding: 0.6rem 2rem;
+            border-radius: 10px;
+            width: 50%;
+            margin-top: 20%;
+            margin-bottom: -20%;
+            font-size: 1.2rem;
 
             @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
                 width: 50%
