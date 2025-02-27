@@ -10,18 +10,19 @@ export const InputV1Styled = styled.div`
 
 export const Input = styled.input`
     width: 100%;
-    padding: 12px 0 12px 0;
-    border: 1px solid #ccc;
+    padding: 0.4rem 1rem;
+    border: 1px solid black;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
     font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 1rem;
+    background-color: transparent;
 `
 
 export const Label = styled.label`
     font-family: "Lexend", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 `

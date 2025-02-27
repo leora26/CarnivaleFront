@@ -54,9 +54,11 @@ export const ParagraphButton = styled.div`
     margin-top: auto;
     align-self: center;
     
-    button {
+    .paragraphLink {
         font-family: "Lexend", sans-serif;
         font-size: 1.4rem;
+        text-decoration: none;
+        color: black;
     }
     
     svg {

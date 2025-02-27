@@ -3,7 +3,7 @@ import {AppLinkStyled} from "../styled/wholesale/AppLink.styled";
 import GetInTouch1 from "../../assets/pictures/get-in-touch1.png";
 import GetInTouch2 from "../../assets/pictures/get-in-touch2.png";
 import GetInTouch3 from "../../assets/pictures/get-in-touch3.png";
-import AppPic from "../../assets/pictures/appForChefs.jpg"
+import AppPic from "../../assets/pictures/wholesale/appForChefs.jpg"
 import {BiLogoAndroid} from "react-icons/bi";
 import {FaApple} from "react-icons/fa";
 

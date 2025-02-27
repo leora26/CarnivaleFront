@@ -1,5 +1,4 @@
 import React from "react";
-import RegisterImg from "../../assets/pictures/register.png";
 import {RegisterStyled} from "../../components/styled/register/Register.styled";
 import {RegisterForm} from "../../components/styled/register/RegisterForm";
 import InputV2 from "../../components/global/InputV2";

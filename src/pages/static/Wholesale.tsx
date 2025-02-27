@@ -9,8 +9,8 @@ import ManEatingRibs from "../../assets/pictures/wholesale/N1060008.jpg"
 import GuysInForest from "../../assets/pictures/wholesale/native_cooking_awards_015_©_kris_vlegels_0031.jpg"
 import GetTheApp from "../../components/wholesale/GetTheApp";
 import BecomeCustomerSection from "../../components/wholesale/BecomeCustomerSection";
-import FAQ from "../../models/response/FAQ";
 import FAQSection from "../../components/wholesale/FAQSection";
+import {Link} from "react-router-dom";
 
 const Wholesale = () => {
     return (
@@ -42,9 +42,9 @@ const Wholesale = () => {
                         entire team with the knowledge to become true experts
                     </p>
                     <ParagraphButton>
-                        <button>
+                        <Link to="asd" className="paragraphLink">
                             Subscribe to our newsletter
-                        </button>
+                        </Link>
                         <IoArrowForward/>
                     </ParagraphButton>
                 </TextSection>
@@ -66,9 +66,9 @@ const Wholesale = () => {
                         balance between consistency, cost, and quality to meet your unique requirements week after week.
                     </p>
                     <ParagraphButton>
-                        <button>
+                        <Link to="/contactUs/getInTouch" className="paragraphLink">
                             Get in touch
-                        </button>
+                        </Link>
                         <IoArrowForward/>
                     </ParagraphButton>
                 </TextSection>
@@ -89,9 +89,9 @@ const Wholesale = () => {
                         to take a seat in our kitchen and explore our assortment in depth.
                     </p>
                     <ParagraphButton>
-                        <button>
+                        <Link to="/contactUs/contactUs" className="paragraphLink">
                             Contact us
-                        </button>
+                        </Link>
                         <IoArrowForward/>
                     </ParagraphButton>
                 </TextSection>

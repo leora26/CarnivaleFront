@@ -14,6 +14,7 @@ import StoriesInterviews from "./dynamic/StoriesInterviews";
 import StoriesRecipies from "./dynamic/StoriesRecipies";
 import React from "react";
 import useScreenSize from "../hooks/useScreenSize";
+import ContactUs from "./static/ContactUs";
 
 const RouterSetup = () => {
     const isMobile = useScreenSize({minWidth: 200, maxWidth: 600});
@@ -29,6 +30,7 @@ const RouterSetup = () => {
                 <Route path="companies" element={<CompanyPage />} />
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<Register />} />
+                <Route path="contactUs/:theme" element={<ContactUs />} />
                 <Route path="stories" element={<Stories />}/>
                 <Route path="stories/blogs" element={<StoriesBlogs />}/>
                 <Route path="stories/podcasts" element={<StoriesPodcasts />}/>
