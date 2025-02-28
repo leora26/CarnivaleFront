@@ -26,6 +26,10 @@ export const ChangingTextStyled = styled(motion.div)`
         font-family: "Lexend", sans-serif;
         font-weight: 500;
 
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            font-size: 1.8rem;
+        }
+
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             font-size: 1.6rem;
         }
@@ -48,6 +52,10 @@ export const ChangingTextStyled = styled(motion.div)`
         color: black;
         width: fit-content;
 
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            font-size: 2.8rem;
+        }
+        
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             font-size: 2.5rem;
         }
@@ -66,7 +74,6 @@ export const ChangingTextContainer = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    //background-color: #FFDD5A;
     display: flex;
     flex-direction: column;
     justify-content: center;

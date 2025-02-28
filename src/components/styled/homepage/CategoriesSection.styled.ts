@@ -22,7 +22,9 @@ export const CategoriesSectionStyled = styled.section`
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             font-size: 7rem;
             width: 25%;
+            height: 100%;
         }
+        
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             height: 90%;
         }
@@ -50,5 +52,9 @@ export const CategoriesSectionStyled = styled.section`
             height: auto;
             border-bottom: 6px solid #FFDD5A;
         }
+    }
+
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
+        margin-bottom: 10%;
     }
 `

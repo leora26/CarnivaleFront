@@ -45,10 +45,18 @@ export const LookAtUsContainer = styled.div`
                 width: 80%;
             }
         }
+
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            width: 32rem;
+        }
     }
     
     #bigGif {
         width: 24rem;
+
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            width: 20rem;
+        }
     }
     
     #secondImages{
@@ -64,6 +72,10 @@ export const LookAtUsContainer = styled.div`
             img {
                 width: 48%;
             }
+        }
+
+        @media (max-width: ${({theme}) => theme.display.laptop}) {
+            width: 25rem;
         }
     }
     

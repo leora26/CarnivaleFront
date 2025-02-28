@@ -10,6 +10,10 @@ export const HomepageParagraph = styled.p`
         background-color: #FFDD5A;
     }
 
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
+        font-size: 1.2rem;
+    }
+
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         margin-left: 5%;

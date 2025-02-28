@@ -42,6 +42,10 @@ export const WeWorkWithSectionStyled = styled.section`
 
     }
 
+    @media (max-width: ${({theme}) => theme.display.laptop}) {
+        margin-bottom: 10%;
+    }
+
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         height: 40vh;
         margin: 10% 0 10% 0;
