@@ -49,6 +49,10 @@ export const LookAtUsContainer = styled.div`
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             width: 32rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            width: 28rem;
+        }
     }
     
     #bigGif {
@@ -56,6 +60,10 @@ export const LookAtUsContainer = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             width: 20rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            width: 18rem;
         }
     }
     
@@ -76,6 +84,10 @@ export const LookAtUsContainer = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.laptop}) {
             width: 25rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+            width: 22rem;
         }
     }
     
@@ -109,18 +121,33 @@ export const ImagesContainer = styled.div<ImagesContainerProps>`
             width: 20rem;
             margin-left: 1.5rem;
             margin-top: 2rem;
+
+            @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+                width: 15rem;
+                margin-left: 1rem;
+
+            }
         }
         
         span {
             display: inline-block;
             white-space: nowrap; 
             font-size: 1.8rem;
+
+            @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+                font-size: 1.6rem;
+            }
         }
 
         svg {
             width: 50px;
             height: 50px;
             transform:rotate(45deg);
+
+            @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
     

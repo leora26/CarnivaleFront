@@ -136,4 +136,9 @@ export const TextSection = styled.section`
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 5%;
+
+    @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
+        width: 95%;
+        margin-top: 5%;
+    }
 `

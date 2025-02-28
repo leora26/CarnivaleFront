@@ -26,7 +26,7 @@ export const CategoriesSectionStyled = styled.section`
         }
         
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
-            height: 90%;
+            font-size: 6.5rem;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
