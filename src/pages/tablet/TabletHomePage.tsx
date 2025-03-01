@@ -1,22 +1,19 @@
-import React, {useEffect} from "react";
-import {
-    HomepageStyled,
-} from "../../components/styled/homepage/Homepage.styled";
-import {HomePageOverlay, TextOverlay} from "../../components/styled/global/TextOverlay";
-import {HeroSection, TextSection} from "../../components/styled/homepage/HomepageSection.styled";
-
-import LatestStories from "../../components/homepage/LatestStories";
-
 import {useAnimation} from "framer-motion";
-import HomepageHeroSVG from "../../assets/svg/HomepageHeroSVG";
+import React, {useEffect} from "react";
+import {HomepageStyled} from "../../components/styled/homepage/Homepage.styled";
+import HeroSectionTabletHomepage from "../../assets/svg/HeroSectionTabletHomepage";
+import {HerosectionTablet} from "../../components/styled/homepage/HerosectionTablet";
+import {HomePageOverlay, TextOverlay} from "../../components/styled/global/TextOverlay";
+import {TextSection} from "../../components/styled/homepage/HomepageSection.styled";
 import {HomepageParagraph} from "../../components/styled/homepage/HomepageParagraph";
-import ConnectWithUsSVG from "../../assets/svg/ConnectWithUsSVG";
+import ChangingTextSection from "../../components/homepage/ChangingTextSection";
 import CategoriesSection from "../../components/homepage/CategoriesSection";
 import WeWorkWithSection from "../../components/homepage/WeWorkWithSection";
-import ChangingTextSection from "../../components/homepage/ChangingTextSection";
+import LatestStories from "../../components/homepage/LatestStories";
 import LookAtUsSection from "../../components/homepage/LookAtUsSection";
+import LookAtUsTabletSection from "../../components/homepage/LookAtUsTabletSection";
 
-const HomePage = () => {
+const TabletHomePage = () => {
     const controls = useAnimation();
     useEffect(() => {
         controls.start("visible")
@@ -25,16 +22,9 @@ const HomePage = () => {
 
     return (
         <HomepageStyled>
-            <ConnectWithUsSVG/>
-            <HeroSection
-                href="#weWorkWithSection"
-                onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById("weWorkWithSection")?.scrollIntoView({behavior: "smooth"});
-                }}
-                id="firstSection">
+            <HerosectionTablet>
 
-                <HomepageHeroSVG/>
+                <HeroSectionTabletHomepage/>
 
                 <TextOverlay>
                     <HomePageOverlay>
@@ -44,9 +34,7 @@ const HomePage = () => {
                         </p>
                     </HomePageOverlay>
                 </TextOverlay>
-
-            </HeroSection>
-
+            </HerosectionTablet>
 
             <TextSection>
                 <HomepageParagraph>
@@ -77,11 +65,11 @@ const HomePage = () => {
             <h4>LATEST STORIES</h4>
             <LatestStories/>
 
-            <LookAtUsSection/>
+            <LookAtUsTabletSection/>
 
         </HomepageStyled>
     )
 }
 
 
-export default HomePage;
+export default TabletHomePage;

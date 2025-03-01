@@ -33,18 +33,14 @@ export const CategoriesSectionStyled = styled.section`
             font-size: 6rem;
             height: 90%;
         }
+        
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 5rem;
-            height: 80%;
-            width: 25%;
-            align-self: start;
+            height: auto;
+            width: 85%;
+            align-self: center;
         }
-
-        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-            font-size: 4rem;
-            width: 25%;
-            height: 80%;
-        }
+        
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 2rem;
@@ -57,4 +53,17 @@ export const CategoriesSectionStyled = styled.section`
     @media (max-width: ${({theme}) => theme.display.laptop}) {
         margin-bottom: 10%;
     }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        flex-direction: column;
+        margin-bottom: 0;
+        height: 60vh;
+    }
+`
+
+export const CategoriesContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
 `

@@ -1,14 +1,14 @@
-import {LoginActions, LoginForm, LoginStyled} from "../../components/styled/login/Login.styled";
-import LoginImg from "../../assets/pictures/login.png";
-import InputV1 from "../../components/global/InputV1";
-import CheckBox from "../../components/global/CheckBox";
+import {LoginActions, LoginForm, LoginStyled} from "../components/styled/login/Login.styled";
+import LoginImg from "../assets/pictures/login.png";
+import InputV1 from "../components/global/InputV1";
+import CheckBox from "../components/global/CheckBox";
 import {Link} from "react-router-dom";
 import React, {useRef, useState} from "react";
 import axios, {AxiosResponse} from "axios";
-import LoginRequest from "../../models/request/LoginRequest";
-import ApiResponse from "../../models/response/ApiResponse";
-import LoginResponse from "../../models/response/LoginResponse";
-import InputErrorMessage from "../../components/global/InputErrorMessage";
+import LoginRequest from "../models/request/LoginRequest";
+import ApiResponse from "../models/response/ApiResponse";
+import LoginResponse from "../models/response/LoginResponse";
+import InputErrorMessage from "../components/global/InputErrorMessage";
 
 const Login: React.FC = () => {
     const emailRef = useRef<HTMLInputElement>(null);

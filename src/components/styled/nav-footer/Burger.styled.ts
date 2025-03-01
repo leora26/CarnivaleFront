@@ -55,12 +55,16 @@ export const NavigationContainer = styled.div<OpenProps>`
         margin-top: 10%;
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 6rem;
+            font-size: 3rem;
         }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 2rem;
         }
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        padding: 10% 5% 10% 5%;
     }
 `
 

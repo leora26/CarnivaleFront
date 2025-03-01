@@ -1,20 +1,22 @@
 import {Route, Routes} from "react-router-dom";
 import DefaultLayout from "../layout/DefaultLayout";
-import HomePage from "./static/HomePage";
-import Wholesale from "./static/Wholesale";
-import CompanyPage from "./static/CompanyPage";
-import Login from "./static/Login";
-import Register from "./static/Register";
-import Stories from "./dynamic/Stories";
-import StoriesBlogs from "./dynamic/StoriesBlogs";
-import StoriesPodcasts from "./dynamic/StoriesPodcasts";
-import StoriesEvents from "./dynamic/StoriesEvents";
-import StoriesProducers from "./dynamic/StoriesProducers";
-import StoriesInterviews from "./dynamic/StoriesInterviews";
-import StoriesRecipies from "./dynamic/StoriesRecipies";
-import React from "react";
 import useScreenSize from "../hooks/useScreenSize";
-import ContactUs from "./static/ContactUs";
+import React from "react";
+import HomePage from "./HomePage";
+import Wholesale from "./Wholesale";
+import CompanyPage from "./CompanyPage";
+import Login from "./Login";
+import Register from "./Register";
+import ContactUs from "./ContactUs";
+import Stories from "./stories/Stories";
+import StoriesBlogs from "./stories/StoriesBlogs";
+import StoriesPodcasts from "./stories/StoriesPodcasts";
+import StoriesEvents from "./stories/StoriesEvents";
+import StoriesProducers from "./stories/StoriesProducers";
+import StoriesInterviews from "./stories/StoriesInterviews";
+import StoriesRecipies from "./stories/StoriesRecipies";
+import TabletHomePage from "./tablet/TabletHomePage";
+
 
 const RouterSetup = () => {
     const isMobile = useScreenSize({minWidth: 200, maxWidth: 600});
@@ -23,8 +25,7 @@ const RouterSetup = () => {
     return(
         <Routes>
             <Route path="" element={<DefaultLayout isMobile={isMobile} isTablet={isTablet} />}>
-                <Route index element={<HomePage />
-                }/>
+                <Route index element={isTablet ? <TabletHomePage /> : <HomePage />}/>
                 <Route path="wholesale" element={<Wholesale />
                 }/>
                 <Route path="companies" element={<CompanyPage />} />

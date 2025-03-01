@@ -3,7 +3,7 @@ import Navigation from "../components/nav-footer/Navigation";
 import Footer from "../components/nav-footer/Footer";
 import React from "react";
 import MobileNavigation from "../components/nav-footer/MobileNavigation";
-import MobileFooter from "../components/nav-footer/MobileFooter";
+import TabletFooter from "../components/nav-footer/TabletFooter";
 
 interface DefaultLayoutProps {
     isTablet: boolean;
@@ -17,7 +17,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({isTablet, isMobile}) => {
             <main>
                 <Outlet />
             </main>
-            {isTablet ? <MobileFooter/> : <Footer/>}
+            {isTablet ? <TabletFooter/> : <Footer/>}
         </>
     )
 }

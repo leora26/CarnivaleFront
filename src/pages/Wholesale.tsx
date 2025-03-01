@@ -1,15 +1,15 @@
-import {WholesaleStyled} from "../../components/styled/wholesale/Wholesale.styled";
-import {WholeSaleHeroSection} from "../../components/styled/wholesale/WholesaleHeroSection";
-import {TextOverlay, WholesaleOverlay} from "../../components/styled/global/TextOverlay";
+import {WholesaleStyled} from "../components/styled/wholesale/Wholesale.styled";
+import {WholeSaleHeroSection} from "../components/styled/wholesale/WholesaleHeroSection";
+import {TextOverlay, WholesaleOverlay} from "../components/styled/global/TextOverlay";
 import React from "react";
-import WholesaleHeroSVG from "../../assets/svg/WholesaleHeroSVG";
-import {ParagraphButton, TextSection, WholesaleParagraph} from "../../components/styled/wholesale/WholesaleParagraph";
+import WholesaleHeroSVG from "../assets/svg/WholesaleHeroSVG";
+import {ParagraphButton, TextSection, WholesaleParagraph} from "../components/styled/wholesale/WholesaleParagraph";
 import {IoArrowForward} from "react-icons/io5";
-import ManEatingRibs from "../../assets/pictures/wholesale/N1060008.jpg"
-import GuysInForest from "../../assets/pictures/wholesale/native_cooking_awards_015_©_kris_vlegels_0031.jpg"
-import GetTheApp from "../../components/wholesale/GetTheApp";
-import BecomeCustomerSection from "../../components/wholesale/BecomeCustomerSection";
-import FAQSection from "../../components/wholesale/FAQSection";
+import ManEatingRibs from "../assets/pictures/wholesale/N1060008.jpg"
+import GuysInForest from "../assets/pictures/wholesale/native_cooking_awards_015_©_kris_vlegels_0031.jpg"
+import GetTheApp from "../components/wholesale/GetTheApp";
+import BecomeCustomerSection from "../components/wholesale/BecomeCustomerSection";
+import FAQSection from "../components/wholesale/FAQSection";
 import {Link} from "react-router-dom";
 
 const Wholesale = () => {

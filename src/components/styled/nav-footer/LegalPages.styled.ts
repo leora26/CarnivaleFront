@@ -11,6 +11,10 @@ export const LegalPagesStyled = styled.section`
     font-size: 1.1rem;
     margin-right: 5%;
     margin-bottom: 1%;
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 90%;
+    }
 `
 
 export const LegalPage = styled(Link)`

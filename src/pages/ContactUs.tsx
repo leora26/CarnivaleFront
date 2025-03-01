@@ -1,12 +1,12 @@
-import {ContactUsContainer, ContactUsStyled} from "../../components/styled/contactUs/ContactUs.styled";
+import {ContactUsContainer, ContactUsStyled} from "../components/styled/contactUs/ContactUs.styled";
 import {useNavigate, useParams} from "react-router-dom";
-import {ContactUsForm, TextAreaButtonContainer} from "../../components/styled/contactUs/ContactUsForm";
-import ContactUsPicture from "../../assets/pictures/contactUs/TRIP FARM OF IDEAS-0053.jpg"
-import InputV1 from "../../components/global/InputV1";
-import TextAreaV2 from "../../components/global/TextAreaV2";
+import {ContactUsForm, TextAreaButtonContainer} from "../components/styled/contactUs/ContactUsForm";
+import ContactUsPicture from "../assets/pictures/contactUs/TRIP FARM OF IDEAS-0053.jpg"
+import InputV1 from "../components/global/InputV1";
+import TextAreaV2 from "../components/global/TextAreaV2";
 import {IoIosArrowRoundForward} from "react-icons/io";
 import {useEffect, useRef, useState} from "react";
-import ContactUsRequest from "../../models/request/ContactUsRequest";
+import ContactUsRequest from "../models/request/ContactUsRequest";
 
 const ContactUs = () => {
 

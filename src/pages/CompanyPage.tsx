@@ -1,8 +1,8 @@
-import {CompanyPageStyled} from "../../components/styled/companies/CompanyPage.styled";
-import {CompanySection} from "../../components/styled/companies/CompanySection";
+import {CompanyPageStyled} from "../components/styled/companies/CompanyPage.styled";
+import {CompanySection} from "../components/styled/companies/CompanySection";
 import React from "react";
-import FirstSectionPicture from "../../assets/pictures/companyFirstSection.jpg"
-import {TextOverlay} from "../../components/styled/global/TextOverlay";
+import FirstSectionPicture from "../assets/pictures/companyFirstSection.jpg"
+import {TextOverlay} from "../components/styled/global/TextOverlay";
 
 const CompanyPage = () => {
     return (

@@ -26,7 +26,8 @@ export const HomePageOverlay = styled.div`
             transform: rotate(90deg);
             transform-origin: center;
             margin-right: 80%;
-            margin-top: 20%;
+            margin-top: -30%;
+            font-weight: 500;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
@@ -52,7 +53,8 @@ export const HomePageOverlay = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             width: 40%;
-            margin: 40% 50% 0 0 ;
+            margin-top: 50%;
+            margin-right: 80%;
         }
 
         @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
@@ -65,6 +67,10 @@ export const HomePageOverlay = styled.div`
             align-self: center;
             width: 60%;
         }
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        margin-top: -50%;
     }
 `
 export const WholesaleOverlay = styled.div`

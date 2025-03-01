@@ -14,7 +14,6 @@ export const NavigationItemStyled = styled(Link)<NavigationItemProps>`
     font-family: "Lexend", sans-serif;
     font-weight: ${({fontWeight}) => fontWeight};
     margin-right: 1%;
-    
 
 
     @media (max-width: ${({theme}) => theme.display.laptop}) {

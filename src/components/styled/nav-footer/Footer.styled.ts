@@ -31,6 +31,14 @@ export const SignUpSection = styled.section`
         font-family: "Lexend", sans-serif;
         font-weight: 300;
         font-size: 1.1rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 100%;
     }
 `
 
@@ -72,12 +80,19 @@ export const MainFooterSection = styled.section`
     #secondSection{
         margin-left: 10%;
     }
+
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 `
 
 export const MainSectionContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 90%;
     
     h3 {
         font-size: 2.4rem;
@@ -125,4 +140,12 @@ export const SocialMediaSection = styled.section`
     justify-content: space-between;
     margin-left: 5%;
     color: white;
+`
+
+export const AdditionalLinksContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+    margin: 5% 0;
 `

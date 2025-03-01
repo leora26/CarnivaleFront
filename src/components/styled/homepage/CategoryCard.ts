@@ -2,7 +2,7 @@ import {styled} from "styled-components";
 import {Link} from "react-router-dom";
 
 const CategoryCard = styled(Link)`
-    width: 23%;
+    width: 35%;
     height: 100%;
     text-decoration: none;
 
@@ -47,7 +47,7 @@ const CategoryCard = styled(Link)`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        width: 25%;
+        width: 35%;
     }
 
     @media (max-width: ${({theme}) => theme.display.mobile}) {

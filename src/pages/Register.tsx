@@ -1,10 +1,10 @@
 import React from "react";
-import {RegisterStyled} from "../../components/styled/register/Register.styled";
-import {RegisterForm} from "../../components/styled/register/RegisterForm";
-import InputV2 from "../../components/global/InputV2";
-import TextAreaV1 from "../../components/global/TextAreaV1";
-import CheckBox from "../../components/global/CheckBox";
-import RegisterHeading from "../../components/register/RegisterHeading";
+import {RegisterStyled} from "../components/styled/register/Register.styled";
+import {RegisterForm} from "../components/styled/register/RegisterForm";
+import InputV2 from "../components/global/InputV2";
+import TextAreaV1 from "../components/global/TextAreaV1";
+import CheckBox from "../components/global/CheckBox";
+import RegisterHeading from "../components/register/RegisterHeading";
 
 const Register: React.FC = () => {
     // const companyNameRef = useRef<HTMLInputElement>(null);

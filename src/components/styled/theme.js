@@ -6,8 +6,8 @@ const theme = {
     },
     display: {
         laptop: "1600px",
-        smallTabletHorizontal: "1200px",
         tabletHorizontal: "1400px",
+        smallTabletHorizontal: "1200px",
         tabletVertical: "1024px",
         smallTabletVertical: "820px",
         mobile:"600px"

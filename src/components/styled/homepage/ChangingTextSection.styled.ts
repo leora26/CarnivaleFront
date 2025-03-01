@@ -10,6 +10,11 @@ export const ChangingTextSectionStyled = styled.section`
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        height: 40vh;
+        margin-top: 5%;
+    }
 `
 
 export const ChangingTextStyled = styled(motion.div)`
@@ -34,9 +39,10 @@ export const ChangingTextStyled = styled(motion.div)`
             font-size: 1.6rem;
         }
 
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.6rem;
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            font-size: 1.4rem;
         }
+       
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 0.6rem;
         }
@@ -60,8 +66,8 @@ export const ChangingTextStyled = styled(motion.div)`
             font-size: 2.5rem;
         }
 
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 2rem;
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            font-size: 2.2rem;
         }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
@@ -86,18 +92,26 @@ export const ChangingTextContainer = styled.div`
         height: 100%;
 
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            width: 95vw;
-            height: 90vh;
+            display: none;
         }
-
-        @media (max-width: ${({theme}) => theme.display.mobile}) {
-            width: 95vw;
-            height: 70vh;
-        }
+        
 
         & image {
             width: 100%;
             height: 100%;
+        }
+    }
+    
+    #yellowContainer {
+        display: none;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 100%;
+            height: 40vh;
+            border-radius: 2rem;
+            display: block;
+            position: absolute;
+            background-color: ${({theme}) => theme.colors.primary};
         }
     }
     

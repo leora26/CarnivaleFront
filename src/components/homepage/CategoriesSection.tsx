@@ -1,4 +1,4 @@
-import {CategoriesSectionStyled} from "../styled/homepage/CategoriesSection.styled";
+import {CategoriesContainer, CategoriesSectionStyled} from "../styled/homepage/CategoriesSection.styled";
 import CategoryCard from "../styled/homepage/CategoryCard";
 import React, {useContext, useEffect, useState} from "react";
 import {HomepageContext} from "../../context/HomepageContext";
@@ -9,8 +9,6 @@ const CategoriesSection = () => {
     const [categories, setCategories] = useState<Category[] | null>(null)
 
     const homepageInfo = useContext(HomepageContext);
-    console.log("Homepage: ", homepageInfo)
-    console.log("categories:", categories)
 
     useEffect(() => {
         if(homepageInfo?.homepageInfo?.categoryDTOs) {
@@ -20,16 +18,18 @@ const CategoriesSection = () => {
 
     return (
         <CategoriesSectionStyled>
-            <h2 id="whatDoWeHave">what do we have?</h2>
-            {categories && categories.map(category => (
-                <CategoryCard to={`/stories/tag/${category.titleEn}`}>
-                    <img src={category.imgUrl} alt={`${category.titleEn} category link`}/>
-                    <h3>{category.titleEn}</h3>
-                    <p>
-                        {category.descriptionEn}
-                    </p>
-                </CategoryCard>
-            ))}
+            <h2>what do we have?</h2>
+            <CategoriesContainer>
+                {categories && categories.map(category => (
+                    <CategoryCard to={`/stories/tag/${category.titleEn}`}>
+                        <img src={category.imgUrl} alt={`${category.titleEn} category link`}/>
+                        <h3>{category.titleEn}</h3>
+                        <p>
+                            {category.descriptionEn}
+                        </p>
+                    </CategoryCard>
+                ))}
+            </CategoriesContainer>
         </CategoriesSectionStyled>
     )
 }

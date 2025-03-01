@@ -22,6 +22,7 @@ const ChangingTextSection = () => {
         <ChangingTextSectionStyled onClick={handleClick}>
             <ChangingTextContainer>
                 <WeSeekForSVG/>
+                <div id="yellowContainer"></div>
 
 
                 <TextOverlay>

@@ -9,7 +9,7 @@ export const WeWorkWithSectionStyled = styled.section`
     align-items: end;
     justify-content: center;
     margin-bottom: 5%;
-    
+
     span {
         font-family: "Lexend", sans-serif;
         font-weight: 400;
@@ -19,15 +19,12 @@ export const WeWorkWithSectionStyled = styled.section`
         margin-right: auto;
         margin-bottom: 1rem;
 
-        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-            font-size: 1.5rem;
-        }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             display: none;
         }
     }
-    
+
     .weWorkWithText {
         color: black;
         font-size: 8rem;
@@ -40,6 +37,10 @@ export const WeWorkWithSectionStyled = styled.section`
         margin-left: 0;
         padding-bottom: 1.8rem;
 
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 4rem;
+        }
+
     }
 
     @media (max-width: ${({theme}) => theme.display.laptop}) {
@@ -47,8 +48,7 @@ export const WeWorkWithSectionStyled = styled.section`
     }
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        height: 40vh;
-        margin: 10% 0 10% 0;
+        height: 35vh;
     }
 
 `
@@ -69,10 +69,19 @@ export const WeWorkWithHeading = styled.div`
         text-align: start;
         font-family: ${({theme}) => theme.fonts.primarySemiBold};
         margin-left: -5rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 4rem;
+            margin-left: -3rem;
+        }
     }
-    
+
     button {
-        transform: rotate(-45deg)
+        transform: rotate(-45deg);
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            margin-bottom: 1rem;
+        }
     }
 
 `

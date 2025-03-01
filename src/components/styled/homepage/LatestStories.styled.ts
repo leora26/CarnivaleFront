@@ -13,16 +13,20 @@ export const LatestStoriesStyled = styled(motion.section)`
     
     @media (max-width: ${({theme}) => theme.display.mobile}) {
         flex-direction: column;
-        
     }
 `
 
 export const LatestStoryCardContainer = styled.div`
     position: relative;
     
-    
     &:first-child {
         position: relative;
+    }
+    
+    .latestStorySvg{
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            height: 30vh;
+        }
     }
     
     

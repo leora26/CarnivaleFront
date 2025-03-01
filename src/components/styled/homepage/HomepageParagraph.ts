@@ -14,11 +14,9 @@ export const HomepageParagraph = styled.p`
         font-size: 1.2rem;
     }
 
-   
-
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        margin-left: 5%;
-        width: 90%;
+        width: 100%;
+        font-size: 1.5rem;
     }
 
     @media (max-width: ${({theme}) => theme.display.mobile}) {

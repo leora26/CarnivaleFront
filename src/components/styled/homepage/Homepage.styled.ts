@@ -40,17 +40,6 @@ export const HomepageStyled = styled.main`
 `
 
 
-export const GetInTouchContainer = styled.div`
-    width: 100%;
-    margin-bottom: 20vh;
-
-    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
-        margin-bottom: 10vh;
-    }
-`
-
-
-
 
 
 

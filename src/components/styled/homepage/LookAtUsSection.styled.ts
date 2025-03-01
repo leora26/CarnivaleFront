@@ -53,6 +53,10 @@ export const LookAtUsContainer = styled.div`
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             width: 28rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            width: 25rem;
+        }
     }
     
     #bigGif {
@@ -64,6 +68,10 @@ export const LookAtUsContainer = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             width: 18rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            width: 16rem;
         }
     }
     
@@ -88,6 +96,10 @@ export const LookAtUsContainer = styled.div`
 
         @media (max-width: ${({theme}) => theme.display.tabletHorizontal}) {
             width: 22rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
+            width: 19.5rem;
         }
     }
     
