@@ -10,7 +10,6 @@ import ChangingTextSection from "../../components/homepage/ChangingTextSection";
 import CategoriesSection from "../../components/homepage/CategoriesSection";
 import WeWorkWithSection from "../../components/homepage/WeWorkWithSection";
 import LatestStories from "../../components/homepage/LatestStories";
-import LookAtUsSection from "../../components/homepage/LookAtUsSection";
 import LookAtUsTabletSection from "../../components/homepage/LookAtUsTabletSection";
 
 const TabletHomePage = () => {

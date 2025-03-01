@@ -20,6 +20,16 @@ export const BecomeCustomerSectionStyled = styled.section`
         border-radius: 1rem;
         font-size: 1.2rem;
         cursor: pointer;
+
+        
+        svg {
+            transform: rotate(-45deg);
+            margin-left: 1rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 40%;
+        }
     }
     
     h4 {

@@ -24,6 +24,10 @@ export const SocialIconsStyled = styled.div`
             height: 40px;
         }
     }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 20%;
+    }
     
 `
 

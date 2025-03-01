@@ -16,6 +16,7 @@ import StoriesProducers from "./stories/StoriesProducers";
 import StoriesInterviews from "./stories/StoriesInterviews";
 import StoriesRecipies from "./stories/StoriesRecipies";
 import TabletHomePage from "./tablet/TabletHomePage";
+import TabletWholesale from "./tablet/TabletWholesale";
 
 
 const RouterSetup = () => {
@@ -26,7 +27,7 @@ const RouterSetup = () => {
         <Routes>
             <Route path="" element={<DefaultLayout isMobile={isMobile} isTablet={isTablet} />}>
                 <Route index element={isTablet ? <TabletHomePage /> : <HomePage />}/>
-                <Route path="wholesale" element={<Wholesale />
+                <Route path="wholesale" element={isTablet ? <TabletWholesale /> : <Wholesale />
                 }/>
                 <Route path="companies" element={<CompanyPage />} />
                 <Route path="login" element={<Login />} />

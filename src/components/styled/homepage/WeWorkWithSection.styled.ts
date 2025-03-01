@@ -41,6 +41,10 @@ export const WeWorkWithSectionStyled = styled.section`
             font-size: 4rem;
         }
 
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 3rem;
+        }
+
     }
 
     @media (max-width: ${({theme}) => theme.display.laptop}) {
@@ -49,6 +53,11 @@ export const WeWorkWithSectionStyled = styled.section`
 
     @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
         height: 35vh;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        height: 45vh;
+        margin-top: 10%;
     }
 
 `
@@ -73,6 +82,11 @@ export const WeWorkWithHeading = styled.div`
         @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
             font-size: 4rem;
             margin-left: -3rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 3rem;
+            margin-left: -2rem;
         }
     }
 

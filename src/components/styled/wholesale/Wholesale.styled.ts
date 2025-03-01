@@ -14,5 +14,10 @@ export const WholesaleStyled = styled.main`
         font-family: ${({theme}) => theme.fonts.primaryBold};
         border-bottom: 10px solid ${({theme}) => theme.colors.primary};
         text-transform: uppercase;
+
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 3rem;
+        }
     }
 `

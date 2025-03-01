@@ -1,0 +1,111 @@
+import React from "react";
+import {WholeSaleHeroSection} from "../../components/styled/wholesale/WholesaleHeroSection";
+import ManEatingRibs from "../../assets/pictures/wholesale/manribs2.jpg"
+import GuysInForest from "../../assets/pictures/wholesale/guysforest2.jpg"
+import {WholesaleStyled} from "../../components/styled/wholesale/Wholesale.styled";
+import {TextOverlay, WholesaleOverlay} from "../../components/styled/global/TextOverlay";
+import {ParagraphButton, TextSection, WholesaleParagraph} from "../../components/styled/wholesale/WholesaleParagraph";
+import {Link} from "react-router-dom";
+import {IoArrowForward} from "react-icons/io5";
+import BecomeCustomerSection from "../../components/wholesale/BecomeCustomerSection";
+import FAQSection from "../../components/wholesale/FAQSection";
+import GetTheApp from "../../components/wholesale/GetTheApp";
+import WholesaleTabletHero from "../../assets/svg/WholesaleTabletHero";
+
+
+const Wholesale = () => {
+    return (
+        <WholesaleStyled>
+            <WholeSaleHeroSection>
+                <WholesaleTabletHero/>
+
+                <TextOverlay>
+                    <WholesaleOverlay>
+                        <h2>Start Carnivalizing your menu here!</h2>
+                        <p>
+                            Step into our lush selection of handpicked ingredients, bursting with identity, powered by
+                            nature.
+                        </p>
+                    </WholesaleOverlay>
+                </TextOverlay>
+            </WholeSaleHeroSection>
+
+            <h3>WE EXIST TO SUPPORT KITCHENS</h3>
+
+            <WholesaleParagraph>
+
+                <TextSection>
+                    <span>MONTHLY INSIGHTS</span>
+                    <p>
+                        Our bespoke monthly reports designed helping you to plan your menu weeks in advance.
+                        Our updates spotlight ingredients at their peak quality and abundance while keeping you informed
+                        about upcoming seasonal shifts. Backed by insightful data on seasonal trends, it equips your
+                        entire team with the knowledge to become true experts
+                    </p>
+                    <ParagraphButton>
+                        <Link to="asd" className="paragraphLink">
+                            Subscribe to our newsletter
+                        </Link>
+                        <IoArrowForward/>
+                    </ParagraphButton>
+                </TextSection>
+
+                <img src={ManEatingRibs} alt="" className="paragraphImage"/>
+
+            </WholesaleParagraph>
+
+
+            <WholesaleParagraph>
+
+                <img src={GuysInForest} alt="" className="paragraphImage"/>
+                <TextSection>
+                    <span>Menu consulting</span>
+                    <p>
+                        As your trusted seafood partner, we’re committed to supporting you and your
+                        team at every step. That’s why we provide a complimentary, in-house
+                        consulting service tailored for your kitchen team and pace. Together, we’ll strike the perfect
+                        balance between consistency, cost, and quality to meet your unique requirements week after week.
+                    </p>
+                    <ParagraphButton>
+                        <Link to="/contactUs/getInTouch" className="paragraphLink">
+                            Get in touch
+                        </Link>
+                        <IoArrowForward/>
+                    </ParagraphButton>
+                </TextSection>
+
+
+            </WholesaleParagraph>
+
+            <GetTheApp/>
+
+            <WholesaleParagraph>
+
+                <TextSection>
+                    <span>Tasting by crnvl</span>
+                    <p>
+                        Just like you, we speak the language of food, and we believe the true meaning of our ingredients
+                        is best communicated by tasting them. Therefor we created the only logical place we could think
+                        of to start a dialogue with you about food - a kitchen. Feel free to reach out if you would like
+                        to take a seat in our kitchen and explore our assortment in depth.
+                    </p>
+                    <ParagraphButton>
+                        <Link to="/contactUs/contactUs" className="paragraphLink">
+                            Contact us
+                        </Link>
+                        <IoArrowForward/>
+                    </ParagraphButton>
+                </TextSection>
+
+                <img src={GuysInForest} alt="" className="paragraphImage"/>
+
+            </WholesaleParagraph>
+
+            <BecomeCustomerSection/>
+
+            <FAQSection />
+        </WholesaleStyled>
+    )
+}
+
+export default Wholesale;

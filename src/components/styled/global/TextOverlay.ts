@@ -86,6 +86,10 @@ export const WholesaleOverlay = styled.div`
         font-family:  ${({theme}) => theme.fonts.primary};
         color: white;
         margin-bottom: 1rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 3rem;
+        }
     }
 
     p {
@@ -93,5 +97,9 @@ export const WholesaleOverlay = styled.div`
         font-size: 1.5rem;
         font-weight: 200;
         color: white;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 70%;
+        }
     }
 `

@@ -15,6 +15,10 @@ export const ChangingTextSectionStyled = styled.section`
         height: 40vh;
         margin-top: 5%;
     }
+
+    @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+        margin-top: 10%;
+    }
 `
 
 export const ChangingTextStyled = styled(motion.div)`
@@ -42,6 +46,10 @@ export const ChangingTextStyled = styled(motion.div)`
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             font-size: 1.4rem;
         }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 1rem;
+        }
        
         @media (max-width: ${({theme}) => theme.display.mobile}) {
             font-size: 0.6rem;
@@ -68,6 +76,10 @@ export const ChangingTextStyled = styled(motion.div)`
 
         @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
             font-size: 2.2rem;
+        }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 2rem;
         }
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {

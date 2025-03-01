@@ -14,6 +14,10 @@ export const FAQCategories = styled.div`
     justify-content: space-between;
     width: 30%;
     margin-top: 1rem;
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 50%;
+    }
 `
 
 interface FAQCategoryProps {
@@ -21,7 +25,8 @@ interface FAQCategoryProps {
 }
 
 export const FAQCategory = styled.div<FAQCategoryProps>`
-
+    width: 20%;
+    text-align: center;
     padding: 0.8rem;
     border-radius: 2rem;
     font-family: "Lexend", sans-serif;
@@ -36,6 +41,10 @@ export const FAQCategory = styled.div<FAQCategoryProps>`
     &:hover {
         background-color: ${({theme}) => theme.colors.primary};
         border: 2px solid transparent;
+    }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 25%;
     }
 
 `

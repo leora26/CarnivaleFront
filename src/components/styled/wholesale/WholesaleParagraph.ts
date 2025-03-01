@@ -12,6 +12,11 @@ export const WholesaleParagraph = styled.div`
     .paragraphImage {
         width: 60%;
         border-radius: 1rem;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            width: 50%;
+            height: 50%;
+        }
     }
     
 `
@@ -34,12 +39,21 @@ export const TextSection = styled.div`
         font-family: "Lexend", sans-serif;
         font-size: 1.4rem;
         line-height: 1.6;
+
+        @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+            font-size: 1rem;
+        }
     }
     
     button {
         font-size: 1.4rem;
         border: none;
         background-color: transparent;
+    }
+
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        width: 45%;
     }
 `
 

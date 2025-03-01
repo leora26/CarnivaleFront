@@ -22,16 +22,16 @@ export const GetTheAppStyled = styled.section`
         height: 60vh;
     }
     
-
-    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
-        height: 35vh;
-        margin-top: 10%;
-    }
-
     @media (max-width: ${({theme}) => theme.display.smallTabletHorizontal}) {
         margin-top: 30%;
         margin-bottom: 0;        
     }
+
+    @media (max-width: ${({theme}) => theme.display.tabletVertical}) {
+        height: 35vh;
+        margin-top: 0;
+    }
+
 
     @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
         height: 40vh;

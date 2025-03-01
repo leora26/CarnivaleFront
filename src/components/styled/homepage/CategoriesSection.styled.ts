@@ -40,6 +40,10 @@ export const CategoriesSectionStyled = styled.section`
             width: 85%;
             align-self: center;
         }
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            font-size: 3.8rem;
+        }
         
 
         @media (max-width: ${({theme}) => theme.display.mobile}) {

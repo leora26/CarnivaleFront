@@ -32,9 +32,9 @@ export const BigImageContainerTablet = styled.div`
     
     #firstGif {
         width: 43%;
-        height: auto; /* Allow height to adjust */
-        object-fit: cover; /* Cover the container, cropping if needed */
-        overflow: hidden; /* Ensure that the cropped parts are hidden */
+        height: auto; 
+        object-fit: cover;
+        overflow: hidden; 
     }
 `
 
@@ -49,6 +49,11 @@ export const ImageButtonContainer = styled.div`
         height: 13rem;
         object-fit: cover;
         object-position: center;
+
+        @media (max-width: ${({theme}) => theme.display.smallTabletVertical}) {
+            width: 11rem;
+            height: 11rem;
+        }
     }
 
     #seeMoreButton {
